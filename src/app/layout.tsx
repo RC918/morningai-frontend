@@ -12,6 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// 動態robots設定 - 根據環境變數決定是否允許搜尋引擎收錄
+const isProduction = process.env.NODE_ENV === 'production' && 
+                    process.env.VERCEL_ENV === 'production';
+
 export const metadata: Metadata = {
   title: "Morning AI - 智能AI代理平台",
   description: "Morning AI 官方網站 - 智能AI代理平台，讓每一天都充滿微笑的節奏",
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Morning AI - 智能AI代理平台",
     description: "Morning AI 官方網站 - 智能AI代理平台，讓每一天都充滿微笑的節奏",
-    url: "https://morningai.me",
+    url: isProduction ? "https://morningai.me" : "https://staging.morningai.me",
     siteName: "Morning AI",
     images: [
       {
@@ -41,15 +45,16 @@ export const metadata: Metadata = {
     description: "Morning AI 官方網站 - 智能AI代理平台，讓每一天都充滿微笑的節奏",
     images: ["/og-image.png"],
   },
+  // 🔧 優化：根據環境動態設定robots
   robots: {
-    index: true,
-    follow: true,
+    index: isProduction,
+    follow: isProduction,
     googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      index: isProduction,
+      follow: isProduction,
+      "max-video-preview": isProduction ? -1 : 0,
+      "max-image-preview": isProduction ? "large" : "none",
+      "max-snippet": isProduction ? -1 : 0,
     },
   },
   icons: {
@@ -66,6 +71,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-TW">
+      <head>
+        {/* 🔧 優化：動態meta robots標籤 */}
+        {!isProduction && (
+          <meta name="robots" content="noindex,nofollow" />
+        )}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -74,3 +85,4 @@ export default function RootLayout({
     </html>
   );
 }
+
