@@ -1,76 +1,36 @@
-# Morning AI Frontend
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Morning AI 官方網站前端專案，基於 Next.js 開發。
+## Getting Started
 
-## 🚀 技術棧
+First, run the development server:
 
-- **Framework**: Next.js 15.5.0
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Node Version**: 18 LTS
-
-## 📦 開發環境設置
-
-### 安裝依賴
-```bash
-npm install
-```
-
-### 開發模式
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### 建置專案
-```bash
-npm run build
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 啟動生產環境
-```bash
-npm run start
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### 程式碼檢查
-```bash
-npm run lint
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🌿 分支策略
+## Learn More
 
-- **main**: 生產環境 (Production)
-- **develop**: 測試環境 (Staging)
+To learn more about Next.js, take a look at the following resources:
 
-## 📁 專案結構
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-morningai-frontend/
-├── src/
-│   ├── app/           # App Router 頁面
-│   ├── components/    # 可重用組件
-│   └── lib/          # 工具函數
-├── public/           # 靜態資源
-├── next.config.ts    # Next.js 配置
-└── package.json      # 專案依賴
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 🔒 安全配置
+## Deploy on Vercel
 
-專案已配置以下安全標頭：
-- X-Frame-Options: SAMEORIGIN
-- X-Content-Type-Options: nosniff
-- X-XSS-Protection: 1; mode=block
-- Referrer-Policy: strict-origin-when-cross-origin
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🚀 部署
-
-專案支援部署到 Vercel、Netlify 等平台。
-
-## 👥 協作者
-
-- Manushelp
-- RyanChen
-
-## 📄 授權
-
-© 2025 Morning AI. All rights reserved.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
