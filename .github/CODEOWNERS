@@ -1,0 +1,23 @@
+# Global owners - require review for all changes
+* @Manushelp @RyanChen
+
+# Frontend specific files
+/src/** @Manushelp @RyanChen
+/public/** @Manushelp @RyanChen
+/components/** @Manushelp @RyanChen
+
+# Configuration files - require extra scrutiny
+package.json @Manushelp @RyanChen
+package-lock.json @Manushelp @RyanChen
+next.config.* @Manushelp @RyanChen
+tsconfig.json @Manushelp @RyanChen
+tailwind.config.* @Manushelp @RyanChen
+
+# Security and deployment files
+.env* @Manushelp @RyanChen
+vercel.json @Manushelp @RyanChen
+.github/** @Manushelp @RyanChen
+
+# Documentation
+README.md @Manushelp @RyanChen
+docs/** @Manushelp @RyanChen
