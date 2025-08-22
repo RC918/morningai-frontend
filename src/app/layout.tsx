@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 // 動態robots設定 - 根據環境變數決定是否允許搜尋引擎收錄
-const isProduction = process.env.NODE_ENV === 'production' && 
-                    process.env.VERCEL_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production';
+
 
 export const metadata: Metadata = {
   title: "Morning AI - 智能AI代理平台",
   description: "Morning AI 官方網站 - 智能AI代理平台，讓每一天都充滿微笑的節奏",
   keywords: ["Morning AI", "AI", "人工智能", "代理平台", "智能助手"],
-  authors: [{ name: "Morning AI Team" }],
+  robots: "noindex, nofollow",
   creator: "Morning AI",
   publisher: "Morning AI",
   openGraph: {
@@ -73,8 +73,8 @@ export default function RootLayout({
     <html lang="zh-TW">
       <head>
         {/* 🔧 優化：動態meta robots標籤 */}
-        {!isProduction && (
-          <meta name="robots" content="noindex,nofollow" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
         )}
       </head>
       <body
