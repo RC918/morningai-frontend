@@ -1,12 +1,18 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const health = {
-    status: 'ok',
+type HealthResponse = {
+  status: string
+  timestamp: string
+  environment: string
+}
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<HealthResponse>
+) {
+  res.status(200).json({
+    status: 'healthy',
     timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
     environment: process.env.NODE_ENV || 'development'
-  };
-
-  res.status(200).json(health);
+  })
 }
