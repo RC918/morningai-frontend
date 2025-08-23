@@ -1,13 +1,18 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const version = {
+type VersionResponse = {
+  commit: string
+  build_id: string
+  built_at: string
+}
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<VersionResponse>
+) {
+  res.status(200).json({
     commit: process.env.VERCEL_GIT_COMMIT_SHA || 'unknown',
     build_id: process.env.VERCEL_GIT_COMMIT_REF || 'unknown',
-    built_at: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development',
-    version: '1.0.0'
-  };
-
-  res.status(200).json(version);
+    built_at: new Date().toISOString()
+  })
 }
