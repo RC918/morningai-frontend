@@ -3,22 +3,32 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   
+  // Ensure proper API routes
+  async rewrites() {
+    return [
+      {
+        source: '/version.json',
+        destination: '/api/version.json',
+      },
+      {
+        source: '/healthz',
+        destination: '/api/healthz',
+      },
+    ]
+  },
+  
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/api/:path*',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
+            key: 'Content-Type',
+            value: 'application/json',
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            key: 'Cache-Control',
+            value: 'no-cache, no-store, must-revalidate',
           },
         ],
       },
