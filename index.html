@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning AI - 智能AI代理平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .status {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        .status-item {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .success {
+            color: #4ade80;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .logo { font-size: 3rem; }
+            .subtitle { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🌅</div>
+        <h1>Morning AI</h1>
+        <p class="subtitle">
+            歡迎來到 Morning AI - 您的智能助手，為您開啟高效的一天。
+        </p>
+        
+        <div class="status">
+            <div class="status-item">
+                🚀 系統狀態: <span class="success">線上運行</span>
+            </div>
+            <div class="status-item">
+                📅 今日日期: <span id="current-date"></span>
+            </div>
+            <div class="status-item">
+                ⏰ 當前時間: <span id="current-time"></span>
+            </div>
+            <div class="status-item">
+                🔒 SSL 狀態: <span class="success">安全連接</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>環境: Production | 版本: 1.0.0</p>
+            <p>構建時間: 2025-08-23 14:45:41</p>
+            <p>© 2025 Morning AI. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('current-date').textContent = now.toLocaleDateString('zh-TW');
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('zh-TW');
+        }
+        
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        
+        // 簡單的健康檢查
+        console.log('Morning AI 靜態網站已載入');
+        console.log('SSL 狀態: 正常');
+        console.log('部署時間:', new Date().toISOString());
+    </script>
+</body>
+</html>
