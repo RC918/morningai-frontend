@@ -76,4 +76,4 @@ morningai-frontend/
 © 2025 Morning AI. All rights reserved.
 
 <!-- Deploy trigger: 2025-08-23 13:31:32 -->
-<!-- Environment variables applied: 2025-08-23 13:49:49 -->
+<!-- Environment variables applied: 2025-08-23 14:03:51 -->
