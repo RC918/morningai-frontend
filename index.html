@@ -16,19 +16,26 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            padding: 40px 20px;
         }
         
         .container {
             text-align: center;
             max-width: 800px;
-            padding: 40px 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 40px;
         }
         
         .logo {
@@ -61,53 +68,95 @@
             font-size: 1.1rem;
         }
         
-        .footer {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
         .success {
             color: #4ade80;
             font-weight: bold;
+        }
+        
+        .api-status {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .version-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .build-id {
+            font-family: 'Monaco', 'Menlo', monospace;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
         }
         
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .logo { font-size: 3rem; }
             .subtitle { font-size: 1.1rem; }
+            .version-info { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🌅</div>
-        <h1>Morning AI</h1>
-        <p class="subtitle">
-            歡迎來到 Morning AI - 您的智能助手，為您開啟高效的一天。
-        </p>
-        
-        <div class="status">
-            <div class="status-item">
-                🚀 系統狀態: <span class="success">線上運行</span>
-            </div>
-            <div class="status-item">
-                📅 今日日期: <span id="current-date"></span>
-            </div>
-            <div class="status-item">
-                ⏰ 當前時間: <span id="current-time"></span>
-            </div>
-            <div class="status-item">
-                🔒 SSL 狀態: <span class="success">安全連接</span>
+    <div class="main-content">
+        <div class="container">
+            <div class="logo">🌅</div>
+            <h1>Morning AI</h1>
+            <p class="subtitle">
+                歡迎來到 Morning AI - 您的智能助手，為您開啟高效的一天。
+            </p>
+            
+            <div class="status">
+                <div class="status-item">
+                    🚀 系統狀態: <span class="success">線上運行</span>
+                </div>
+                <div class="status-item">
+                    📅 今日日期: <span id="current-date"></span>
+                </div>
+                <div class="status-item">
+                    ⏰ 當前時間: <span id="current-time"></span>
+                </div>
+                <div class="status-item">
+                    🔒 SSL 狀態: <span class="success">安全連接</span>
+                </div>
+                <div class="status-item">
+                    🌐 API 連接: <span id="api-status" class="success">檢查中...</span>
+                </div>
+                
+                <div class="api-status" id="api-details">
+                    正在檢查 API 連接狀態...
+                </div>
             </div>
         </div>
-        
-        <div class="footer">
-            <p>環境: Production | 版本: 1.0.0</p>
-            <p>構建時間: 2025-08-23 14:45:41</p>
-            <p>© 2025 Morning AI. All rights reserved.</p>
+    </div>
+    
+    <div class="footer">
+        <div class="version-info">
+            <div>
+                <strong>Morning AI</strong> | 環境: Production
+            </div>
+            <div class="build-id">
+                Build: 20250823_145420
+            </div>
+            <div>
+                © 2025 Morning AI. All rights reserved.
+            </div>
         </div>
     </div>
     
@@ -118,13 +167,47 @@
             document.getElementById('current-time').textContent = now.toLocaleTimeString('zh-TW');
         }
         
+        async function checkApiStatus() {
+            try {
+                const response = await fetch('https://api.morningai.me/healthz');
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('api-status').textContent = '正常連接';
+                    document.getElementById('api-status').className = 'success';
+                    document.getElementById('api-details').innerHTML = `
+                        ✅ API 健康檢查通過<br>
+                        📊 狀態: ${data.status}<br>
+                        🏷️  版本: ${data.version}<br>
+                        🌍 環境: ${data.environment}
+                    `;
+                } else {
+                    throw new Error('API 響應錯誤');
+                }
+            } catch (error) {
+                document.getElementById('api-status').textContent = '連接異常';
+                document.getElementById('api-status').style.color = '#f87171';
+                document.getElementById('api-details').innerHTML = `
+                    ❌ API 連接失敗<br>
+                    錯誤: ${error.message}
+                `;
+            }
+        }
+        
         updateDateTime();
         setInterval(updateDateTime, 1000);
+        checkApiStatus();
         
-        // 簡單的健康檢查
-        console.log('Morning AI 靜態網站已載入');
-        console.log('SSL 狀態: 正常');
-        console.log('部署時間:', new Date().toISOString());
+        // 版本信息
+        window.morningAI = {
+            version: '20250823_145420',
+            commit: '2c0cfa62',
+            built_at: '2025-08-23T14:54:20.923476',
+            environment: 'production'
+        };
+        
+        console.log('Morning AI 已載入');
+        console.log('版本信息:', window.morningAI);
     </script>
 </body>
 </html>
