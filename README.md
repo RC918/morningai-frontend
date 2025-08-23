@@ -74,3 +74,5 @@ morningai-frontend/
 ## 📄 授權
 
 © 2025 Morning AI. All rights reserved.
+
+<!-- Deploy trigger: 2025-08-23 13:31:32 -->
