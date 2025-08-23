@@ -1,105 +1,89 @@
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { GetStaticProps } from 'next'
 
-export default function Home() {
-  const [buildInfo, setBuildInfo] = useState(null)
-  
-  useEffect(() => {
-    fetch('/api/version.json')
-      .then(res => res.json())
-      .then(data => setBuildInfo(data))
-      .catch(err => console.error('Failed to load build info:', err))
-  }, [])
-  
+interface HomeProps {
+  buildTime: string
+  stage: string
+  apiBase: string
+}
+
+export default function Home({ buildTime, stage, apiBase }: HomeProps) {
   return (
-    <>
-      <Head>
-        <title>Morning AI</title>
-        <meta name="description" content="Morning AI - Your AI Assistant Platform" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-      <main style={{ 
-        padding: '2rem', 
-        textAlign: 'center',
-        fontFamily: 'system-ui, sans-serif',
-        maxWidth: '800px',
-        margin: '0 auto'
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      color: 'white',
+      textAlign: 'center',
+      padding: '20px'
+    }}>
+      <div style={{
+        background: 'rgba(255,255,255,0.1)',
+        padding: '40px',
+        borderRadius: '20px',
+        backdropFilter: 'blur(10px)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+        maxWidth: '600px'
       }}>
-        <h1 style={{ color: '#0070f3', marginBottom: '1rem' }}>
-          Welcome to Morning AI
+        <h1 style={{ 
+          fontSize: '3.5rem', 
+          marginBottom: '1rem',
+          fontWeight: '700'
+        }}>
+          🌅 Morning AI
         </h1>
         
-        <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#666' }}>
-          Your AI Assistant Platform
+        <p style={{ 
+          fontSize: '1.3rem', 
+          marginBottom: '2rem',
+          opacity: 0.9,
+          lineHeight: '1.6'
+        }}>
+          Welcome to Morning AI - Your intelligent assistant for a productive day ahead.
         </p>
         
-        <div style={{ 
-          display: 'flex', 
-          gap: '1rem', 
-          justifyContent: 'center',
-          flexWrap: 'wrap',
+        <div style={{
+          background: 'rgba(255,255,255,0.15)',
+          padding: '20px',
+          borderRadius: '15px',
           marginBottom: '2rem'
         }}>
-          <a 
-            href="/api/healthz" 
-            style={{ 
-              padding: '0.75rem 1.5rem', 
-              backgroundColor: '#0070f3', 
-              color: 'white', 
-              textDecoration: 'none', 
-              borderRadius: '6px',
-              fontSize: '1rem'
-            }}
-          >
-            Health Check
-          </a>
-          <a 
-            href="/api/version.json" 
-            style={{ 
-              padding: '0.75rem 1.5rem', 
-              backgroundColor: '#0070f3', 
-              color: 'white', 
-              textDecoration: 'none', 
-              borderRadius: '6px',
-              fontSize: '1rem'
-            }}
-          >
-            Version Info
-          </a>
+          <p style={{ margin: '10px 0', fontSize: '1.1rem' }}>
+            🚀 System Status: <strong>Online</strong>
+          </p>
+          <p style={{ margin: '10px 0', fontSize: '1.1rem' }}>
+            📅 {new Date().toLocaleDateString()}
+          </p>
+          <p style={{ margin: '10px 0', fontSize: '1.1rem' }}>
+            ⏰ {new Date().toLocaleTimeString()}
+          </p>
         </div>
         
-        {buildInfo && (
-          <div style={{ 
-            backgroundColor: '#f5f5f5', 
-            padding: '1rem', 
-            borderRadius: '6px',
-            textAlign: 'left',
-            fontSize: '0.9rem'
-          }}>
-            <h3>Build Information</h3>
-            <p><strong>Version:</strong> {buildInfo.version}</p>
-            <p><strong>Environment:</strong> {buildInfo.environment}</p>
-            <p><strong>Build ID:</strong> {buildInfo.build_id}</p>
-            <p><strong>Commit:</strong> {buildInfo.commit?.substring(0, 8)}</p>
-            <p><strong>Built At:</strong> {new Date(buildInfo.built_at).toLocaleString()}</p>
-          </div>
-        )}
-        
-        <footer style={{ 
-          marginTop: '3rem', 
-          padding: '1rem', 
-          borderTop: '1px solid #eee',
-          color: '#666',
-          fontSize: '0.9rem'
+        <div style={{
+          background: 'rgba(0,0,0,0.2)',
+          padding: '15px',
+          borderRadius: '10px',
+          fontSize: '0.9rem',
+          opacity: 0.8
         }}>
-          <p>Morning AI Platform - Powered by Next.js & Vercel</p>
-          {buildInfo && (
-            <p>Build: {buildInfo.build_id} | {buildInfo.commit?.substring(0, 8)}</p>
-          )}
-        </footer>
-      </main>
-    </>
+          <p style={{ margin: '5px 0' }}>Environment: {stage}</p>
+          <p style={{ margin: '5px 0' }}>API Base: {apiBase}</p>
+          <p style={{ margin: '5px 0' }}>Build: {buildTime}</p>
+        </div>
+      </div>
+    </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      buildTime: new Date().toISOString(),
+      stage: process.env.NEXT_PUBLIC_STAGE || 'prod',
+      apiBase: process.env.NEXT_PUBLIC_API_BASE || 'https://api.morningai.me'
+    }
+  }
 }
