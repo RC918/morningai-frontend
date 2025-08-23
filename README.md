@@ -52,3 +52,4 @@ npm run start
 © 2025 Morning AI. All rights reserved.
 
 <!-- Clean codebase created: 2025-08-23 14:24:15 -->
+<!-- Environment variables applied: 2025-08-23 14:43:46 -->
