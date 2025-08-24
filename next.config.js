@@ -5,18 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  // 確保靜態文件正確處理
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  
-  // 重寫規則確保 robots.txt 正確路由
-  async rewrites() {
-    return [
-      {
-        source: '/robots.txt',
-        destination: '/api/robots'
-      }
-    ]
-  },
   
   // 環境變數配置
   env: {
