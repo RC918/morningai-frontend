@@ -1,26 +1,30 @@
 {
   "name": "morningai-frontend",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:production": "next build",
+    "build:staging": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "build:staging": "NEXT_PUBLIC_STAGE=staging next build",
-    "build:production": "NEXT_PUBLIC_STAGE=prod next build"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "14.2.32",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "typescript": "^5"
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.32",
+    "typescript": "5.5.2"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }
