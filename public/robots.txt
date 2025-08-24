@@ -1,8 +1,2 @@
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://morningai.me/sitemap.xml
-
-# Morning AI Production Environment
-# Generated: 2025-08-23 22:50:00 UTC
