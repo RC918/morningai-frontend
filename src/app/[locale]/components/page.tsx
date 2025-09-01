@@ -1,16 +1,12 @@
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 
 export default async function ComponentsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   
-  // Enable static rendering
-  setRequestLocale(locale);
-  
-  const t = useTranslations('components');
+  const t = await getTranslations('components');
 
   return (
     <div className="container mx-auto px-4 py-8">
