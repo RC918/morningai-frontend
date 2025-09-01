@@ -7,12 +7,11 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-// SSG：明確產出三語頁面
+export const dynamic = 'force-static';
+
 export function generateStaticParams() {
   return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
 }
-
-export const dynamic = 'force-static';
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;

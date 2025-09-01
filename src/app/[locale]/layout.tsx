@@ -1,3 +1,4 @@
+// src/app/[locale]/layout.tsx
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
@@ -6,16 +7,21 @@ import { locales } from '@/i18n/config';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Navigation } from '@/components/ui/Navigation';
 import '@/styles/globals.css';
-
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
+}
+
+export const metadata: Metadata = { 
+  title: 'Morning AI Design System' 
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }
 
 export default async function RootLayout({

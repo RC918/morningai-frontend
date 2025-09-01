@@ -35,7 +35,7 @@
     "currentLanguage": "当前语言"
   },
   "home": {
-    "title": "Morning AI 设计系统",
+    "title": "Morning AI 设计系统（简体）",
     "subtitle": "企业级 React 组件库",
     "description": "支持完整 RWD + A11y + 设计系统整合。包含 Button、Input、Navigation 等 16+ 响应式组件。",
     "viewComponents": "查看组件库",
