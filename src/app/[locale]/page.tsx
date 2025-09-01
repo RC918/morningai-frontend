@@ -26,7 +26,7 @@ export default function HomePage() {
               {t('viewComponents')}
             </Button>
           </Link>
-          <Link href="/documentation">
+          <Link href="https://github.com/RC918/morningai-frontend#readme" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="w-full sm:w-auto">
               {t('viewDocumentation')}
             </Button>
