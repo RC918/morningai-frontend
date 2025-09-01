@@ -1,10 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
-export default function HomePage() {
-  const t = useTranslations('home');
-  const tStats = useTranslations('stats');
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('home');
+  const tStats = await getTranslations('stats');
 
   return (
     <div className="container mx-auto px-4 py-16">

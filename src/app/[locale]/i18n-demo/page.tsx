@@ -1,12 +1,21 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
-export default function I18nDemoPage() {
-  const t = useTranslations('home');
-  const tNav = useTranslations('navigation');
-  const tTheme = useTranslations('theme');
-  const tLang = useTranslations('language');
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function I18nDemoPage({ params }: Props) {
+  const { locale } = await params;
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('home');
+  const tNav = await getTranslations('navigation');
+  const tTheme = await getTranslations('theme');
+  const tLang = await getTranslations('language');
 
   return (
     <div className="container mx-auto px-4 py-8">
