@@ -1,0 +1,14 @@
+{
+  "LANG_CHECK": "繁中 OK",
+  "common": {
+    "title": "晨間設計系統",
+    "description": "現代化的設計系統與元件庫"
+  },
+  "navigation": {
+    "home": "首頁",
+    "components": "元件",
+    "advanced": "進階元件",
+    "docs": "文檔"
+  }
+}
+

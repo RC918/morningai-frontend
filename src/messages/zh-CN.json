@@ -1,0 +1,14 @@
+{
+  "LANG_CHECK": "简中 OK",
+  "common": {
+    "title": "晨间设计系统",
+    "description": "现代化的设计系统与组件库"
+  },
+  "navigation": {
+    "home": "首页",
+    "components": "组件",
+    "advanced": "高级组件",
+    "docs": "文档"
+  }
+}
+

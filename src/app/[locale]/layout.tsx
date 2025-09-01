@@ -1,13 +1,14 @@
-// src/app/[locale]/layout.tsx
 import type { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale, getMessages } from 'next-intl/server';
+import { unstable_setRequestLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { locales } from '@/i18n/config';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Navigation } from '@/components/ui/Navigation';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import { MESSAGES } from '@/i18n/messages';
+
+const locales = ['zh-TW', 'zh-CN', 'en'] as const;
 
 export const dynamic = 'force-static';
 
@@ -24,33 +25,30 @@ export default async function RootLayout({
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
   
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  // ✅ 一定要最先呼叫，建立正確的 locale context 給下游使用
-  setRequestLocale(locale);
+  // ✅ next-intl v3 使用 unstable_setRequestLocale
+  unstable_setRequestLocale(locale);
 
-  // ✅ 之後再讀取 messages（會使用上面設好的 locale）
-  const messages = await getMessages();
+  // ✅ 使用明確映射的訊息
+  const messages = (MESSAGES as any)[locale];
   
-  // 調試日誌
-  console.log('SSG locale:', locale);
-  console.log('messages sample=', messages.LANG_CHECK);
-
+  // 調試日誌 - 煙霧測試
+  console.log('SSG locale:', locale, 'messages sample=', messages?.LANG_CHECK);
+  
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body>
+      <body className="min-h-screen bg-background font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
-            <div className="min-h-screen bg-background font-sans antialiased">
+            <div className="relative flex min-h-screen flex-col">
               <Navigation />
-              <main className="flex-1">
-                {children}
-              </main>
+              <main className="flex-1">{children}</main>
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
