@@ -1,10 +1,10 @@
 // src/i18n.ts
 import {getRequestConfig} from 'next-intl/server';
 
-// 靜態導入所有訊息檔案
-import zhTWMessages from './i18n/messages/zh-TW.json';
-import zhCNMessages from './i18n/messages/zh-CN.json';
-import enMessages from './i18n/messages/en.json';
+// 使用絕對路徑靜態導入所有訊息檔案
+import zhTWMessages from '@/i18n/messages/zh-TW.json';
+import zhCNMessages from '@/i18n/messages/zh-CN.json';
+import enMessages from '@/i18n/messages/en.json';
 
 const SUPPORTED = ['zh-TW', 'zh-CN', 'en'] as const;
 

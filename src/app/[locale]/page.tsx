@@ -1,4 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { locales } from '@/i18n/config';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
@@ -14,6 +16,12 @@ export function generateStaticParams() {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
+  
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+
+  // Enable static rendering
+  setRequestLocale(locale);
   
   const t = await getTranslations('home');
   const tStats = await getTranslations('stats');

@@ -1,3 +1,6 @@
+import { setRequestLocale } from 'next-intl/server';
+import { locales } from '@/i18n/config';
+import { notFound } from 'next/navigation';
 import AdvancedComponentsClient from './AdvancedComponentsClient';
 
 export const dynamic = 'force-static';
@@ -12,6 +15,12 @@ export default async function AdvancedComponentsPage({
   params: Promise<{ locale: string }> 
 }) {
   const { locale } = await params;
+  
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   return <AdvancedComponentsClient />;
 }

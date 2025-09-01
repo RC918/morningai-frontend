@@ -1,4 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { locales } from '@/i18n/config';
+import { notFound } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
@@ -14,6 +16,12 @@ export function generateStaticParams() {
 
 export default async function I18nDemoPage({ params }: Props) {
   const { locale } = await params;
+  
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as any)) notFound();
+
+  // Enable static rendering
+  setRequestLocale(locale);
   
   const t = await getTranslations('home');
   const tNav = await getTranslations('navigation');
