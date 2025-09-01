@@ -1,6 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
 import { locales, defaultLocale } from './i18n/config';
 
+// Force Node.js runtime to avoid Edge compatibility issues
+export const runtime = 'nodejs';
+
 export default createMiddleware({
   locales,
   defaultLocale,

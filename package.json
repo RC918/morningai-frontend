@@ -26,6 +26,9 @@
     "url": "https://github.com/RC918/morningai-frontend/issues"
   },
   "homepage": "https://github.com/RC918/morningai-frontend#readme",
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
     "@tailwindcss/postcss": "^4.1.12",
