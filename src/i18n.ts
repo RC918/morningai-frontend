@@ -1,43 +1,36 @@
 // src/i18n.ts
 import {getRequestConfig} from 'next-intl/server';
 
-// 使用絕對路徑靜態導入所有訊息檔案
-import zhTWMessages from '@/i18n/messages/zh-TW.json';
-import zhCNMessages from '@/i18n/messages/zh-CN.json';
-import enMessages from '@/i18n/messages/en.json';
-
 const SUPPORTED = ['zh-TW', 'zh-CN', 'en'] as const;
 
-// 靜態映射，避免動態導入被打包器優化
-const messagesMap: Record<string, any> = {
-  'zh-TW': zhTWMessages,
-  'zh-CN': zhCNMessages,
-  'en': enMessages
+const messageLoaders: Record<string, () => Promise<any>> = {
+  'zh-TW': () => import('./i18n/messages/zh-TW.json'),
+  'zh-CN': () => import('./i18n/messages/zh-CN.json'),
+  'en': () => import('./i18n/messages/en.json')
 };
 
 export default getRequestConfig(async ({locale}) => {
   let validLocale: string = locale || 'zh-TW';
   if (!SUPPORTED.includes(validLocale as any)) validLocale = 'zh-TW';
 
-  const messages = messagesMap[validLocale];
-  if (!messages) throw new Error(`No messages found for locale: ${validLocale}`);
+  const loader = messageLoaders[validLocale];
+  if (!loader) throw new Error(`No message loader for locale: ${validLocale}`);
 
-  // 冒煙檢查——先**無條件**啟用（不要只在 production）
-  const expectMap: Record<string, string> = {
+  const messages = (await loader()).default;
+
+  // 冒煙檢查（請先保留，不要只在 prod）
+  const expect: Record<string, string> = {
     'zh-TW': '繁中 OK',
     'zh-CN': '简中 OK',
     'en': 'EN OK'
   };
-  if (messages?.LANG_CHECK !== expectMap[validLocale]) {
+  if (messages?.LANG_CHECK !== expect[validLocale]) {
     throw new Error(
       `Messages mismatch for ${validLocale}. Loaded: "${messages?.LANG_CHECK}". ` +
       `Check src/i18n/messages/${validLocale}.json (case-sensitive) & bundling.`
     );
   }
 
-  return {
-    locale: validLocale,
-    messages
-  };
+  return {locale: validLocale, messages};
 });
 
