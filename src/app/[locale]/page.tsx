@@ -1,4 +1,5 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
@@ -6,11 +7,18 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// SSG：明確產出三語頁面
+export function generateStaticParams() {
+  return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
+}
+
+export const dynamic = 'force-static';
+
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   
   // Enable static rendering
-  setRequestLocale(locale);
+  unstable_setRequestLocale(locale);
   
   const t = await getTranslations('home');
   const tStats = await getTranslations('stats');

@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 import { ThemeProvider } from '@/components/theme/theme-provider';
@@ -25,7 +26,7 @@ export default async function RootLayout({
   if (!locales.includes(locale as any)) notFound();
 
   // Enable static rendering
-  setRequestLocale(locale);
+  unstable_setRequestLocale(locale);
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -34,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <div className="min-h-screen bg-background font-sans antialiased">
               <Navigation />
