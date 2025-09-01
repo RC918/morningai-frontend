@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 
@@ -15,9 +14,6 @@ export function generateStaticParams() {
 
 export default async function I18nDemoPage({ params }: Props) {
   const { locale } = await params;
-  
-  // Enable static rendering
-  setRequestLocale(locale);
   
   const t = await getTranslations('home');
   const tNav = await getTranslations('navigation');

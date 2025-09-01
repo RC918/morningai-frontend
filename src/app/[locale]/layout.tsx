@@ -1,7 +1,7 @@
 // src/app/[locale]/layout.tsx
+import type { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 import { ThemeProvider } from '@/components/theme/theme-provider';
@@ -12,7 +12,7 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
-  return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
+  return locales.map((locale) => ({ locale }));
 }
 
 export const metadata: Metadata = { 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   params: Promise<{ locale: string }>;
 }
 
@@ -33,11 +33,10 @@ export default async function RootLayout({
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  // Enable static rendering
+  // 關鍵：最外層就設定請求語系
   setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  // 關鍵：用 getMessages() 取得「該語系」訊息
   const messages = await getMessages();
 
   return (

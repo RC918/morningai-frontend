@@ -1,4 +1,3 @@
-import { setRequestLocale } from 'next-intl/server';
 import AdvancedComponentsClient from './AdvancedComponentsClient';
 
 interface Props {
@@ -13,9 +12,6 @@ export function generateStaticParams() {
 
 export default async function AdvancedComponentsPage({ params }: Props) {
   const { locale } = await params;
-  
-  // Enable static rendering
-  setRequestLocale(locale);
 
   return <AdvancedComponentsClient />;
 }

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 
@@ -17,9 +16,6 @@ export function generateStaticParams() {
 export default async function ComponentsPage({ params }: Props) {
   const { locale } = await params;
   
-  // Enable static rendering
-  setRequestLocale(locale);
-
   const t = await getTranslations('components');
 
   return (
