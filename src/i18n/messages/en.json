@@ -1,0 +1,208 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "navigation": {
+    "home": "Home",
+    "components": "Components",
+    "documentation": "Documentation",
+    "about": "About",
+    "contact": "Contact",
+    "features": "Features",
+    "pricing": "Pricing"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "switchTheme": "Switch Theme"
+  },
+  "language": {
+    "switchLanguage": "Switch Language",
+    "currentLanguage": "Current Language"
+  },
+  "home": {
+    "title": "Morning AI Design System",
+    "subtitle": "Enterprise React Component Library",
+    "description": "Complete RWD + A11y + Design System Integration. Includes Button, Input, Navigation and 16+ responsive components.",
+    "viewComponents": "View Components",
+    "viewDocumentation": "View Documentation",
+    "hero": {
+      "title": "Build Better Products Faster",
+      "subtitle": "Enterprise-grade design system and component library",
+      "description": "Accelerate your development with our comprehensive design system. Built with accessibility, performance, and developer experience in mind.",
+      "cta": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose Morning AI",
+      "subtitle": "Everything you need to build modern applications",
+      "accessibility": {
+        "title": "Accessibility First",
+        "description": "WCAG 2.1 AA compliant components with full keyboard navigation and screen reader support."
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Mobile-first approach with breakpoints at 375px, 768px, and 1280px for perfect adaptation."
+      },
+      "performance": {
+        "title": "High Performance",
+        "description": "Optimized bundle size and runtime performance. First Load JS under 140KB."
+      },
+      "typescript": {
+        "title": "TypeScript Ready",
+        "description": "100% TypeScript support with comprehensive type definitions and IntelliSense."
+      },
+      "theming": {
+        "title": "Advanced Theming",
+        "description": "Light/Dark mode support with CSS custom properties and design tokens."
+      },
+      "developer": {
+        "title": "Developer Experience",
+        "description": "Excellent documentation, Storybook integration, and comprehensive testing."
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of developers building amazing products with Morning AI Design System.",
+      "button": "Start Building Now"
+    }
+  },
+  "components": {
+    "title": "Component Library",
+    "subtitle": "Morning AI Design System Core Components. Includes Button, Input, Navigation and 16+ responsive components.",
+    "basic": "Basic Components",
+    "advanced": "Advanced Components",
+    "button": {
+      "title": "Button Component",
+      "variants": "Variants",
+      "sizes": "Sizes", 
+      "states": "States",
+      "fullWidth": "Full Width"
+    },
+    "input": {
+      "title": "Input Component",
+      "basic": "Basic Input",
+      "withIcon": "With Icon Input",
+      "sizes": "Input Sizes",
+      "states": "Input States",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "nameHelper": "This is helper text",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+      "smallPlaceholder": "Small input",
+      "mediumPlaceholder": "Medium input", 
+      "largePlaceholder": "Large input",
+      "normalState": "Normal state",
+      "successState": "Success state",
+      "errorState": "Error state",
+      "loadingState": "Loading state",
+      "disabledState": "Disabled state"
+    },
+    "navigation": {
+      "title": "Navigation Component",
+      "description": "Responsive navigation with theme switcher and language selector"
+    },
+    "tabs": {
+      "title": "Tabs Component",
+      "tab1": "Tab 1",
+      "tab2": "Tab 2", 
+      "tab3": "Tab 3",
+      "content1": "Content for Tab 1",
+      "content2": "Content for Tab 2",
+      "content3": "Content for Tab 3"
+    },
+    "modal": {
+      "title": "Modal Component",
+      "openModal": "Open Modal",
+      "modalTitle": "Modal Title",
+      "modalContent": "This is the modal content. You can put any content here.",
+      "closeModal": "Close Modal"
+    },
+    "toast": {
+      "title": "Toast Component",
+      "showSuccess": "Show Success Toast",
+      "showError": "Show Error Toast",
+      "showWarning": "Show Warning Toast",
+      "showInfo": "Show Info Toast",
+      "successMessage": "Operation completed successfully!",
+      "errorMessage": "An error occurred. Please try again.",
+      "warningMessage": "Please check your input.",
+      "infoMessage": "This is an informational message."
+    },
+    "dropdown": {
+      "title": "Dropdown Component",
+      "selectOption": "Select an option",
+      "option1": "Option 1",
+      "option2": "Option 2",
+      "option3": "Option 3"
+    },
+    "tooltip": {
+      "title": "Tooltip Component",
+      "hoverMe": "Hover me",
+      "tooltipText": "This is a tooltip"
+    },
+    "table": {
+      "title": "Table Component",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "actions": "Actions",
+      "noData": "No data available"
+    },
+    "pagination": {
+      "title": "Pagination Component",
+      "page": "Page",
+      "of": "of",
+      "itemsPerPage": "items per page"
+    },
+    "card": {
+      "title": "Card Component",
+      "cardTitle": "Card Title",
+      "cardSubtitle": "Card Subtitle",
+      "cardContent": "This is the card content area where you can put any information.",
+      "action": "Action"
+    },
+    "badge": {
+      "title": "Badge Component",
+      "default": "Default",
+      "primary": "Primary",
+      "success": "Success",
+      "warning": "Warning",
+      "error": "Error"
+    },
+    "avatar": {
+      "title": "Avatar Component",
+      "user": "User"
+    },
+    "skeleton": {
+      "title": "Skeleton Component",
+      "loading": "Loading content..."
+    }
+  },
+  "stats": {
+    "coreComponents": "Core Components",
+    "componentStates": "Component States", 
+    "responsiveBreakpoints": "Responsive Breakpoints",
+    "typescript": "TypeScript"
+  },
+  "footer": {
+    "copyright": "© 2025 Morning AI. Built with Next.js 15 + Tailwind CSS."
+  }
+}
+

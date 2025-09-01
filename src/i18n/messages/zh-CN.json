@@ -1,0 +1,208 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "close": "关闭",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "navigation": {
+    "home": "首页",
+    "components": "组件库",
+    "documentation": "文档",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "features": "功能特色",
+    "pricing": "价格方案"
+  },
+  "theme": {
+    "light": "浅色",
+    "dark": "深色",
+    "system": "系统",
+    "switchTheme": "切换主题"
+  },
+  "language": {
+    "switchLanguage": "切换语言",
+    "currentLanguage": "当前语言"
+  },
+  "home": {
+    "title": "Morning AI 设计系统",
+    "subtitle": "企业级 React 组件库",
+    "description": "支持完整 RWD + A11y + 设计系统整合。包含 Button、Input、Navigation 等 16+ 响应式组件。",
+    "viewComponents": "查看组件库",
+    "viewDocumentation": "查看文档",
+    "hero": {
+      "title": "更快构建更好的产品",
+      "subtitle": "企业级设计系统与组件库",
+      "description": "使用我们全面的设计系统加速您的开发。专注于无障碍性、性能和开发者体验。",
+      "cta": "开始使用",
+      "learnMore": "了解更多"
+    },
+    "features": {
+      "title": "为什么选择 Morning AI",
+      "subtitle": "构建现代应用程序所需的一切",
+      "accessibility": {
+        "title": "无障碍优先",
+        "description": "符合 WCAG 2.1 AA 标准的组件，具备完整的键盘导航和屏幕阅读器支持。"
+      },
+      "responsive": {
+        "title": "响应式设计",
+        "description": "移动优先的设计方法，在 375px、768px 和 1280px 断点完美适配。"
+      },
+      "performance": {
+        "title": "高性能",
+        "description": "优化的打包大小和运行时性能。首次加载 JS 低于 140KB。"
+      },
+      "typescript": {
+        "title": "TypeScript 就绪",
+        "description": "100% TypeScript 支持，具备完整的类型定义和 IntelliSense。"
+      },
+      "theming": {
+        "title": "高级主题系统",
+        "description": "支持浅色/深色模式，使用 CSS 自定义属性和设计令牌。"
+      },
+      "developer": {
+        "title": "开发者体验",
+        "description": "优秀的文档、Storybook 整合和全面的测试。"
+      }
+    },
+    "cta": {
+      "title": "准备开始了吗？",
+      "description": "加入数千名开发者，使用 Morning AI 设计系统构建令人惊艳的产品。",
+      "button": "立即开始构建"
+    }
+  },
+  "components": {
+    "title": "组件库展示",
+    "subtitle": "Morning AI 设计系统核心组件。包含 Button、Input、Navigation 等 16+ 响应式组件。",
+    "basic": "基础组件",
+    "advanced": "高级组件",
+    "button": {
+      "title": "Button 组件",
+      "variants": "变体",
+      "sizes": "尺寸",
+      "states": "状态",
+      "fullWidth": "全宽按钮"
+    },
+    "input": {
+      "title": "Input 组件",
+      "basic": "基本输入框",
+      "withIcon": "带图标输入框",
+      "sizes": "输入框尺寸",
+      "states": "输入框状态",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "nameHelper": "这是说明文字",
+      "email": "电子邮箱",
+      "emailPlaceholder": "example@email.com",
+      "smallPlaceholder": "小型输入框",
+      "mediumPlaceholder": "中型输入框",
+      "largePlaceholder": "大型输入框",
+      "normalState": "正常状态",
+      "successState": "成功状态",
+      "errorState": "错误状态",
+      "loadingState": "加载中状态",
+      "disabledState": "禁用状态"
+    },
+    "navigation": {
+      "title": "Navigation 组件",
+      "description": "响应式导航，具备主题切换器和语言选择器"
+    },
+    "tabs": {
+      "title": "Tabs 组件",
+      "tab1": "标签 1",
+      "tab2": "标签 2",
+      "tab3": "标签 3",
+      "content1": "标签 1 的内容",
+      "content2": "标签 2 的内容",
+      "content3": "标签 3 的内容"
+    },
+    "modal": {
+      "title": "Modal 组件",
+      "openModal": "打开弹窗",
+      "modalTitle": "弹窗标题",
+      "modalContent": "这是弹窗内容。您可以在这里放置任何内容。",
+      "closeModal": "关闭弹窗"
+    },
+    "toast": {
+      "title": "Toast 组件",
+      "showSuccess": "显示成功提示",
+      "showError": "显示错误提示",
+      "showWarning": "显示警告提示",
+      "showInfo": "显示信息提示",
+      "successMessage": "操作成功完成！",
+      "errorMessage": "发生错误，请重试。",
+      "warningMessage": "请检查您的输入。",
+      "infoMessage": "这是一则信息消息。"
+    },
+    "dropdown": {
+      "title": "Dropdown 组件",
+      "selectOption": "选择选项",
+      "option1": "选项 1",
+      "option2": "选项 2",
+      "option3": "选项 3"
+    },
+    "tooltip": {
+      "title": "Tooltip 组件",
+      "hoverMe": "鼠标悬停",
+      "tooltipText": "这是工具提示"
+    },
+    "table": {
+      "title": "Table 组件",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "role": "角色",
+      "status": "状态",
+      "actions": "操作",
+      "noData": "无可用数据"
+    },
+    "pagination": {
+      "title": "Pagination 组件",
+      "page": "第",
+      "of": "页，共",
+      "itemsPerPage": "项目每页"
+    },
+    "card": {
+      "title": "Card 组件",
+      "cardTitle": "卡片标题",
+      "cardSubtitle": "卡片副标题",
+      "cardContent": "这是卡片内容区域，您可以在此放置任何信息。",
+      "action": "操作"
+    },
+    "badge": {
+      "title": "Badge 组件",
+      "default": "默认",
+      "primary": "主要",
+      "success": "成功",
+      "warning": "警告",
+      "error": "错误"
+    },
+    "avatar": {
+      "title": "Avatar 组件",
+      "user": "用户"
+    },
+    "skeleton": {
+      "title": "Skeleton 组件",
+      "loading": "加载内容中..."
+    }
+  },
+  "stats": {
+    "coreComponents": "核心组件",
+    "componentStates": "组件状态",
+    "responsiveBreakpoints": "响应式断点",
+    "typescript": "TypeScript"
+  },
+  "footer": {
+    "copyright": "© 2025 Morning AI. 使用 Next.js 15 + Tailwind CSS 构建。"
+  }
+}
+
