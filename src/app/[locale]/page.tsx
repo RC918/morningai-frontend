@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
@@ -18,7 +18,7 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   
   const t = await getTranslations('home');
   const tStats = await getTranslations('stats');

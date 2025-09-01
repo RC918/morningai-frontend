@@ -205,7 +205,7 @@ export default function AdvancedComponentsClient() {
           <Avatar size="sm" src="/api/placeholder/32/32" alt="Small Avatar" />
           <Avatar size="md" src="/api/placeholder/40/40" alt="Medium Avatar" />
           <Avatar size="lg" src="/api/placeholder/48/48" alt="Large Avatar" />
-          <Avatar size="xl">JD</Avatar>
+          <Avatar size="xl" fallback="JD" alt="Large Avatar with fallback" />
         </div>
       </section>
 
@@ -217,8 +217,8 @@ export default function AdvancedComponentsClient() {
           <div className="flex items-center gap-4">
             <SkeletonAvatar />
             <div className="space-y-2">
-              <SkeletonText width="200px" />
-              <SkeletonText width="150px" />
+              <SkeletonText lines={1} className="w-48" />
+              <SkeletonText lines={1} className="w-36" />
             </div>
           </div>
         </div>
