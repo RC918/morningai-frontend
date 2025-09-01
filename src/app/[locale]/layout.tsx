@@ -39,7 +39,7 @@ export default async function RootLayout({
   
   // 調試日誌
   console.log('SSG locale:', locale);
-  console.log('messages sample=', messages.home?.title);
+  console.log('messages sample=', messages.LANG_CHECK);
 
   return (
     <html lang={locale} suppressHydrationWarning>
