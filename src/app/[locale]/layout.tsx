@@ -38,6 +38,10 @@ export default async function RootLayout({
 
   // 關鍵：用 getMessages() 取得「該語系」訊息
   const messages = await getMessages();
+  
+  // 調試日誌
+  console.log('layout locale=', locale);
+  console.log('messages sample=', messages.home?.title);
 
   return (
     <html lang={locale} suppressHydrationWarning>
