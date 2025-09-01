@@ -12,35 +12,33 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
 }
 
 export const metadata: Metadata = { 
   title: 'Morning AI Design System' 
 };
 
-interface RootLayoutProps {
-  children: ReactNode;
-  params: Promise<{ locale: string }>;
-}
-
 export default async function RootLayout({
   children,
-  params
-}: RootLayoutProps) {
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  // 關鍵：最外層就設定請求語系
+  // ✅ 一定要最先呼叫，建立正確的 locale context 給下游使用
   setRequestLocale(locale);
 
-  // 關鍵：用 getMessages() 取得「該語系」訊息
+  // ✅ 之後再讀取 messages（會使用上面設好的 locale）
   const messages = await getMessages();
   
   // 調試日誌
-  console.log('layout locale=', locale);
+  console.log('SSG locale:', locale);
   console.log('messages sample=', messages.home?.title);
 
   return (

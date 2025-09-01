@@ -1,16 +1,16 @@
 import AdvancedComponentsClient from './AdvancedComponentsClient';
 
-interface Props {
-  params: Promise<{ locale: string }>;
-}
-
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
 }
 
-export default async function AdvancedComponentsPage({ params }: Props) {
+export default async function AdvancedComponentsPage({ 
+  params 
+}: { 
+  params: Promise<{ locale: string }> 
+}) {
   const { locale } = await params;
 
   return <AdvancedComponentsClient />;
