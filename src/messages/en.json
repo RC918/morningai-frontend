@@ -1,0 +1,14 @@
+{
+  "LANG_CHECK": "EN OK",
+  "common": {
+    "title": "Morning Design System",
+    "description": "Modern design system and component library"
+  },
+  "navigation": {
+    "home": "Home",
+    "components": "Components",
+    "advanced": "Advanced Components",
+    "docs": "Documentation"
+  }
+}
+
