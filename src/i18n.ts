@@ -1,36 +1,14 @@
-// src/i18n.ts
 import {getRequestConfig} from 'next-intl/server';
 
-const SUPPORTED = ['zh-TW', 'zh-CN', 'en'] as const;
-
-const messageLoaders: Record<string, () => Promise<any>> = {
-  'zh-TW': () => import('./i18n/messages/zh-TW.json'),
-  'zh-CN': () => import('./i18n/messages/zh-CN.json'),
-  'en': () => import('./i18n/messages/en.json')
-};
+const TABLE = {
+  'zh-TW': {LANG_CHECK: '繁中 OK', heroTitle: '晨間設計系統'},
+  'zh-CN': {LANG_CHECK: '简中 OK', heroTitle: '晨间设计系统'},
+  'en': {LANG_CHECK: 'EN OK',    heroTitle: 'Morning Design System'}
+} as const;
 
 export default getRequestConfig(async ({locale}) => {
   let validLocale: string = locale || 'zh-TW';
-  if (!SUPPORTED.includes(validLocale as any)) validLocale = 'zh-TW';
-
-  const loader = messageLoaders[validLocale];
-  if (!loader) throw new Error(`No message loader for locale: ${validLocale}`);
-
-  const messages = (await loader()).default;
-
-  // 冒煙檢查（請先保留，不要只在 prod）
-  const expect: Record<string, string> = {
-    'zh-TW': '繁中 OK',
-    'zh-CN': '简中 OK',
-    'en': 'EN OK'
-  };
-  if (messages?.LANG_CHECK !== expect[validLocale]) {
-    throw new Error(
-      `Messages mismatch for ${validLocale}. Loaded: "${messages?.LANG_CHECK}". ` +
-      `Check src/i18n/messages/${validLocale}.json (case-sensitive) & bundling.`
-    );
-  }
-
-  return {locale: validLocale, messages};
+  if (!Object.keys(TABLE).includes(validLocale)) validLocale = 'zh-TW';
+  return {locale: validLocale, messages: TABLE[validLocale as keyof typeof TABLE]};
 });
 
