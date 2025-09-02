@@ -227,9 +227,12 @@
     "contactSales": "聯絡銷售",
     "viewAllFeatures": "查看所有功能",
     "viewAllPricing": "查看所有定價",
+    "viewPricing": "查看定價",
     "contactUs": "聯絡我們"
   },
   "features": {
+    "title": "強大功能，無限可能",
+    "subtitle": "探索 Morning AI 的完整功能套件，從智能設計系統到企業級解決方案，我們提供您成功所需的一切工具。",
     "hero": {
       "title": "強大功能，無限可能",
       "description": "探索 Morning AI 的完整功能套件，從智能設計系統到企業級解決方案，我們提供您成功所需的一切工具。"
@@ -713,10 +716,28 @@
   },
   "language": {
     "current": "繁體中文",
-    "switch": "切換語言"
+    "switch": "切換語言",
+    "switchLanguage": "切換語言"
   },
   "contact": {
+    "hero": {
+      "title": "聯絡我們",
+      "description": "有任何問題或需要協助嗎？我們的團隊隨時為您提供支援。"
+    },
+    "form": {
+      "title": "發送訊息",
+      "name": "姓名",
+      "namePlaceholder": "請輸入您的姓名",
+      "email": "電子郵件",
+      "emailPlaceholder": "請輸入您的電子郵件",
+      "subject": "主旨",
+      "subjectPlaceholder": "請選擇主旨",
+      "message": "訊息內容",
+      "messagePlaceholder": "請詳細描述您的問題或需求",
+      "submit": "發送訊息"
+    },
     "info": {
+      "title": "聯絡資訊",
       "email": {
         "title": "電子郵件",
         "value": "hello@morningai.com"
@@ -729,6 +750,13 @@
         "title": "地址",
         "value": "台北市信義區信義路五段7號"
       }
+    },
+    "hours": {
+      "title": "營業時間",
+      "weekdays": "週一至週五",
+      "weekdaysTime": "09:00 - 18:00",
+      "weekend": "週末",
+      "weekendTime": "休息"
     }
   }
 }
