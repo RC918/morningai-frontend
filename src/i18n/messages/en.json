@@ -204,6 +204,19 @@
   },
   "footer": {
     "copyright": "© 2025 Morning AI. Built with Next.js 15 + Tailwind CSS."
+  },
+  "seo": {
+    "siteName": "Morning AI - Intelligent SaaS Platform",
+    "defaultTitle": "Morning AI - Intelligent SaaS Platform",
+    "defaultDescription": "Morning AI provides advanced artificial intelligence solutions to help businesses improve efficiency and innovation. Experience our intelligent design system and component library.",
+    "defaultKeywords": "Morning AI, artificial intelligence, SaaS, design system, component library, intelligent platform, AI solutions"
+  },
+  "cta": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "tryDemo": "Try Demo",
+    "signUp": "Sign Up",
+    "contactSales": "Contact Sales"
   }
 }
 

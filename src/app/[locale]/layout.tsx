@@ -4,6 +4,8 @@ import { unstable_setRequestLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Navigation } from '@/components/ui/Navigation';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { MESSAGES } from '@/i18n/messages';
@@ -41,17 +43,25 @@ export default async function RootLayout({
   // 調試日誌 - 煙霧測試
   console.log('SSG locale:', locale, 'messages sample=', messages?.LANG_CHECK);
   
+  // 構建當前路徑 (用於 SEO)
+  const pathname = `/${locale}`;
+  
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <SEOHead locale={locale} pathname={pathname} />
+      </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>
-            <div className="relative flex min-h-screen flex-col">
-              <Navigation />
-              <main className="flex-1">{children}</main>
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <AnalyticsProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ThemeProvider>
+              <div className="relative flex min-h-screen flex-col">
+                <Navigation />
+                <main className="flex-1">{children}</main>
+              </div>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </AnalyticsProvider>
       </body>
     </html>
   );

@@ -204,6 +204,19 @@
   },
   "footer": {
     "copyright": "© 2025 Morning AI. 使用 Next.js 15 + Tailwind CSS 建構。"
+  },
+  "seo": {
+    "siteName": "Morning AI - 智能 SaaS 平台",
+    "defaultTitle": "Morning AI - 智能 SaaS 平台",
+    "defaultDescription": "Morning AI 提供先進的人工智能解決方案，幫助企業提升效率和創新能力。體驗我們的智能設計系統和元件庫。",
+    "defaultKeywords": "Morning AI, 人工智能, SaaS, 設計系統, 元件庫, 智能平台, AI 解決方案"
+  },
+  "cta": {
+    "getStarted": "立即開始",
+    "learnMore": "了解更多",
+    "tryDemo": "試用示範",
+    "signUp": "註冊帳號",
+    "contactSales": "聯絡銷售"
   }
 }
 
