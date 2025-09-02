@@ -1,0 +1,55 @@
+{
+  "service": "morningai-frontend",
+  "version": "v2.1.0-phase2-d4-marketing",
+  "commit": "7c07513",
+  "buildId": "7c07513",
+  "tag": "v2.1.0-phase2-d4-marketing",
+  "locales": ["zh-TW","zh-CN","en"],
+  "pages": 33,
+  "pagesByLocale": {
+    "zh-TW": 11,
+    "zh-CN": 11,
+    "en": 11
+  },
+  "marketingPages": [
+    "/",
+    "/features",
+    "/pricing",
+    "/faq", 
+    "/contact",
+    "/demo",
+    "/privacy",
+    "/terms"
+  ],
+  "generatedAt": "2025-09-02T08:10:00Z",
+  "status": "healthy",
+  "stage": "D+4 Marketing Site Complete",
+  "features": {
+    "i18n": true,
+    "ssg": true,
+    "htmlLang": true,
+    "e2eTests": true,
+    "unitTests": true,
+    "marketing": true,
+    "seo": true,
+    "analytics": true,
+    "ogImages": true
+  },
+  "analytics": {
+    "ga4": true,
+    "mixpanel": true,
+    "events": ["cta_click", "demo_interact", "lang_switch", "signup_click"]
+  },
+  "seo": {
+    "hreflang": true,
+    "canonical": true,
+    "sitemap": true,
+    "ogCards": true
+  },
+  "tech": {
+    "nextVersion": "14.2.32",
+    "nextIntlVersion": "3.22.0",
+    "nodeVersion": "20.x"
+  }
+}
+
