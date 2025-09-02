@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
-import { unstable_setRequestLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Navigation } from '@/components/ui/Navigation';
@@ -8,7 +7,17 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { MESSAGES } from '@/i18n/messages';
+
+// 靜態import map - 避免動態載入失敗
+import zhTW from '@/i18n/messages/zh-TW.json';
+import zhCN from '@/i18n/messages/zh-CN.json';
+import en from '@/i18n/messages/en.json';
+
+const MAP = {
+  'zh-TW': zhTW,
+  'zh-CN': zhCN,
+  'en': en
+} as const;
 
 const locales = ['zh-TW', 'zh-CN', 'en'] as const;
 
@@ -22,7 +31,7 @@ export const metadata: Metadata = {
   title: 'Morning AI Design System' 
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params,
 }: {
@@ -34,14 +43,13 @@ export default async function RootLayout({
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  // ✅ next-intl v3 使用 unstable_setRequestLocale
-  unstable_setRequestLocale(locale);
-
-  // ✅ 使用明確映射的訊息
-  const messages = (MESSAGES as any)[locale];
+  // 使用靜態import map載入messages
+  const messages = MAP[locale as keyof typeof MAP];
   
-  // 調試日誌 - 煙霧測試
-  console.log('SSG locale:', locale, 'messages sample=', messages?.LANG_CHECK);
+  // 開發環境調試日誌
+  if (process.env.NODE_ENV === 'development') {
+    console.log('SSG locale:', locale, 'messages loaded:', !!messages);
+  }
   
   // 構建當前路徑 (用於 SEO)
   const pathname = `/${locale}`;

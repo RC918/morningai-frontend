@@ -1,45 +1,29 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { CTAButton } from '@/components/ui/CTAButton';
-import { MESSAGES } from '@/i18n/messages';
 
-const locales = ['zh-TW', 'zh-CN', 'en'] as const;
-
-type Props = {
-  params: { locale: string };
-};
-
-export const dynamic = 'force-static';
-
-export function generateStaticParams() {
-  return [{ locale: 'zh-TW' }, { locale: 'zh-CN' }, { locale: 'en' }];
-}
-
-export default async function HomePage({ params }: Props) {
-  const { locale } = params;
-  
-  // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
-
-  // Enable static rendering - v3 使用 unstable_setRequestLocale
-  unstable_setRequestLocale(locale);
-  
-  const t = await getTranslations();
-  const langCheck = (MESSAGES as any)[locale]?.LANG_CHECK ?? 'MISSING';
+export default function HomePage() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const t = useTranslations();
 
   return (
     <div>
-      {/* 煙霧測試區域 - 開發用 */}
-      <div className="bg-muted p-4 rounded-lg max-w-md mx-auto mb-8 container">
-        <p id="lang-check" className="font-mono text-sm font-bold">
-          LANG_CHECK: {langCheck}
-        </p>
-        <p id="locale" className="font-mono text-sm text-muted-foreground">
-          Locale: {locale}
-        </p>
-      </div>
+      {/* 開發環境調試區域 */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="bg-muted p-4 rounded-lg max-w-md mx-auto mb-8 container">
+          <p id="lang-check" className="font-mono text-sm font-bold">
+            LANG_CHECK: {t('LANG_CHECK')}
+          </p>
+          <p id="locale" className="font-mono text-sm text-muted-foreground">
+            Locale: {locale}
+          </p>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">

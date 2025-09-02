@@ -1,13 +1,9 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { CTAButton } from '@/components/ui/CTAButton';
 
-interface PricingPageProps {
-  params: { locale: string };
-}
-
-export default function PricingPage({ params }: PricingPageProps) {
-  unstable_setRequestLocale(params.locale);
+export default function PricingPage() {
   const t = useTranslations();
 
   const plans = [
@@ -23,8 +19,8 @@ export default function PricingPage({ params }: PricingPageProps) {
         t('pricing.starter.feature3'),
         t('pricing.starter.feature4')
       ],
-      popular: false,
-      ctaText: t('pricing.starter.cta')
+      cta: t('pricing.starter.cta'),
+      popular: false
     },
     {
       id: 'professional',
@@ -37,11 +33,10 @@ export default function PricingPage({ params }: PricingPageProps) {
         t('pricing.professional.feature2'),
         t('pricing.professional.feature3'),
         t('pricing.professional.feature4'),
-        t('pricing.professional.feature5'),
-        t('pricing.professional.feature6')
+        t('pricing.professional.feature5')
       ],
-      popular: true,
-      ctaText: t('pricing.professional.cta')
+      cta: t('pricing.professional.cta'),
+      popular: true
     },
     {
       id: 'enterprise',
@@ -55,11 +50,10 @@ export default function PricingPage({ params }: PricingPageProps) {
         t('pricing.enterprise.feature3'),
         t('pricing.enterprise.feature4'),
         t('pricing.enterprise.feature5'),
-        t('pricing.enterprise.feature6'),
-        t('pricing.enterprise.feature7')
+        t('pricing.enterprise.feature6')
       ],
-      popular: false,
-      ctaText: t('pricing.enterprise.cta')
+      cta: t('pricing.enterprise.cta'),
+      popular: false
     }
   ];
 
@@ -76,81 +70,59 @@ export default function PricingPage({ params }: PricingPageProps) {
       </div>
 
       {/* Pricing Cards */}
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         {plans.map((plan) => (
           <div 
             key={plan.id} 
             className={`relative bg-card rounded-lg p-8 border ${
-              plan.popular ? 'border-primary shadow-lg scale-105' : ''
+              plan.popular ? 'border-primary border-2' : ''
             }`}
           >
             {plan.popular && (
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                  {t('pricing.popular')}
-                </span>
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
+                {t('pricing.popular')}
               </div>
             )}
             
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <div className="mb-4">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-muted-foreground">/{plan.period}</span>
-              </div>
-              <p className="text-muted-foreground">{plan.description}</p>
+              <h3 className="text-2xl font-semibold mb-2">{plan.name}</h3>
+              <div className="text-4xl font-bold mb-2">{plan.price}</div>
+              <div className="text-muted-foreground">{plan.period}</div>
             </div>
-
+            
+            <p className="text-muted-foreground mb-6 text-center">{plan.description}</p>
+            
             <ul className="space-y-3 mb-8">
               {plan.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-green-500 mr-3 mt-1">✓</span>
+                  <span className="text-green-500 mr-2">✓</span>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
-
+            
             <CTAButton 
-              variant={plan.popular ? "primary" : "outline"}
-              size="lg"
+              variant={plan.popular ? "primary" : "outline"} 
+              size="lg" 
               className="w-full"
               ctaText={`pricing_${plan.id}_cta`}
             >
-              {plan.ctaText}
+              {plan.cta}
             </CTAButton>
           </div>
         ))}
       </div>
 
       {/* FAQ Section */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold mb-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-4">
           {t('pricing.faq.title')}
         </h2>
-        <div className="max-w-3xl mx-auto space-y-6">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="text-left bg-card rounded-lg p-6 border">
-              <h4 className="font-semibold mb-2">
-                {t(`pricing.faq.question${i}`)}
-              </h4>
-              <p className="text-muted-foreground">
-                {t(`pricing.faq.answer${i}`)}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Contact Sales CTA */}
-      <div className="text-center bg-primary/5 rounded-lg p-12">
-        <h2 className="text-3xl font-bold mb-4">
-          {t('pricing.contact.title')}
-        </h2>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          {t('pricing.contact.description')}
+        <p className="text-xl text-muted-foreground mb-8">
+          {t('pricing.faq.description')}
         </p>
         <CTAButton 
-          variant="primary" 
+          variant="outline" 
           size="lg"
           ctaText="pricing_contact_sales"
         >
@@ -160,4 +132,3 @@ export default function PricingPage({ params }: PricingPageProps) {
     </div>
   );
 }
-

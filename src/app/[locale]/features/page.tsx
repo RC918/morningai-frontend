@@ -1,13 +1,9 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { CTAButton } from '@/components/ui/CTAButton';
 
-interface FeaturesPageProps {
-  params: { locale: string };
-}
-
-export default function FeaturesPage({ params }: FeaturesPageProps) {
-  unstable_setRequestLocale(params.locale);
+export default function FeaturesPage() {
   const t = useTranslations();
 
   const features = [
