@@ -215,6 +215,10 @@
     "defaultKeywords": "Morning AI, 人工智能, SaaS, 设计系统, 组件库, 智能平台, AI 解决方案"
   },
   "cta": {
+    "readyToStart": {
+      "title": "准备开始了吗？",
+      "description": "立即开始使用 Morning AI，体验智能化开发的全新境界。"
+    },
     "getStarted": "立即开始",
     "learnMore": "了解更多",
     "tryDemo": "试用演示",
@@ -225,6 +229,18 @@
     "hero": {
       "title": "强大功能，无限可能",
       "description": "探索 Morning AI 的完整功能套件，从智能设计系统到企业级解决方案，我们提供您成功所需的一切工具。"
+    },
+    "aiDesign": {
+      "title": "AI 智能设计",
+      "description": "运用最先进的人工智能技术，自动化您的设计工作流程，提升创作效率。"
+    },
+    "componentLibrary": {
+      "title": "组件库系统",
+      "description": "完整的 UI 组件库，每个组件都经过精心设计，支持响应式布局。"
+    },
+    "workflow": {
+      "title": "开发流程",
+      "description": "优化的开发工作流程，从设计到部署的一站式解决方案。"
     },
     "aiPowered": {
       "title": "AI 驱动的智能系统",
@@ -265,6 +281,7 @@
       "description": "从个人开发者到大型企业，我们提供灵活的定价方案，满足不同规模的需求。"
     },
     "free": {
+      "name": "免费方案",
       "title": "免费方案",
       "price": "免费",
       "description": "适合个人开发者和小型项目",
@@ -274,6 +291,7 @@
       "feature4": "最多 3 个项目"
     },
     "pro": {
+      "name": "专业方案",
       "title": "专业方案",
       "price": "¥ 99",
       "period": "每月",
@@ -285,6 +303,7 @@
       "feature5": "自定义主题与品牌"
     },
     "enterprise": {
+      "name": "企业方案",
       "title": "企业方案",
       "price": "定制化",
       "description": "适合大型企业和组织",

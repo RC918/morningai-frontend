@@ -215,6 +215,10 @@
     "defaultKeywords": "Morning AI, 人工智能, SaaS, 設計系統, 元件庫, 智能平台, AI 解決方案"
   },
   "cta": {
+    "readyToStart": {
+      "title": "準備開始了嗎？",
+      "description": "立即開始使用 Morning AI，體驗智能化開發的全新境界。"
+    },
     "getStarted": "立即開始",
     "learnMore": "了解更多",
     "tryDemo": "試用示範",
@@ -225,6 +229,18 @@
     "hero": {
       "title": "強大功能，無限可能",
       "description": "探索 Morning AI 的完整功能套件，從智能設計系統到企業級解決方案，我們提供您成功所需的一切工具。"
+    },
+    "aiDesign": {
+      "title": "AI 智能設計",
+      "description": "運用最先進的人工智能技術，自動化您的設計工作流程，提升創作效率。"
+    },
+    "componentLibrary": {
+      "title": "元件庫系統",
+      "description": "完整的 UI 元件庫，每個元件都經過精心設計，支援響應式佈局。"
+    },
+    "workflow": {
+      "title": "開發流程",
+      "description": "優化的開發工作流程，從設計到部署的一站式解決方案。"
     },
     "aiPowered": {
       "title": "AI 驅動的智能系統",
@@ -265,6 +281,7 @@
       "description": "從個人開發者到大型企業，我們提供靈活的定價方案，滿足不同規模的需求。"
     },
     "free": {
+      "name": "免費方案",
       "title": "免費方案",
       "price": "免費",
       "description": "適合個人開發者和小型專案",
@@ -274,6 +291,7 @@
       "feature4": "最多 3 個專案"
     },
     "pro": {
+      "name": "專業方案",
       "title": "專業方案",
       "price": "NT$ 990",
       "period": "每月",
@@ -285,6 +303,7 @@
       "feature5": "自訂主題與品牌"
     },
     "enterprise": {
+      "name": "企業方案",
       "title": "企業方案",
       "price": "客製化",
       "description": "適合大型企業和組織",

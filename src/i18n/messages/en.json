@@ -215,6 +215,10 @@
     "defaultKeywords": "Morning AI, artificial intelligence, SaaS, design system, component library, intelligent platform, AI solutions"
   },
   "cta": {
+    "readyToStart": {
+      "title": "Ready to Get Started?",
+      "description": "Start using Morning AI now and experience the new era of intelligent development."
+    },
     "getStarted": "Get Started",
     "learnMore": "Learn More",
     "tryDemo": "Try Demo",
@@ -225,6 +229,18 @@
     "hero": {
       "title": "Powerful Features, Unlimited Possibilities",
       "description": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions. We provide all the tools you need for success."
+    },
+    "aiDesign": {
+      "title": "AI Smart Design",
+      "description": "Leverage cutting-edge artificial intelligence technology to automate your design workflow and boost creative efficiency."
+    },
+    "componentLibrary": {
+      "title": "Component Library System",
+      "description": "Complete UI component library with each component carefully designed to support responsive layouts."
+    },
+    "workflow": {
+      "title": "Development Workflow",
+      "description": "Optimized development workflow providing one-stop solution from design to deployment."
     },
     "aiPowered": {
       "title": "AI-Powered Intelligent System",
@@ -265,6 +281,7 @@
       "description": "From individual developers to large enterprises, we offer flexible pricing plans to meet different scale requirements."
     },
     "free": {
+      "name": "Free Plan",
       "title": "Free Plan",
       "price": "Free",
       "description": "Perfect for individual developers and small projects",
@@ -274,6 +291,7 @@
       "feature4": "Up to 3 projects"
     },
     "pro": {
+      "name": "Professional Plan",
       "title": "Professional Plan",
       "price": "$19",
       "period": "per month",
@@ -285,6 +303,7 @@
       "feature5": "Custom themes and branding"
     },
     "enterprise": {
+      "name": "Enterprise Plan",
       "title": "Enterprise Plan",
       "price": "Custom",
       "description": "Perfect for large enterprises and organizations",
