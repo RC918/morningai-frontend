@@ -1,17 +1,20 @@
 {
-  "timestamp": "2025-09-02T07:18:36.678Z",
+  "timestamp": "2025-09-02T12:10:54.352Z",
   "results": {
-    "zh-TW": {
-      "htmlLang": "zh-TW",
-      "langCheck": "LANG_CHECK: 繁中 OK",
-      "localeDisplay": "Locale: zh-TW",
+    "zh-CN": {
       "statusCode": 200,
       "hasTitle": true
     },
-    "zh-CN": {
-      "htmlLang": "zh-CN",
-      "langCheck": "LANG_CHECK: 简中 OK",
-      "localeDisplay": "Locale: zh-CN"
+    "en": {
+      "htmlLang": "en",
+      "langCheck": "LANG_CHECK: EN OK",
+      "localeDisplay": "Locale: en",
+      "statusCode": 200,
+      "hasTitle": true
     }
+  },
+  "navigation": {
+    "zh-TW_to_zh-CN": "success",
+    "zh-CN_to_en": "success"
   }
 }

@@ -1,0 +1,25 @@
+D+4 Marketing Site Build Summary
+Generated Pages: 42
+Build Time: ~30 seconds
+SSG Status: All marketing pages successfully generated
+
+Page Structure:
+- Root pages: 6 (/, /_not-found, /api/health, /api/version, /healthcheck.json, /sitemap.xml)
+- Locale pages: 36 (12 pages × 3 locales)
+
+Marketing Pages per Locale:
+- / (homepage)
+- /features
+- /pricing  
+- /faq
+- /contact
+- /demo
+- /privacy
+- /terms
+- /components
+- /components/advanced
+- /i18n-demo
+
+Locales: zh-TW, zh-CN, en
+Build Status: SUCCESS with warnings (missing translation keys)
+
