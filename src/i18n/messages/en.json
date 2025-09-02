@@ -284,6 +284,17 @@
       "description": "From individual developers to large enterprises, we offer flexible pricing plans to meet different scale requirements."
     },
     "popular": "Most Popular",
+    "starter": {
+      "name": "Starter Plan",
+      "price": "Free",
+      "period": "forever",
+      "description": "Perfect for individual developers and small projects",
+      "feature1": "Basic UI component library",
+      "feature2": "Community technical support",
+      "feature3": "Basic documentation access",
+      "feature4": "Up to 3 projects",
+      "cta": "Get Started"
+    },
     "free": {
       "name": "Free Plan",
       "title": "Free Plan",
@@ -293,6 +304,18 @@
       "feature2": "Community technical support",
       "feature3": "Basic documentation access",
       "feature4": "Up to 3 projects"
+    },
+    "professional": {
+      "name": "Professional Plan",
+      "price": "$19",
+      "period": "per month",
+      "description": "Perfect for professional developers and growing teams",
+      "feature1": "Complete UI component library",
+      "feature2": "Advanced design system",
+      "feature3": "Priority technical support",
+      "feature4": "Unlimited projects",
+      "feature5": "Custom themes and branding",
+      "cta": "Get Started"
     },
     "pro": {
       "name": "Professional Plan",
@@ -310,12 +333,19 @@
       "name": "Enterprise Plan",
       "title": "Enterprise Plan",
       "price": "Custom",
+      "period": "contact sales",
       "description": "Perfect for large enterprises and organizations",
       "feature1": "All professional features",
       "feature2": "Dedicated customer success manager",
       "feature3": "SLA service guarantee",
       "feature4": "Custom development services",
-      "feature5": "Enterprise-grade security and compliance"
+      "feature5": "Enterprise-grade security and compliance",
+      "feature6": "White-label solutions",
+      "cta": "Contact Sales"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Find the answers you need, or contact our support team."
     },
     "cta": {
       "title": "Ready to Get Started?",

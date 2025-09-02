@@ -284,6 +284,17 @@
       "description": "从个人开发者到大型企业，我们提供灵活的定价方案，满足不同规模的需求。"
     },
     "popular": "最受欢迎",
+    "starter": {
+      "name": "入门方案",
+      "price": "免费",
+      "period": "永久免费",
+      "description": "适合个人开发者和小型项目",
+      "feature1": "基础 UI 组件库",
+      "feature2": "社区技术支持",
+      "feature3": "基本文档访问",
+      "feature4": "最多 3 个项目",
+      "cta": "立即开始"
+    },
     "free": {
       "name": "免费方案",
       "title": "免费方案",
@@ -293,6 +304,18 @@
       "feature2": "社区技术支持",
       "feature3": "基本文档访问",
       "feature4": "最多 3 个项目"
+    },
+    "professional": {
+      "name": "专业方案",
+      "price": "¥ 99",
+      "period": "每月",
+      "description": "适合专业开发者和成长中的团队",
+      "feature1": "完整 UI 组件库",
+      "feature2": "进阶设计系统",
+      "feature3": "优先技术支持",
+      "feature4": "无限项目数量",
+      "feature5": "自定义主题与品牌",
+      "cta": "立即开始"
     },
     "pro": {
       "name": "专业方案",
@@ -310,12 +333,19 @@
       "name": "企业方案",
       "title": "企业方案",
       "price": "定制化",
+      "period": "联系销售",
       "description": "适合大型企业和组织",
       "feature1": "所有专业功能",
       "feature2": "专属客户成功经理",
       "feature3": "SLA 服务保证",
       "feature4": "定制化开发服务",
-      "feature5": "企业级安全与合规"
+      "feature5": "企业级安全与合规",
+      "feature6": "白标解决方案",
+      "cta": "联系销售"
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "找到您需要的答案，或联系我们的支持团队。"
     },
     "cta": {
       "title": "准备开始了吗？",

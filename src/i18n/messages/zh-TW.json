@@ -284,6 +284,17 @@
       "description": "從個人開發者到大型企業，我們提供靈活的定價方案，滿足不同規模的需求。"
     },
     "popular": "最受歡迎",
+    "starter": {
+      "name": "入門方案",
+      "price": "免費",
+      "period": "永久免費",
+      "description": "適合個人開發者和小型專案",
+      "feature1": "基礎 UI 元件庫",
+      "feature2": "社群技術支援",
+      "feature3": "基本文檔存取",
+      "feature4": "最多 3 個專案",
+      "cta": "立即開始"
+    },
     "free": {
       "name": "免費方案",
       "title": "免費方案",
@@ -293,6 +304,18 @@
       "feature2": "社群技術支援",
       "feature3": "基本文檔存取",
       "feature4": "最多 3 個專案"
+    },
+    "professional": {
+      "name": "專業方案",
+      "price": "NT$ 990",
+      "period": "每月",
+      "description": "適合專業開發者和成長中的團隊",
+      "feature1": "完整 UI 元件庫",
+      "feature2": "進階設計系統",
+      "feature3": "優先技術支援",
+      "feature4": "無限專案數量",
+      "feature5": "自訂主題與品牌",
+      "cta": "立即開始"
     },
     "pro": {
       "name": "專業方案",
@@ -310,12 +333,19 @@
       "name": "企業方案",
       "title": "企業方案",
       "price": "客製化",
+      "period": "聯絡銷售",
       "description": "適合大型企業和組織",
       "feature1": "所有專業功能",
       "feature2": "專屬客戶成功經理",
       "feature3": "SLA 服務保證",
       "feature4": "客製化開發服務",
-      "feature5": "企業級安全與合規"
+      "feature5": "企業級安全與合規",
+      "feature6": "白標解決方案",
+      "cta": "聯絡銷售"
+    },
+    "faq": {
+      "title": "常見問題",
+      "description": "找到您需要的答案，或聯絡我們的支援團隊。"
     },
     "cta": {
       "title": "準備開始了嗎？",
