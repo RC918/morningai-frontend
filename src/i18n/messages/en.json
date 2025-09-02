@@ -1,6 +1,8 @@
 {
   "LANG_CHECK": "EN OK",
   "common": {
+    "title": "Powerful Features, Unlimited Possibilities",
+    "description": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions, we provide all the tools you need for success.",
     "loading": "Loading...",
     "error": "Error",
     "success": "Success",

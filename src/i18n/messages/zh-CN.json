@@ -1,6 +1,8 @@
 {
   "LANG_CHECK": "简中 OK",
   "common": {
+    "title": "强大功能，无限可能",
+    "description": "探索 Morning AI 的完整功能套件，从智能设计系统到企业级解决方案，我们提供您成功所需的一切工具。",
     "loading": "加载中...",
     "error": "错误",
     "success": "成功",
