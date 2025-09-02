@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { CTAButton } from '@/components/ui/CTAButton';
+import { ScrollAnimations } from '@/components/ui/ScrollAnimations';
 
 export default function HomePage() {
   const params = useParams();
@@ -19,6 +20,8 @@ export default function HomePage() {
 
   return (
     <div>
+      <ScrollAnimations />
+      
       {/* 開發環境調試區域 */}
       {process.env.NODE_ENV === 'development' && (
         <div className="bg-muted p-4 rounded-lg max-w-md mx-auto mb-8 container">
@@ -31,33 +34,48 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold">
-            {tCommon('title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {tCommon('description')}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <CTAButton 
-              variant="primary" 
-              size="lg"
-              ctaText="hero_get_started"
-            >
-              {tCta('getStarted')}
-            </CTAButton>
-            <CTAButton 
-              variant="outline" 
-              size="lg"
-              ctaText="hero_view_demo"
-            >
-              <Link href={`/${locale}/demo`}>
-                {tCta('viewDemo')}
-              </Link>
-            </CTAButton>
+      {/* Hero Section with Animated Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 hero-background opacity-10"></div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full opacity-20 hero-float"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-purple-500 rounded-full opacity-20 hero-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-20 w-12 h-12 bg-green-500 rounded-full opacity-20 hero-float" style={{animationDelay: '4s'}}></div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h1 className="text-4xl md:text-6xl font-bold hero-float">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                {tCommon('title')}
+              </span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-on-scroll slide-left">
+              {tCommon('description')}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 animate-on-scroll">
+              <CTAButton 
+                variant="primary" 
+                size="lg"
+                ctaText="hero_get_started"
+                animated={true}
+              >
+                {tCta('getStarted')}
+              </CTAButton>
+              <CTAButton 
+                variant="outline" 
+                size="lg"
+                ctaText="hero_view_demo"
+                animated={true}
+              >
+                <Link href={`/${locale}/demo`}>
+                  {tCta('viewDemo')}
+                </Link>
+              </CTAButton>
+            </div>
           </div>
         </div>
       </section>
@@ -66,17 +84,17 @@ export default function HomePage() {
       <section className="bg-muted/30 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">
               {tFeatures('hero.title')}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
               {tFeatures('hero.description')}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="feature-card text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+              <div className="feature-icon w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🤖</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">
@@ -87,8 +105,8 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="feature-card text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+              <div className="feature-icon w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📦</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">
@@ -99,8 +117,8 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="feature-card text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+              <div className="feature-icon w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">
@@ -118,6 +136,7 @@ export default function HomePage() {
                 variant="outline" 
                 size="lg"
                 ctaText="home_view_all_features"
+                animated={true}
               >
                 {tCta('viewAllFeatures')}
               </CTAButton>
@@ -140,7 +159,7 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Free Plan */}
-            <div className="border rounded-lg p-6 text-center">
+            <div className="pricing-card border rounded-lg p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
                 {tPricing('free.name')}
               </h3>
@@ -155,13 +174,14 @@ export default function HomePage() {
                 size="lg" 
                 className="w-full"
                 ctaText="pricing_free_get_started"
+                animated={true}
               >
                 {tCta('getStarted')}
               </CTAButton>
             </div>
             
             {/* Pro Plan */}
-            <div className="border-2 border-primary rounded-lg p-6 text-center relative">
+            <div className="pricing-card popular border-2 border-primary rounded-lg p-6 text-center relative">
               <div 
                 className="absolute px-3 py-1 rounded-full text-sm font-medium"
                 style={{
@@ -191,6 +211,7 @@ export default function HomePage() {
                   size="lg" 
                   className="w-full"
                   ctaText="pricing_pro_get_started"
+                  animated={true}
                 >
                   {tCta('getStarted')}
                 </CTAButton>
@@ -198,7 +219,7 @@ export default function HomePage() {
             </div>
             
             {/* Enterprise Plan */}
-            <div className="border rounded-lg p-6 text-center">
+            <div className="pricing-card border rounded-lg p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
                 {tPricing('enterprise.name')}
               </h3>
@@ -213,6 +234,7 @@ export default function HomePage() {
                 size="lg" 
                 className="w-full"
                 ctaText="pricing_enterprise_contact"
+                animated={true}
               >
                 {tCta('contactSales')}
               </CTAButton>
@@ -225,6 +247,7 @@ export default function HomePage() {
                 variant="outline" 
                 size="lg"
                 ctaText="home_view_all_pricing"
+                animated={true}
               >
                 {tCta('viewAllPricing')}
               </CTAButton>
@@ -234,20 +257,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary/5 py-16">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="max-w-3xl mx-auto text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">
               {tCta('readyToStart.title')}
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl mb-8 opacity-90 animate-on-scroll">
               {tCta('readyToStart.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
               <CTAButton 
-                variant="primary" 
+                variant="secondary" 
                 size="lg"
                 ctaText="final_cta_get_started"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+                animated={true}
               >
                 {tCta('getStarted')}
               </CTAButton>
@@ -256,6 +281,8 @@ export default function HomePage() {
                   variant="outline" 
                   size="lg"
                   ctaText="final_cta_contact_us"
+                  className="border-white text-white hover:bg-white hover:text-blue-600"
+                  animated={true}
                 >
                   {tCta('contactUs')}
                 </CTAButton>

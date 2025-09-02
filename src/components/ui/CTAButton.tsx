@@ -12,6 +12,7 @@ interface CTAButtonProps {
   onClick?: () => void;
   className?: string;
   ctaText?: string; // 用於分析追蹤
+  animated?: boolean; // 是否啟用動畫效果
 }
 
 export function CTAButton({
@@ -20,8 +21,9 @@ export function CTAButton({
   size = 'md',
   href,
   onClick,
-  className,
+  className = '',
   ctaText,
+  animated = true,
   ...props
 }: CTAButtonProps) {
   const params = useParams();
@@ -45,12 +47,15 @@ export function CTAButton({
     }
   };
 
+  // 組合 className，包含動畫效果
+  const combinedClassName = `${className} ${animated ? 'cta-button' : ''}`.trim();
+
   return (
     <Button
       variant={variant}
       size={size}
       onClick={handleClick}
-      className={className}
+      className={combinedClassName}
       {...props}
     >
       {children}
