@@ -12,3 +12,4 @@ export const config = {
   ]
 };
 
+// Force sync with Vercel - Tue Sep  2 11:32:31 EDT 2025
