@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 const LOCALES = ['zh-TW', 'zh-CN', 'en'] as const;
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://morningai-frontend-ten.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://morningai-frontend-clean.vercel.app';
 
 // 定義所有頁面路由
 const PAGES = [

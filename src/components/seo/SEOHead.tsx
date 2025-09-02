@@ -33,7 +33,16 @@ export function SEOHead({
   
   // 建構 OG URL
   const ogUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${pathname}`;
-  const ogImageUrl = ogImage || `${process.env.NEXT_PUBLIC_SITE_URL}/og-image-${locale}.png`;
+  
+  // 根據頁面和語言選擇 OG 圖片
+  const getOGImage = () => {
+    if (ogImage) return ogImage;
+    
+    const pageName = pathname.split('/').pop() || 'home';
+    return `${process.env.NEXT_PUBLIC_SITE_URL}/og/${pageName}-${locale}.png`;
+  };
+  
+  const ogImageUrl = getOGImage();
   
   return (
     <>
