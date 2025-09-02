@@ -1,50 +1,21 @@
 {
   "service": "morningai-frontend",
-  "version": "v2.1.0-phase2-d4-marketing",
-  "commit": "7c07513",
-  "buildId": "7c07513",
-  "tag": "v2.1.0-phase2-d4-marketing",
-  "locales": ["zh-TW","zh-CN","en"],
-  "pages": 33,
-  "pagesByLocale": {
-    "zh-TW": 11,
-    "zh-CN": 11,
-    "en": 11
-  },
-  "marketingPages": [
-    "/",
-    "/features",
-    "/pricing",
-    "/faq", 
-    "/contact",
-    "/demo",
-    "/privacy",
-    "/terms"
-  ],
-  "generatedAt": "2025-09-02T08:10:00Z",
+  "version": "v2.1.1-phase2-d4-hotfix-i18n",
+  "commit": "d5f6c31c179480fea379b23c1de7a7fe918f1429",
+  "buildId": "d5f6c31",
+  "locales": ["zh-TW", "zh-CN", "en"],
+  "pages": 19,
+  "generatedAt": "2025-09-02T15:13:30.000Z",
   "status": "healthy",
-  "stage": "D+4 Marketing Site Complete",
   "features": {
     "i18n": true,
     "ssg": true,
     "htmlLang": true,
-    "e2eTests": true,
-    "unitTests": true,
-    "marketing": true,
-    "seo": true,
-    "analytics": true,
-    "ogImages": true
-  },
-  "analytics": {
-    "ga4": true,
-    "mixpanel": true,
-    "events": ["cta_click", "demo_interact", "lang_switch", "signup_click"]
-  },
-  "seo": {
     "hreflang": true,
     "canonical": true,
     "sitemap": true,
-    "ogCards": true
+    "analytics": true,
+    "sentry": true
   },
   "tech": {
     "nextVersion": "14.2.32",
@@ -52,4 +23,3 @@
     "nodeVersion": "20.x"
   }
 }
-
