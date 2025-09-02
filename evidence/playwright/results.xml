@@ -1,0 +1,58 @@
+<testsuites id="" name="" tests="26" failures="0" skipped="0" errors="0" time="14.866734000000001">
+<testsuite name="i18n.spec.ts" timestamp="2025-09-02T07:18:25.727Z" hostname="chromium" tests="13" failures="0" skipped="0" time="6.697" errors="0">
+<testcase name="i18n Functionality › should have correct HTML lang attribute for zh-TW" classname="i18n.spec.ts" time="0.858">
+</testcase>
+<testcase name="i18n Functionality › should display correct LANG_CHECK for zh-TW" classname="i18n.spec.ts" time="0.444">
+</testcase>
+<testcase name="i18n Functionality › should display correct locale info for zh-TW" classname="i18n.spec.ts" time="0.472">
+</testcase>
+<testcase name="i18n Functionality › should render page successfully for zh-TW" classname="i18n.spec.ts" time="0.373">
+</testcase>
+<testcase name="i18n Functionality › should have correct HTML lang attribute for zh-CN" classname="i18n.spec.ts" time="0.393">
+</testcase>
+<testcase name="i18n Functionality › should display correct LANG_CHECK for zh-CN" classname="i18n.spec.ts" time="0.348">
+</testcase>
+<testcase name="i18n Functionality › should display correct locale info for zh-CN" classname="i18n.spec.ts" time="0.371">
+</testcase>
+<testcase name="i18n Functionality › should render page successfully for zh-CN" classname="i18n.spec.ts" time="1.047">
+</testcase>
+<testcase name="i18n Functionality › should have correct HTML lang attribute for en" classname="i18n.spec.ts" time="0.471">
+</testcase>
+<testcase name="i18n Functionality › should display correct LANG_CHECK for en" classname="i18n.spec.ts" time="0.619">
+</testcase>
+<testcase name="i18n Functionality › should display correct locale info for en" classname="i18n.spec.ts" time="0.389">
+</testcase>
+<testcase name="i18n Functionality › should render page successfully for en" classname="i18n.spec.ts" time="0.366">
+</testcase>
+<testcase name="i18n Functionality › should have working navigation between locales" classname="i18n.spec.ts" time="0.546">
+</testcase>
+</testsuite>
+<testsuite name="i18n.spec.ts" timestamp="2025-09-02T07:18:25.727Z" hostname="Mobile Chrome" tests="13" failures="0" skipped="0" time="6.205" errors="0">
+<testcase name="i18n Functionality › should have correct HTML lang attribute for zh-TW" classname="i18n.spec.ts" time="0.523">
+</testcase>
+<testcase name="i18n Functionality › should display correct LANG_CHECK for zh-TW" classname="i18n.spec.ts" time="0.667">
+</testcase>
+<testcase name="i18n Functionality › should display correct locale info for zh-TW" classname="i18n.spec.ts" time="0.466">
+</testcase>
+<testcase name="i18n Functionality › should render page successfully for zh-TW" classname="i18n.spec.ts" time="0.457">
+</testcase>
+<testcase name="i18n Functionality › should have correct HTML lang attribute for zh-CN" classname="i18n.spec.ts" time="0.384">
+</testcase>
+<testcase name="i18n Functionality › should display correct LANG_CHECK for zh-CN" classname="i18n.spec.ts" time="0.45">
+</testcase>
+<testcase name="i18n Functionality › should display correct locale info for zh-CN" classname="i18n.spec.ts" time="0.403">
+</testcase>
+<testcase name="i18n Functionality › should render page successfully for zh-CN" classname="i18n.spec.ts" time="0.548">
+</testcase>
+<testcase name="i18n Functionality › should have correct HTML lang attribute for en" classname="i18n.spec.ts" time="0.403">
+</testcase>
+<testcase name="i18n Functionality › should display correct LANG_CHECK for en" classname="i18n.spec.ts" time="0.502">
+</testcase>
+<testcase name="i18n Functionality › should display correct locale info for en" classname="i18n.spec.ts" time="0.433">
+</testcase>
+<testcase name="i18n Functionality › should render page successfully for en" classname="i18n.spec.ts" time="0.4">
+</testcase>
+<testcase name="i18n Functionality › should have working navigation between locales" classname="i18n.spec.ts" time="0.569">
+</testcase>
+</testsuite>
+</testsuites>

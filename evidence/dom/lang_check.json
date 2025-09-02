@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-09-02T07:18:36.678Z",
+  "results": {
+    "zh-TW": {
+      "htmlLang": "zh-TW",
+      "langCheck": "LANG_CHECK: 繁中 OK",
+      "localeDisplay": "Locale: zh-TW",
+      "statusCode": 200,
+      "hasTitle": true
+    },
+    "zh-CN": {
+      "htmlLang": "zh-CN",
+      "langCheck": "LANG_CHECK: 简中 OK",
+      "localeDisplay": "Locale: zh-CN"
+    }
+  }
+}

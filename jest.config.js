@@ -21,6 +21,8 @@ const customJestConfig = {
     '!src/app/**/loading.tsx',
     '!src/app/**/not-found.tsx',
   ],
+  coverageDirectory: 'evidence/jest/coverage',
+  coverageReporters: ['text', 'lcov', 'html', 'json'],
 }
 
 module.exports = createJestConfig(customJestConfig)
