@@ -7,6 +7,8 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ['/((?!_next|.*\\..*).*)']
+  matcher: [
+    '/((?!_next|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml)).*)'
+  ]
 };
 

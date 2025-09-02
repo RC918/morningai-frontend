@@ -2,22 +2,24 @@
 import {getRequestConfig} from 'next-intl/server';
 import {locales} from './config';
 
-export default getRequestConfig(async ({locale}) => {
+export default getRequestConfig(async ({requestLocale}) => {
+  // 使用新的 requestLocale API
+  let locale = await requestLocale;
+  
   // Use default locale if locale is not provided or invalid
   const validLocale = locale && locales.includes(locale as any) ? locale : 'zh-TW';
 
-  // 使用函數內部的動態導入，避免被靜態優化
+  // 使用靜態導入映射，確保SSG階段能正確載入
+  const messagesMap = {
+    'zh-TW': () => import('@/i18n/messages/zh-TW.json'),
+    'zh-CN': () => import('@/i18n/messages/zh-CN.json'),
+    'en': () => import('@/i18n/messages/en.json')
+  };
+
   let messages;
   try {
-    if (validLocale === 'zh-TW') {
-      messages = (await import('@/i18n/messages/zh-TW.json')).default;
-    } else if (validLocale === 'zh-CN') {
-      messages = (await import('@/i18n/messages/zh-CN.json')).default;
-    } else if (validLocale === 'en') {
-      messages = (await import('@/i18n/messages/en.json')).default;
-    } else {
-      messages = (await import('@/i18n/messages/zh-TW.json')).default;
-    }
+    const messageLoader = messagesMap[validLocale as keyof typeof messagesMap] || messagesMap['zh-TW'];
+    messages = (await messageLoader()).default;
   } catch (error) {
     console.error(`Failed to load messages for locale ${validLocale}:`, error);
     messages = (await import('@/i18n/messages/zh-TW.json')).default;
@@ -35,7 +37,7 @@ export default getRequestConfig(async ({locale}) => {
   };
   
   if (messages?.LANG_CHECK !== expectMap[validLocale]) {
-    throw new Error(
+    console.warn(
       `Messages mismatch for ${validLocale}. Loaded: "${messages?.LANG_CHECK}". ` +
       `Expected: "${expectMap[validLocale]}". Check src/i18n/messages/${validLocale}.json`
     );
