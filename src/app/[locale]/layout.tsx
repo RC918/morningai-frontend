@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
-import { unstable_setRequestLocale, getMessages } from 'next-intl/server';
+import { setRequestLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Navigation } from '@/components/ui/Navigation';
@@ -25,15 +25,15 @@ export default async function RootLayout({
   params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = params;
+  const { locale } = await params;
   
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  // ✅ next-intl v3 使用 unstable_setRequestLocale
-  unstable_setRequestLocale(locale);
+  // ✅ next-intl v3 使用 setRequestLocale
+  setRequestLocale(locale);
 
   // ✅ 使用明確映射的訊息
   const messages = (MESSAGES as any)[locale];

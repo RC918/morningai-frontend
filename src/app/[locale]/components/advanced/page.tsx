@@ -1,4 +1,3 @@
-import { setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n/config';
 import { notFound } from 'next/navigation';
 import AdvancedComponentsClient from './AdvancedComponentsClient';
@@ -20,7 +19,6 @@ export default async function AdvancedComponentsPage({
   if (!locales.includes(locale as any)) notFound();
 
   // Enable static rendering
-  setRequestLocale(locale);
 
   return <AdvancedComponentsClient />;
 }

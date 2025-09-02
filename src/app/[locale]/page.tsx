@@ -1,4 +1,4 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
@@ -7,7 +7,7 @@ import { MESSAGES } from '@/i18n/messages';
 const locales = ['zh-TW', 'zh-CN', 'en'] as const;
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export const dynamic = 'force-static';
@@ -17,14 +17,11 @@ export function generateStaticParams() {
 }
 
 export default async function HomePage({ params }: Props) {
-  const { locale } = params;
+  const { locale } = await params;
   
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  // Enable static rendering - v3 使用 unstable_setRequestLocale
-  unstable_setRequestLocale(locale);
-  
   const t = await getTranslations('common');
   const langCheck = (MESSAGES as any)[locale]?.LANG_CHECK ?? 'MISSING';
 

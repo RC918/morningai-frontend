@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/config';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
@@ -22,7 +22,6 @@ export default async function ComponentsPage({ params }: Props) {
   if (!locales.includes(locale as any)) notFound();
 
   // Enable static rendering
-  setRequestLocale(locale);
   
   const t = await getTranslations('components');
 
