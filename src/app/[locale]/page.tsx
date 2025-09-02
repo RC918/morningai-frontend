@@ -162,7 +162,16 @@ export default function HomePage() {
             
             {/* Pro Plan */}
             <div className="border-2 border-primary rounded-lg p-6 text-center relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
+              <div 
+                className="absolute text-white px-3 py-1 rounded-full text-sm font-medium"
+                style={{
+                  top: '-12px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  backgroundColor: 'hsl(var(--primary))',
+                  zIndex: 10
+                }}
+              >
                 {tPricing('popular')}
               </div>
               <div style={{ paddingTop: '3rem' }}>
