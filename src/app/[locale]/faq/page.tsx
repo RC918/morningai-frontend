@@ -9,33 +9,48 @@ export default function FAQPage() {
   const faqs = [
     {
       id: 'general-1',
-      question: t('faq.general.q1'),
-      answer: t('faq.general.a1')
+      question: t('faq.general.q1.question'),
+      answer: t('faq.general.q1.answer')
     },
     {
       id: 'general-2', 
-      question: t('faq.general.q2'),
-      answer: t('faq.general.a2')
+      question: t('faq.general.q2.question'),
+      answer: t('faq.general.q2.answer')
+    },
+    {
+      id: 'general-3',
+      question: t('faq.general.q3.question'),
+      answer: t('faq.general.q3.answer')
     },
     {
       id: 'pricing-1',
-      question: t('faq.pricing.q1'),
-      answer: t('faq.pricing.a1')
+      question: t('faq.pricing.q1.question'),
+      answer: t('faq.pricing.q1.answer')
     },
     {
       id: 'pricing-2',
-      question: t('faq.pricing.q2'),
-      answer: t('faq.pricing.a2')
+      question: t('faq.pricing.q2.question'),
+      answer: t('faq.pricing.q2.answer')
+    },
+    {
+      id: 'pricing-3',
+      question: t('faq.pricing.q3.question'),
+      answer: t('faq.pricing.q3.answer')
     },
     {
       id: 'technical-1',
-      question: t('faq.technical.q1'),
-      answer: t('faq.technical.a1')
+      question: t('faq.technical.q1.question'),
+      answer: t('faq.technical.q1.answer')
     },
     {
       id: 'technical-2',
-      question: t('faq.technical.q2'),
-      answer: t('faq.technical.a2')
+      question: t('faq.technical.q2.question'),
+      answer: t('faq.technical.q2.answer')
+    },
+    {
+      id: 'technical-3',
+      question: t('faq.technical.q3.question'),
+      answer: t('faq.technical.q3.answer')
     }
   ];
 

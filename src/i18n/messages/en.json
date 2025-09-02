@@ -508,7 +508,9 @@
     },
     "interactive": {
       "title": "Interactive Demo",
-      "description": "Click the components below to experience the powerful features of our design system."
+      "description": "Click the components below to experience the powerful features of our design system.",
+      "startTrial": "Start Free Trial",
+      "scheduleDemo": "Schedule Demo"
     },
     "cta": {
       "title": "Ready to Get Started?",
@@ -625,6 +627,83 @@
       "addressValue": "123 Tech Street, San Francisco, CA 94105, USA",
       "phone": "Phone",
       "phoneValue": "+1-415-123-4567"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find the answers you need, or contact our support team.",
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "description": "Find the answers you need, or contact our support team for more assistance."
+    },
+    "general": {
+      "title": "General Questions",
+      "q1": {
+        "question": "What types of projects is Morning AI suitable for?",
+        "answer": "Morning AI is suitable for web application development of all scales, from personal blogs to large enterprise applications, all can benefit from our design system and AI features."
+      },
+      "q2": {
+        "question": "Does it support custom design?",
+        "answer": "Yes, our design system fully supports customization. You can adjust colors, fonts, spacing and other design tokens to create a unique interface that matches your brand identity."
+      },
+      "q3": {
+        "question": "Can I try it for free?",
+        "answer": "Absolutely! We offer a permanent free plan, and you can also apply for a 14-day free trial of the professional plan without requiring credit card information."
+      }
+    },
+    "pricing": {
+      "title": "Pricing Questions",
+      "q1": {
+        "question": "What paid plans are available?",
+        "answer": "We offer three plans: Starter ($29/month), Professional ($99/month), and Enterprise (custom pricing) to meet the needs of users of different scales."
+      },
+      "q2": {
+        "question": "Can I cancel my subscription at any time?",
+        "answer": "Yes, you can cancel your subscription at any time. After cancellation, your account will be downgraded to the free plan at the end of the current billing cycle."
+      },
+      "q3": {
+        "question": "Do you offer educational discounts?",
+        "answer": "We offer a 50% educational discount for students and educational institutions. Please contact our sales team for details."
+      }
+    },
+    "technical": {
+      "title": "Technical Questions",
+      "q1": {
+        "question": "Which frameworks and tech stacks are supported?",
+        "answer": "We support mainstream frontend frameworks like React, Vue, Angular, as well as full-stack frameworks like Next.js and Nuxt.js."
+      },
+      "q2": {
+        "question": "How to integrate into existing projects?",
+        "answer": "Through our CLI tools or npm packages, you can easily integrate Morning AI components into existing projects without refactoring existing code."
+      },
+      "q3": {
+        "question": "Does it support TypeScript?",
+        "answer": "Yes, all our components provide complete TypeScript type definitions to ensure type safety and better development experience."
+      }
+    },
+    "support": {
+      "title": "Support Questions",
+      "q1": {
+        "question": "How is technical support provided?",
+        "answer": "We provide multi-level technical support: free users can use community forums, paid users enjoy email support, and enterprise customers have dedicated customer success managers."
+      },
+      "q2": {
+        "question": "What is the response time?",
+        "answer": "Free users get community support with typical 24-48 hour response; paid users get email support within 12 hours; enterprise customers enjoy 4-hour response SLA."
+      },
+      "q3": {
+        "question": "How is data security ensured?",
+        "answer": "We adopt industry-standard security measures, including SOC 2 Type II certification, end-to-end encryption, and regular security audits to ensure your data security."
+      }
+    },
+    "search": {
+      "title": "Didn't find what you're looking for?",
+      "placeholder": "Search FAQ..."
+    },
+    "contact": {
+      "title": "Still have questions?",
+      "description": "If you haven't found the answer you need, our support team is always here to help.",
+      "support": "Contact Support Team"
     }
   }
 }

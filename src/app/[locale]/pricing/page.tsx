@@ -72,44 +72,49 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         {plans.map((plan) => (
-          <div 
+          <article 
             key={plan.id} 
-            className={`relative bg-card rounded-lg p-8 border ${
+            className={`relative bg-card rounded-lg border flex flex-col ${
               plan.popular ? 'border-primary border-2' : ''
             }`}
           >
             {plan.popular && (
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
-                {t('pricing.popular')}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                <span className="rounded-full px-3 py-1 text-sm font-semibold bg-primary text-primary-foreground shadow-md">
+                  {t('pricing.popular')}
+                </span>
               </div>
             )}
             
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-semibold mb-2">{plan.name}</h3>
-              <div className="text-4xl font-bold mb-2">{plan.price}</div>
-              <div className="text-muted-foreground">{plan.period}</div>
+            {/* 為 Popular 標籤預留空間 */}
+            <div className={`p-8 flex flex-col flex-grow ${plan.popular ? 'pt-10' : ''}`}>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-semibold mb-3 leading-normal">{plan.name}</h3>
+                <div className="text-4xl font-bold mb-2 leading-normal">{plan.price}</div>
+                <div className="text-muted-foreground leading-normal">{plan.period}</div>
+              </div>
+              
+              <p className="text-muted-foreground mb-6 text-center leading-normal">{plan.description}</p>
+              
+              <ul className="space-y-3 mb-8 flex-grow">
+                {plan.features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-green-500 flex-shrink-0 mt-0.5">✓</span>
+                    <span className="leading-normal">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <CTAButton 
+                variant={plan.popular ? "primary" : "outline"} 
+                size="lg" 
+                className="w-full mt-auto"
+                ctaText={`pricing_${plan.id}_cta`}
+              >
+                {plan.cta}
+              </CTAButton>
             </div>
-            
-            <p className="text-muted-foreground mb-6 text-center">{plan.description}</p>
-            
-            <ul className="space-y-3 mb-8">
-              {plan.features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <CTAButton 
-              variant={plan.popular ? "primary" : "outline"} 
-              size="lg" 
-              className="w-full"
-              ctaText={`pricing_${plan.id}_cta`}
-            >
-              {plan.cta}
-            </CTAButton>
-          </div>
+          </article>
         ))}
       </div>
 
