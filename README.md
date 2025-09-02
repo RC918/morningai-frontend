@@ -1,6 +1,23 @@
-# Morning AI Frontend - Design System & Component Library
+# Morning AI Frontend - Design System &# Morning AI Frontend
 
-Morning AI SaaS MVP Phase 2 前端專案，包含完整的設計系統和響應式元件庫。
+## 🌐 i18n Known Issue 結案說明
+
+**✅ 已解決** - Phase 2 D+3 國際化功能已完成並上線 Production
+
+### 技術方案
+- **主線採用**: Next.js 14.2.32 + next-intl v3.22.0 (穩定驗證版本)
+- **暫緩版本**: Next.js 15 + next-intl v4 (標記為暫緩，存在兼容性問題)
+- **支援語言**: 繁體中文 (zh-TW)、簡體中文 (zh-CN)、英文 (en)
+- **部署狀態**: ✅ Production Ready - https://morningai-frontend-ten.vercel.app
+
+### 實驗分支
+- `i18n-lab` 分支保留作未來升版實驗用途
+- **嚴禁直接合併到 main**，需走 RFC + 回歸驗證流程
+- 升版需完成「三語 LANG_CHECK + html[lang] + SSG 差異」測試
+
+---
+
+Morning AI SaaS MVP Phase 2 前端專案，包含完整的設計系統、響應式元件庫和國際化功能。
 
 ## 🚀 快速開始
 
