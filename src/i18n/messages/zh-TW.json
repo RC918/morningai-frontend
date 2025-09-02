@@ -87,6 +87,7 @@
   "components": {
     "title": "元件庫展示",
     "subtitle": "Morning AI 設計系統核心元件。包含 Button、Input、Navigation 等 16+ 響應式元件。",
+    "description": "探索我們完整的 UI 元件庫，每個元件都經過精心設計，支援響應式佈局和無障礙性標準。",
     "basic": "基礎元件",
     "advanced": "進階元件",
     "button": {
@@ -393,7 +394,22 @@
     "subtitle": "親身體驗 Morning AI 的強大功能，看看我們如何改變您的開發流程。",
     "hero": {
       "title": "產品示範",
-      "description": "親身體驗 Morning AI 的強大功能，看看我們如何改變您的開發流程。"
+      "description": "親身體驗 Morning AI 的強大功能，看看我們如何改變您的開發流程。",
+      "cta": "開始體驗"
+    },
+    "features": {
+      "design": {
+        "title": "智能設計",
+        "description": "AI 驅動的設計工具，自動生成美觀且功能完整的界面。"
+      },
+      "speed": {
+        "title": "極速開發",
+        "description": "大幅提升開發效率，快速建構高品質的產品原型。"
+      },
+      "tools": {
+        "title": "完整工具",
+        "description": "提供完整的開發工具鏈，從設計到部署一站式解決方案。"
+      }
     },
     "aiDesign": {
       "title": "AI 智能設計",

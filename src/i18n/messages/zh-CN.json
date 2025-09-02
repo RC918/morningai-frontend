@@ -87,6 +87,7 @@
   "components": {
     "title": "组件库展示",
     "subtitle": "Morning AI 设计系统核心组件。包含 Button、Input、Navigation 等 16+ 响应式组件。",
+    "description": "探索我们完整的 UI 组件库，每个组件都经过精心设计，支持响应式布局和无障碍性标准。",
     "basic": "基础组件",
     "advanced": "高级组件",
     "button": {
@@ -466,7 +467,22 @@
     "subtitle": "亲身体验 Morning AI 的强大功能，看看我们如何改变您的开发流程。",
     "hero": {
       "title": "产品演示",
-      "description": "亲身体验 Morning AI 的强大功能，看看我们如何改变您的开发流程。"
+      "description": "亲身体验 Morning AI 的强大功能，看看我们如何改变您的开发流程。",
+      "cta": "开始体验"
+    },
+    "features": {
+      "design": {
+        "title": "智能设计",
+        "description": "AI 驱动的设计工具，自动生成美观且功能完整的界面。"
+      },
+      "speed": {
+        "title": "极速开发",
+        "description": "大幅提升开发效率，快速构建高品质的产品原型。"
+      },
+      "tools": {
+        "title": "完整工具",
+        "description": "提供完整的开发工具链，从设计到部署一站式解决方案。"
+      }
     },
     "aiDesign": {
       "title": "AI 智能设计",

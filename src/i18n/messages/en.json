@@ -87,6 +87,7 @@
   "components": {
     "title": "Component Library",
     "subtitle": "Morning AI Design System Core Components. Includes Button, Input, Navigation and 16+ responsive components.",
+    "description": "Explore our comprehensive UI component library, each component is carefully designed with responsive layout and accessibility standards support.",
     "basic": "Basic Components",
     "advanced": "Advanced Components",
     "button": {
@@ -393,7 +394,22 @@
     "subtitle": "Experience Morning AI's powerful features firsthand and see how we transform your development process.",
     "hero": {
       "title": "Product Demo",
-      "description": "Experience Morning AI's powerful features firsthand and see how we transform your development process."
+      "description": "Experience Morning AI's powerful features firsthand and see how we transform your development process.",
+      "cta": "Start Experience"
+    },
+    "features": {
+      "design": {
+        "title": "Smart Design",
+        "description": "AI-driven design tools that automatically generate beautiful and functional interfaces."
+      },
+      "speed": {
+        "title": "Lightning Fast",
+        "description": "Dramatically improve development efficiency and quickly build high-quality product prototypes."
+      },
+      "tools": {
+        "title": "Complete Tools",
+        "description": "Provide complete development toolchain, from design to deployment one-stop solution."
+      }
     },
     "aiDesign": {
       "title": "AI Intelligent Design",
