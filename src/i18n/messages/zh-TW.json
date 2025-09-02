@@ -706,6 +706,30 @@
       "description": "如果您沒有找到需要的答案，我們的支援團隊隨時為您提供協助。",
       "support": "聯絡支援團隊"
     }
+  },
+  "i18nDemo": {
+    "title": "多語言示範",
+    "description": "展示 Morning AI 的多語言支援功能"
+  },
+  "language": {
+    "current": "繁體中文",
+    "switch": "切換語言"
+  },
+  "contact": {
+    "info": {
+      "email": {
+        "title": "電子郵件",
+        "value": "hello@morningai.com"
+      },
+      "phone": {
+        "title": "電話",
+        "value": "+886-2-1234-5678"
+      },
+      "address": {
+        "title": "地址",
+        "value": "台北市信義區信義路五段7號"
+      }
+    }
   }
 }
 

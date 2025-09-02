@@ -72,49 +72,80 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         {plans.map((plan) => (
-          <article 
+          <div 
             key={plan.id} 
-            className={`relative bg-card rounded-lg border flex flex-col ${
-              plan.popular ? 'border-primary border-2' : ''
+            className={`relative bg-white rounded-2xl border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${
+              plan.popular 
+                ? 'border-blue-500 shadow-lg scale-105' 
+                : 'border-gray-200 hover:border-gray-300'
             }`}
           >
+            {/* Popular Badge */}
             {plan.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                <span className="rounded-full px-3 py-1 text-sm font-semibold bg-primary text-primary-foreground shadow-md">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                <div className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
                   {t('pricing.popular')}
-                </span>
+                </div>
               </div>
             )}
             
-            {/* 為 Popular 標籤預留空間 */}
-            <div className={`p-8 flex flex-col flex-grow ${plan.popular ? 'pt-10' : ''}`}>
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-semibold mb-3 leading-normal">{plan.name}</h3>
-                <div className="text-4xl font-bold mb-2 leading-normal">{plan.price}</div>
-                <div className="text-muted-foreground leading-normal">{plan.period}</div>
+            {/* Card Content */}
+            <div className={`p-8 h-full flex flex-col ${plan.popular ? 'pt-12' : 'pt-8'}`}>
+              {/* Header */}
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {plan.name}
+                </h3>
+                <div className="mb-2">
+                  <span className="text-5xl font-bold text-gray-900">
+                    {plan.price}
+                  </span>
+                </div>
+                <div className="text-gray-500 text-lg">
+                  {plan.period}
+                </div>
               </div>
               
-              <p className="text-muted-foreground mb-6 text-center leading-normal">{plan.description}</p>
+              {/* Description */}
+              <p className="text-gray-600 text-center mb-8 leading-relaxed">
+                {plan.description}
+              </p>
               
-              <ul className="space-y-3 mb-8 flex-grow">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="text-green-500 flex-shrink-0 mt-0.5">✓</span>
-                    <span className="leading-normal">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Features */}
+              <div className="flex-grow mb-8">
+                <ul className="space-y-4">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                        <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-700 leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               
-              <CTAButton 
-                variant={plan.popular ? "primary" : "outline"} 
-                size="lg" 
-                className="w-full mt-auto"
-                ctaText={`pricing_${plan.id}_cta`}
-              >
-                {plan.cta}
-              </CTAButton>
+              {/* CTA Button */}
+              <div className="mt-auto">
+                <CTAButton
+                  variant={plan.popular ? 'primary' : 'outline'}
+                  size="lg"
+                  className={`w-full py-4 text-lg font-semibold rounded-xl transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:shadow-xl'
+                      : 'border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-500'
+                  }`}
+                  ctaText={`pricing_${plan.id}_cta`}
+                >
+                  {plan.cta}
+                </CTAButton>
+              </div>
             </div>
-          </article>
+          </div>
         ))}
       </div>
 

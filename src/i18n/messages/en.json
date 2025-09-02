@@ -706,6 +706,30 @@
       "description": "If you haven't found the answer you need, our support team is always here to help.",
       "support": "Contact Support Team"
     }
+  },
+  "i18nDemo": {
+    "title": "Multilingual Demo",
+    "description": "Showcase Morning AI's multilingual support capabilities"
+  },
+  "language": {
+    "current": "English",
+    "switch": "Switch Language"
+  },
+  "contact": {
+    "info": {
+      "email": {
+        "title": "Email",
+        "value": "hello@morningai.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+1-555-123-4567"
+      },
+      "address": {
+        "title": "Address",
+        "value": "123 Innovation Drive, San Francisco, CA 94105"
+      }
+    }
   }
 }
 
