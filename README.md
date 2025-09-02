@@ -222,3 +222,19 @@ MIT License - 詳見 LICENSE 檔案
 
 **🎯 Morning AI Design System - 企業級 React 元件庫**
 
+
+
+## 🔧 Latest Fix - 2025-09-02 17:48 UTC
+
+**CRITICAL i18n Configuration Fix Applied**
+
+- ✅ **middleware.ts** moved to project root (was in src/)
+- ✅ **i18n.ts** added to project root with correct paths
+- ✅ **Local development** verified working with proper translations
+- ⏳ **Production deployment** in progress - awaiting cache clear
+
+**Verification Status:**
+- Local: ✅ Translations working correctly
+- Production: ⏳ Deployment triggered, cache clearing in progress
+
+
