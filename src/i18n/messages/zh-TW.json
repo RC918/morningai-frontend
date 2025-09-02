@@ -223,7 +223,10 @@
     "learnMore": "了解更多",
     "tryDemo": "試用示範",
     "signUp": "註冊帳號",
-    "contactSales": "聯絡銷售"
+    "contactSales": "聯絡銷售",
+    "viewAllFeatures": "查看所有功能",
+    "viewAllPricing": "查看所有定價",
+    "contactUs": "聯絡我們"
   },
   "features": {
     "hero": {

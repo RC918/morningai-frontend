@@ -223,7 +223,10 @@
     "learnMore": "Learn More",
     "tryDemo": "Try Demo",
     "signUp": "Sign Up",
-    "contactSales": "Contact Sales"
+    "contactSales": "Contact Sales",
+    "viewAllFeatures": "View All Features",
+    "viewAllPricing": "View All Pricing",
+    "contactUs": "Contact Us"
   },
   "features": {
     "hero": {
