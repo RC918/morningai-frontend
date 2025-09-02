@@ -1,4 +1,8 @@
-# Morning AI Frontend - Design System &# Morning AI Frontend
+# Morning AI Frontend
+
+[![CI/CD Pipeline](https://github.com/RC918/morningai-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/RC918/morningai-frontend/actions/workflows/ci.yml)
+[![E2E Tests](https://img.shields.io/badge/E2E-Playwright-green)](https://github.com/RC918/morningai-frontend/actions)
+[![Coverage](https://img.shields.io/badge/Coverage-Jest-blue)](https://github.com/RC918/morningai-frontend/actions)
 
 ## 🌐 i18n Known Issue 結案說明
 
