@@ -165,7 +165,7 @@ export default function HomePage() {
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
                 {tPricing('popular')}
               </div>
-              <div className="pt-12">
+              <div style={{ paddingTop: '3rem' }}>
                 <h3 className="text-xl font-semibold mb-2">
                   {tPricing('pro.name')}
                 </h3>
