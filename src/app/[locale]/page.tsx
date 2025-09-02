@@ -9,7 +9,13 @@ import { CTAButton } from '@/components/ui/CTAButton';
 export default function HomePage() {
   const params = useParams();
   const locale = params.locale as string;
-  const t = useTranslations();
+  
+  // 使用多個namespace的翻譯
+  const tCommon = useTranslations('common');
+  const tFeatures = useTranslations('features');
+  const tPricing = useTranslations('pricing');
+  const tCta = useTranslations('cta');
+  const tLang = useTranslations(); // 用於LANG_CHECK
 
   return (
     <div>
@@ -17,7 +23,7 @@ export default function HomePage() {
       {process.env.NODE_ENV === 'development' && (
         <div className="bg-muted p-4 rounded-lg max-w-md mx-auto mb-8 container">
           <p id="lang-check" className="font-mono text-sm font-bold">
-            LANG_CHECK: {t('LANG_CHECK')}
+            LANG_CHECK: {tLang('LANG_CHECK')}
           </p>
           <p id="locale" className="font-mono text-sm text-muted-foreground">
             Locale: {locale}
@@ -29,10 +35,10 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="text-4xl md:text-6xl font-bold">
-            {t('common.title')}
+            {tCommon('title')}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('common.description')}
+            {tCommon('description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -41,7 +47,7 @@ export default function HomePage() {
               size="lg"
               ctaText="hero_get_started"
             >
-              {t('cta.getStarted')}
+              {tCta('getStarted')}
             </CTAButton>
             <CTAButton 
               variant="outline" 
@@ -49,7 +55,7 @@ export default function HomePage() {
               ctaText="hero_view_demo"
             >
               <Link href={`/${locale}/demo`}>
-                {t('cta.viewDemo')}
+                {tCta('viewDemo')}
               </Link>
             </CTAButton>
           </div>
@@ -61,10 +67,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('features.hero.title')}
+              {tFeatures('hero.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('features.hero.description')}
+              {tFeatures('hero.description')}
             </p>
           </div>
           
@@ -74,10 +80,10 @@ export default function HomePage() {
                 <span className="text-2xl">🤖</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                {t('features.aiDesign.title')}
+                {tFeatures('aiDesign.title')}
               </h3>
               <p className="text-muted-foreground">
-                {t('features.aiDesign.description')}
+                {tFeatures('aiDesign.description')}
               </p>
             </div>
             
@@ -86,10 +92,10 @@ export default function HomePage() {
                 <span className="text-2xl">📦</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                {t('features.componentLibrary.title')}
+                {tFeatures('componentLibrary.title')}
               </h3>
               <p className="text-muted-foreground">
-                {t('features.componentLibrary.description')}
+                {tFeatures('componentLibrary.description')}
               </p>
             </div>
             
@@ -98,10 +104,10 @@ export default function HomePage() {
                 <span className="text-2xl">⚡</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                {t('features.workflow.title')}
+                {tFeatures('workflow.title')}
               </h3>
               <p className="text-muted-foreground">
-                {t('features.workflow.description')}
+                {tFeatures('workflow.description')}
               </p>
             </div>
           </div>
@@ -113,7 +119,7 @@ export default function HomePage() {
                 size="lg"
                 ctaText="home_view_all_features"
               >
-                {t('cta.viewAllFeatures')}
+                {tCta('viewAllFeatures')}
               </CTAButton>
             </Link>
           </div>
@@ -125,10 +131,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('pricing.hero.title')}
+              {tPricing('hero.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('pricing.hero.description')}
+              {tPricing('hero.description')}
             </p>
           </div>
           
@@ -136,13 +142,13 @@ export default function HomePage() {
             {/* Free Plan */}
             <div className="border rounded-lg p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
-                {t('pricing.free.name')}
+                {tPricing('free.name')}
               </h3>
               <div className="text-3xl font-bold mb-4">
-                {t('pricing.free.price')}
+                {tPricing('free.price')}
               </div>
               <p className="text-muted-foreground mb-6">
-                {t('pricing.free.description')}
+                {tPricing('free.description')}
               </p>
               <CTAButton 
                 variant="outline" 
@@ -150,23 +156,23 @@ export default function HomePage() {
                 className="w-full"
                 ctaText="pricing_free_get_started"
               >
-                {t('cta.getStarted')}
+                {tCta('getStarted')}
               </CTAButton>
             </div>
             
             {/* Pro Plan */}
             <div className="border-2 border-primary rounded-lg p-6 text-center relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
-                {t('pricing.popular')}
+                {tPricing('popular')}
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                {t('pricing.pro.name')}
+                {tPricing('pro.name')}
               </h3>
               <div className="text-3xl font-bold mb-4">
-                {t('pricing.pro.price')}
+                {tPricing('pro.price')}
               </div>
               <p className="text-muted-foreground mb-6">
-                {t('pricing.pro.description')}
+                {tPricing('pro.description')}
               </p>
               <CTAButton 
                 variant="primary" 
@@ -174,20 +180,20 @@ export default function HomePage() {
                 className="w-full"
                 ctaText="pricing_pro_get_started"
               >
-                {t('cta.getStarted')}
+                {tCta('getStarted')}
               </CTAButton>
             </div>
             
             {/* Enterprise Plan */}
             <div className="border rounded-lg p-6 text-center">
               <h3 className="text-xl font-semibold mb-2">
-                {t('pricing.enterprise.name')}
+                {tPricing('enterprise.name')}
               </h3>
               <div className="text-3xl font-bold mb-4">
-                {t('pricing.enterprise.price')}
+                {tPricing('enterprise.price')}
               </div>
               <p className="text-muted-foreground mb-6">
-                {t('pricing.enterprise.description')}
+                {tPricing('enterprise.description')}
               </p>
               <CTAButton 
                 variant="outline" 
@@ -195,7 +201,7 @@ export default function HomePage() {
                 className="w-full"
                 ctaText="pricing_enterprise_contact"
               >
-                {t('cta.contactSales')}
+                {tCta('contactSales')}
               </CTAButton>
             </div>
           </div>
@@ -207,7 +213,7 @@ export default function HomePage() {
                 size="lg"
                 ctaText="home_view_all_pricing"
               >
-                {t('cta.viewAllPricing')}
+                {tCta('viewAllPricing')}
               </CTAButton>
             </Link>
           </div>
@@ -219,10 +225,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('cta.readyToStart.title')}
+              {tCta('readyToStart.title')}
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              {t('cta.readyToStart.description')}
+              {tCta('readyToStart.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CTAButton 
@@ -230,7 +236,7 @@ export default function HomePage() {
                 size="lg"
                 ctaText="final_cta_get_started"
               >
-                {t('cta.getStarted')}
+                {tCta('getStarted')}
               </CTAButton>
               <Link href={`/${locale}/contact`}>
                 <CTAButton 
@@ -238,7 +244,7 @@ export default function HomePage() {
                   size="lg"
                   ctaText="final_cta_contact_us"
                 >
-                  {t('cta.contactUs')}
+                  {tCta('contactUs')}
                 </CTAButton>
               </Link>
             </div>
