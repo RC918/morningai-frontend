@@ -217,6 +217,323 @@
     "tryDemo": "Try Demo",
     "signUp": "Sign Up",
     "contactSales": "Contact Sales"
+  },
+  "features": {
+    "hero": {
+      "title": "Powerful Features, Unlimited Possibilities",
+      "description": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions. We provide all the tools you need for success."
+    },
+    "aiPowered": {
+      "title": "AI-Powered Intelligent System",
+      "description": "Leverage cutting-edge artificial intelligence technology to automate your workflows and boost team efficiency.",
+      "benefit1": "Intelligent code generation, reducing 80% development time",
+      "benefit2": "Automated testing and quality assurance",
+      "benefit3": "Smart error detection and fix suggestions"
+    },
+    "designSystem": {
+      "title": "Enterprise-Grade Design System",
+      "description": "Unified design language and component library ensuring brand consistency and development efficiency.",
+      "benefit1": "16+ responsive UI components",
+      "benefit2": "Complete design token system",
+      "benefit3": "Light/dark theme switching support"
+    },
+    "enterpriseReady": {
+      "title": "Enterprise-Ready Security & Scale",
+      "description": "Enterprise-standard security, reliability, and scalability supporting large-scale deployments.",
+      "benefit1": "SOC 2 Type II compliance certification",
+      "benefit2": "99.9% service availability guarantee",
+      "benefit3": "Single Sign-On (SSO) integration support"
+    },
+    "developerExperience": {
+      "title": "Exceptional Developer Experience",
+      "description": "Tools and documentation crafted for developers, letting you focus on creating value.",
+      "benefit1": "Complete TypeScript support",
+      "benefit2": "Rich API documentation and examples",
+      "benefit3": "Active community and technical support"
+    },
+    "cta": {
+      "title": "Ready to Experience These Powerful Features?",
+      "description": "Start using Morning AI today and experience the new realm of intelligent development."
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Choose the Right Plan for You",
+      "description": "From individual developers to large enterprises, we offer flexible pricing plans to meet different scale requirements."
+    },
+    "free": {
+      "title": "Free Plan",
+      "price": "Free",
+      "description": "Perfect for individual developers and small projects",
+      "feature1": "Basic UI component library",
+      "feature2": "Community technical support",
+      "feature3": "Basic documentation access",
+      "feature4": "Up to 3 projects"
+    },
+    "pro": {
+      "title": "Professional Plan",
+      "price": "$19",
+      "period": "per month",
+      "description": "Perfect for professional developers and growing teams",
+      "feature1": "Complete UI component library",
+      "feature2": "Advanced design system",
+      "feature3": "Priority technical support",
+      "feature4": "Unlimited projects",
+      "feature5": "Custom themes and branding"
+    },
+    "enterprise": {
+      "title": "Enterprise Plan",
+      "price": "Custom",
+      "description": "Perfect for large enterprises and organizations",
+      "feature1": "All professional features",
+      "feature2": "Dedicated customer success manager",
+      "feature3": "SLA service guarantee",
+      "feature4": "Custom development services",
+      "feature5": "Enterprise-grade security and compliance"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Choose the plan that best fits your needs and start using Morning AI today."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find the answers you need, or contact our support team.",
+    "q1": {
+      "question": "What types of projects is Morning AI suitable for?",
+      "answer": "Morning AI is suitable for web application development of all scales, from personal blogs to large enterprise applications can benefit from our design system and AI features."
+    },
+    "q2": {
+      "question": "Does it support custom design?",
+      "answer": "Yes, our design system fully supports customization. You can adjust colors, fonts, spacing and other design tokens to create unique interfaces that match your brand identity."
+    },
+    "q3": {
+      "question": "How is technical support provided?",
+      "answer": "We provide multi-level technical support: free users can use community forums, paid users enjoy email support, and enterprise customers have dedicated customer success managers."
+    },
+    "q4": {
+      "question": "How is data security guaranteed?",
+      "answer": "We adopt industry-standard security measures, including SOC 2 Type II certification, end-to-end encryption, and regular security audits to ensure your data security."
+    },
+    "q5": {
+      "question": "Can I try it for free?",
+      "answer": "Absolutely! We offer a permanent free plan, and you can also apply for a 14-day free trial of the professional plan without requiring credit card information."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have any questions or need assistance? Our team is here to help you.",
+    "hero": {
+      "title": "Contact Us",
+      "description": "Have any questions or need assistance? Our team is here to help you."
+    },
+    "form": {
+      "title": "Send Message",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Please enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Please enter your last name",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Please enter your email",
+      "company": "Company Name",
+      "companyPlaceholder": "Please enter company name (optional)",
+      "subject": "Subject",
+      "subjectPlaceholder": "Please enter email subject",
+      "selectSubject": "Please select a subject",
+      "subjectSales": "Sales Inquiry",
+      "subjectSupport": "Technical Support",
+      "subjectPartnership": "Partnership",
+      "subjectOther": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Please describe your questions or requirements in detail",
+      "submit": "Send Message"
+    },
+    "methods": {
+      "title": "Contact Methods"
+    },
+    "sales": {
+      "title": "Sales Inquiry",
+      "description": "Want to learn about our products and pricing plans? Our sales team will provide professional advice.",
+      "action": "Contact Sales Team"
+    },
+    "support": {
+      "title": "Technical Support",
+      "description": "Encountering technical issues or need usage assistance? Our technical team is ready to solve problems for you.",
+      "action": "Get Technical Support"
+    },
+    "partnership": {
+      "title": "Partnership",
+      "description": "Interested in becoming our partner? Let's explore collaboration opportunities together.",
+      "action": "Explore Partnership"
+    },
+    "office": {
+      "title": "Office Information",
+      "address": "123 Innovation Drive, San Francisco, CA 94105",
+      "phone": "+1-555-123-4567",
+      "hours": "Monday to Friday 9:00-18:00"
+    },
+    "faq": {
+      "title": "Have Other Questions?",
+      "description": "Check our FAQ page, you might find the answers you need.",
+      "action": "View FAQ"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "support@morningai.com",
+      "phone": "+1-555-123-4567",
+      "address": "123 Innovation Drive, San Francisco, CA 94105"
+    }
+  },
+  "demo": {
+    "title": "Product Demo",
+    "subtitle": "Experience Morning AI's powerful features firsthand and see how we transform your development process.",
+    "hero": {
+      "title": "Product Demo",
+      "description": "Experience Morning AI's powerful features firsthand and see how we transform your development process."
+    },
+    "aiDesign": {
+      "title": "AI Intelligent Design",
+      "description": "Experience AI-driven design tools that automatically generate beautiful and functional interfaces.",
+      "feature1": "Smart layout suggestions",
+      "feature2": "Automatic color matching",
+      "feature3": "Responsive design optimization"
+    },
+    "componentLibrary": {
+      "title": "Component Library Showcase",
+      "description": "Explore our rich UI component library, where each component is carefully designed and tested.",
+      "feature1": "16+ responsive components",
+      "feature2": "Complete design tokens",
+      "feature3": "Accessibility support"
+    },
+    "workflow": {
+      "title": "Development Workflow",
+      "description": "Learn how to use Morning AI to optimize your development workflow.",
+      "feature1": "Rapid prototyping",
+      "feature2": "Automatic code generation",
+      "feature3": "Real-time preview updates"
+    },
+    "interactive": {
+      "title": "Interactive Demo",
+      "description": "Click the components below to experience the powerful features of our design system."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Sign up now and begin your Morning AI journey."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "lastUpdatedDate": "January 1, 2025",
+    "introduction": "Morning AI values your privacy. This privacy policy explains how we collect, use, and protect your personal information.",
+    "tableOfContents": "Table of Contents",
+    "informationCollection": {
+      "title": "Information Collection",
+      "content": "We collect information you voluntarily provide to us, including but not limited to: your name, email address, company information, and other registration details. We also automatically collect technical information when you use our services, such as IP address, browser type, operating system, and access times.\n\nWhen you use our AI features, we collect your input content and usage patterns to improve service quality. All collected information is processed and protected in accordance with this policy."
+    },
+    "informationUse": {
+      "title": "Information Use",
+      "content": "We use collected information to provide, maintain, and improve our services. Specific uses include: processing your requests and transactions, providing customer support, sending service-related notifications, conducting security monitoring and preventing abuse.\n\nWe also use anonymized data for analysis to understand usage trends and improve product features. Your personal information will not be used for commercial purposes without your consent."
+    },
+    "informationSharing": {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or transfer your personal information to third parties. We only share your information in the following circumstances: with your explicit consent, to comply with legal requirements or court orders, to protect our rights and security, when working with trusted service providers (who must comply with strict confidentiality agreements).\n\nAll third-party service providers must meet our data protection standards and may only use your information to the extent necessary to provide services."
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "content": "We employ industry-standard security measures to protect your personal information, including encrypted transmission, secure storage, access controls, and regular security audits. Our systems use multi-layer protection mechanisms to ensure data security during transmission and storage.\n\nWhile we make every effort to protect your information, please note that internet transmission cannot guarantee 100% security. We recommend you also take appropriate precautions to protect your account security."
+    },
+    "cookies": {
+      "title": "Cookies and Tracking Technologies",
+      "content": "We use cookies and similar tracking technologies to improve your user experience. These technologies help us remember your preferences, analyze website traffic and usage patterns.\n\nYou can control cookie usage through your browser settings, but please note this may affect the normal operation of certain features. Third-party analytics tools we use (such as Google Analytics) also use cookies to collect anonymous usage data."
+    },
+    "userRights": {
+      "title": "User Rights",
+      "content": "You have the following rights regarding your personal information: Right of access - you can request to view information we hold about you; Right of rectification - you can request correction of inaccurate information; Right of erasure - in certain circumstances, you can request deletion of your personal information; Right to data portability - you can request your data in a structured format.\n\nTo exercise these rights, please contact us using the contact information provided at the end of this policy. We will respond to your requests within a reasonable timeframe."
+    },
+    "childrenPrivacy": {
+      "title": "Children's Privacy",
+      "content": "Our services are not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover we have collected such information, we will delete it immediately.\n\nIf you are a parent or guardian and discover that your child has provided personal information to us, please contact us immediately and we will take appropriate measures to delete the relevant information."
+    },
+    "policyChanges": {
+      "title": "Policy Changes",
+      "content": "We may update this privacy policy from time to time. Significant changes will be notified to you via email or website announcement. We recommend you regularly review this policy to stay informed of the latest information.\n\nContinued use of our services indicates your acceptance of the updated policy. If you disagree with the changes, please stop using our services."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about this privacy policy or need assistance, please contact us through the following methods:",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "123 Tech Street, San Francisco, CA 94105, USA",
+      "phone": "Phone",
+      "phoneValue": "+1-415-123-4567"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated",
+    "lastUpdatedDate": "January 1, 2025",
+    "introduction": "Welcome to Morning AI services. By using our services, you agree to comply with the following terms and conditions.",
+    "tableOfContents": "Table of Contents",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing or using Morning AI's services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.\n\nThese terms constitute a legally binding agreement between you and Morning AI. We reserve the right to modify these terms at any time, and modified terms will take effect upon posting on the website."
+    },
+    "services": {
+      "title": "Service Description",
+      "content": "Morning AI provides artificial intelligence-based SaaS platform services, including but not limited to: AI-driven design tools, component libraries, development workflow optimization, and other features. We are committed to providing high-quality, reliable services.\n\nService content may be adjusted based on technological developments and market demands. We will make every effort to notify you of significant changes in advance, but reserve the right to modify or terminate specific features at any time."
+    },
+    "userAccounts": {
+      "title": "User Accounts",
+      "content": "Using certain service features requires creating an account. You are responsible for maintaining the accuracy and security of your account information, including choosing strong passwords and updating them regularly. You must not share account credentials with others.\n\nYou are responsible for all activities conducted through your account. If you discover unauthorized use, please notify us immediately. We reserve the right to suspend or terminate accounts that violate the terms."
+    },
+    "acceptableUse": {
+      "title": "Acceptable Use",
+      "content": "You agree to use our services only for lawful purposes. Prohibited activities include but are not limited to: uploading malware or viruses, attempting unauthorized access, harassing other users, infringing intellectual property rights, engaging in fraudulent activities.\n\nWe reserve the right to monitor usage and take appropriate action (including service suspension) to prevent abuse. Violation of usage policies may result in account termination and legal consequences."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "Morning AI services and all their content, features, and technology are the property of Morning AI or its licensors, protected by copyright, trademark, and other intellectual property laws.\n\nYou receive a limited, non-exclusive, non-transferable license to use the services. You may not copy, modify, distribute, or create derivative works. Content you create through the services belongs to you, but you grant us the necessary license to provide services."
+    },
+    "paymentTerms": {
+      "title": "Payment Terms",
+      "content": "Fees for paid services will be charged according to your selected plan. All fees are denominated in USD unless otherwise specified. Subscription fees are charged monthly or annually in advance.\n\nWe accept credit cards and other specified payment methods. Failure to pay on time may result in service suspension. Refund policies are detailed in our refund terms, and certain fees may be non-refundable."
+    },
+    "privacy": {
+      "title": "Privacy Protection",
+      "content": "Your privacy is important to us. Our privacy policy details how we collect, use, and protect your personal information. Using our services indicates your agreement to our privacy policy.\n\nWe are committed to protecting your data security and will only use your information to the extent necessary to provide services. We do not sell your personal information to third parties."
+    },
+    "disclaimers": {
+      "title": "Disclaimers",
+      "content": "Services are provided 'as is' without any express or implied warranties. We do not guarantee that services will be uninterrupted, error-free, or completely secure. You use the services at your own risk.\n\nWe are not liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the services. This includes but is not limited to data loss, business interruption, or loss of profits."
+    },
+    "limitationLiability": {
+      "title": "Limitation of Liability",
+      "content": "To the maximum extent permitted by law, Morning AI's total liability for any damages shall not exceed the total fees you paid to us in the 12 months preceding the occurrence of the damage.\n\nThis limitation of liability applies to all types of damages, whether based on contract, tort, or other legal theories. Some jurisdictions do not allow the exclusion or limitation of certain damages, so the above limitations may not apply to you."
+    },
+    "termination": {
+      "title": "Service Termination",
+      "content": "You may stop using our services and delete your account at any time. We also reserve the right to suspend or terminate your account for violation of terms, prolonged inactivity, or other reasonable reasons.\n\nAfter termination, your right to use the services will immediately cease. We may retain certain information to comply with legal obligations or resolve disputes. Termination does not affect the rights and obligations of either party arising before termination."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "content": "These terms are governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles. Any disputes should first be resolved through good faith negotiation.\n\nIf negotiation cannot resolve the dispute, both parties agree to submit the dispute to the jurisdiction of the courts in San Francisco County, California. You agree to waive any objections regarding inconvenient forum or lack of jurisdiction."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "We reserve the right to modify these Terms of Service at any time. Significant changes will be communicated to you via email or in-service notifications. Modified terms will take effect immediately upon posting.\n\nContinued use of the services indicates your acceptance of the modified terms. If you disagree with the changes, you should stop using the services. We recommend regularly reviewing the terms to understand the latest changes."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about these Terms of Service, please contact us through the following methods:",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "123 Tech Street, San Francisco, CA 94105, USA",
+      "phone": "Phone",
+      "phoneValue": "+1-415-123-4567"
+    }
   }
 }
 
