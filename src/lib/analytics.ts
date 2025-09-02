@@ -4,6 +4,9 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 // Mixpanel 配置
 export const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN || '';
 
+// 開發環境檢查
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 // 事件類型定義
 export interface AnalyticsEvent {
   action: string;
@@ -27,28 +30,40 @@ export const EVENTS = {
 
 // GA4 事件追蹤
 export const trackGA4Event = (event: AnalyticsEvent) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', event.action, {
-      event_category: event.category,
-      event_label: event.label,
-      value: event.value,
-      custom_parameter_locale: event.locale,
-      custom_parameter_page: event.page
-    });
+  try {
+    if (typeof window !== 'undefined' && window.gtag && GA_TRACKING_ID) {
+      window.gtag('event', event.action, {
+        event_category: event.category,
+        event_label: event.label,
+        value: event.value,
+        custom_parameter_locale: event.locale,
+        custom_parameter_page: event.page
+      });
+    } else if (isDevelopment) {
+      console.log('📊 GA4 Event (Dev):', event);
+    }
+  } catch (error) {
+    console.warn('GA4 tracking error:', error);
   }
 };
 
 // Mixpanel 事件追蹤
 export const trackMixpanelEvent = (event: AnalyticsEvent) => {
-  if (typeof window !== 'undefined' && window.mixpanel) {
-    window.mixpanel.track(event.action, {
-      category: event.category,
-      label: event.label,
-      value: event.value,
-      locale: event.locale,
-      page: event.page,
-      timestamp: new Date().toISOString()
-    });
+  try {
+    if (typeof window !== 'undefined' && window.mixpanel && typeof window.mixpanel.track === 'function') {
+      window.mixpanel.track(event.action, {
+        category: event.category,
+        label: event.label,
+        value: event.value,
+        locale: event.locale,
+        page: event.page,
+        timestamp: new Date().toISOString()
+      });
+    } else if (isDevelopment) {
+      console.log('📈 Mixpanel Event (Dev):', event);
+    }
+  } catch (error) {
+    console.warn('Mixpanel tracking error:', error);
   }
 };
 
@@ -60,21 +75,27 @@ export const trackEvent = (event: AnalyticsEvent) => {
 
 // 頁面瀏覽追蹤
 export const trackPageView = (url: string, locale: string) => {
-  // GA4 頁面瀏覽
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_TRACKING_ID, {
-      page_location: url,
-      custom_parameter_locale: locale
-    });
-  }
-  
-  // Mixpanel 頁面瀏覽
-  if (typeof window !== 'undefined' && window.mixpanel) {
-    window.mixpanel.track('Page View', {
-      url,
-      locale,
-      timestamp: new Date().toISOString()
-    });
+  try {
+    // GA4 頁面瀏覽
+    if (typeof window !== 'undefined' && window.gtag && GA_TRACKING_ID) {
+      window.gtag('config', GA_TRACKING_ID, {
+        page_location: url,
+        custom_parameter_locale: locale
+      });
+    }
+    
+    // Mixpanel 頁面瀏覽
+    if (typeof window !== 'undefined' && window.mixpanel && typeof window.mixpanel.track === 'function') {
+      window.mixpanel.track('Page View', {
+        url,
+        locale,
+        timestamp: new Date().toISOString()
+      });
+    } else if (isDevelopment) {
+      console.log('📄 Page View (Dev):', { url, locale });
+    }
+  } catch (error) {
+    console.warn('Page view tracking error:', error);
   }
 };
 
@@ -121,4 +142,28 @@ export const trackSignupClick = (source: string, locale: string, page: string) =
     page
   });
 };
+
+// 開發環境 Mock 函數
+if (isDevelopment && typeof window !== 'undefined') {
+  // Mock gtag for development
+  if (!window.gtag) {
+    window.gtag = (...args: any[]) => {
+      console.log('🔍 gtag (mock):', args);
+    };
+  }
+  
+  // Mock mixpanel for development
+  if (!window.mixpanel) {
+    window.mixpanel = {
+      track: (event: string, properties?: any) => {
+        console.log('🔍 mixpanel.track (mock):', event, properties);
+      },
+      init: () => {},
+      identify: () => {},
+      people: {
+        set: () => {}
+      }
+    };
+  }
+}
 
