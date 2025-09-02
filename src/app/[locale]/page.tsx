@@ -165,23 +165,25 @@ export default function HomePage() {
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
                 {tPricing('popular')}
               </div>
-              <h3 className="text-xl font-semibold mb-2">
-                {tPricing('pro.name')}
-              </h3>
-              <div className="text-3xl font-bold mb-4">
-                {tPricing('pro.price')}
+              <div className="pt-4">
+                <h3 className="text-xl font-semibold mb-2">
+                  {tPricing('pro.name')}
+                </h3>
+                <div className="text-3xl font-bold mb-4">
+                  {tPricing('pro.price')}
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  {tPricing('pro.description')}
+                </p>
+                <CTAButton 
+                  variant="primary" 
+                  size="lg" 
+                  className="w-full"
+                  ctaText="pricing_pro_get_started"
+                >
+                  {tCta('getStarted')}
+                </CTAButton>
               </div>
-              <p className="text-muted-foreground mb-6">
-                {tPricing('pro.description')}
-              </p>
-              <CTAButton 
-                variant="primary" 
-                size="lg" 
-                className="w-full"
-                ctaText="pricing_pro_get_started"
-              >
-                {tCta('getStarted')}
-              </CTAButton>
             </div>
             
             {/* Enterprise Plan */}
