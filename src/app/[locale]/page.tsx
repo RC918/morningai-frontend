@@ -52,7 +52,7 @@ export default function HomePage() {
                   className="group bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3"
                   ctaText="hero_lets_talk"
                 >
-                  <span>LET'S TALK</span>
+                  <span>LET&apos;S TALK</span>
                   <div className="flex -space-x-2">
                     <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-2 border-white"></div>
                     <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-full border-2 border-white"></div>
