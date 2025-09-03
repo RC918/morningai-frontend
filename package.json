@@ -25,6 +25,7 @@
     "i18n:lint:ci": "npx ts-node --transpile-only scripts/i18n-lint.ts --ci --report=json --out ./.reports/i18n-lint.json",
     "i18n:sync": "npx ts-node --transpile-only scripts/i18n-sync.ts",
     "i18n:sync:dry": "npx ts-node --transpile-only scripts/i18n-sync.ts --dry --report=json --out ./.reports/i18n-sync.json",
+    "i18n:sync-check": "npx ts-node --transpile-only scripts/i18n-sync.ts --dry",
     "ci:check": "npm run i18n:diff"
   },
   "repository": {
@@ -50,6 +51,7 @@
     "@tailwindcss/postcss": "^4.1.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.542.0",
     "negotiator": "^1.0.0",
     "next": "14.2.32",
     "next-intl": "^3.22.0",

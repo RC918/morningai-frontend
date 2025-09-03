@@ -3,116 +3,15 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { CTAButton } from '@/components/ui/CTAButton';
+import Hero from '@/components/Hero';
 
 export default function HomePage() {
   const t = useTranslations();
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Inspired by Orizon.co */}
-      <section className="relative min-h-screen bg-white overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          {/* Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-purple-50/30"></div>
-          
-          {/* Floating Geometric Shapes */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-lg animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '2s'}}></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10 min-h-screen flex items-center">
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-            {/* Left Column - Main Content */}
-            <div className="space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                AI-POWERED DESIGN 🚀
-              </div>
-              
-              {/* Main Title - Orizon Style */}
-              <div className="space-y-4">
-                <h1 className="text-6xl lg:text-8xl font-bold text-gray-900 leading-tight">
-                  We make
-                </h1>
-                <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-                  <span className="text-blue-500">smart design,</span>
-                </h1>
-                <h1 className="text-6xl lg:text-8xl font-bold text-gray-900 leading-tight">
-                  & AI tools
-                </h1>
-              </div>
-              
-              {/* CTA Button with Team Avatars - Orizon Style */}
-              <div className="flex items-center gap-4">
-                <CTAButton
-                  variant="primary"
-                  size="lg"
-                  className="group bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3"
-                  ctaText="hero_lets_talk"
-                >
-                  <span>LET&apos;S TALK</span>
-                  <div className="flex -space-x-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full border-2 border-white"></div>
-                  </div>
-                </CTAButton>
-                
-                {/* Handwritten Style Note */}
-                <div className="relative">
-                  <div className="text-gray-600 font-handwriting text-lg transform rotate-2">
-                    We get booked fast! 🔥
-                  </div>
-                  <svg className="absolute -bottom-2 left-4 w-16 h-4 text-gray-400" viewBox="0 0 64 16" fill="none">
-                    <path d="M2 14C20 8 44 8 62 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                </div>
-              </div>
-              
-              {/* Secondary CTA */}
-              <div className="pt-4">
-                <CTAButton
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-500 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
-                  ctaText="hero_view_demo"
-                >
-                  {t('cta.viewDemo')}
-                </CTAButton>
-              </div>
-            </div>
-            
-            {/* Right Column - Description */}
-            <div className="space-y-6 lg:pl-8">
-              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
-                Morning AI is a leading design system platform based in Taiwan. We help startups & Fortune 500 companies delight humans on the other side of the screen.
-              </p>
-              
-              {/* Stats or Features */}
-              <div className="grid grid-cols-2 gap-6 pt-8">
-                <div className="text-center p-4 bg-white/50 rounded-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-blue-500">500+</div>
-                  <div className="text-gray-600">Components</div>
-                </div>
-                <div className="text-center p-4 bg-white/50 rounded-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-green-500">99%</div>
-                  <div className="text-gray-600">Satisfaction</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section - New Component */}
+      <Hero />
 
       {/* Features Section - Enhanced with Animations */}
       <section className="py-24 bg-gradient-to-b from-white to-gray-50">
