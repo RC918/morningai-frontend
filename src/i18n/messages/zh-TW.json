@@ -202,6 +202,54 @@
     "skeleton": {
       "title": "Skeleton 元件",
       "loading": "載入內容中..."
+    },
+    "select": {
+      "title": "Select 元件",
+      "placeholder": "選擇選項",
+      "option1": "選項 1",
+      "option2": "選項 2",
+      "option3": "選項 3",
+      "disabled": "停用選項",
+      "label": "選擇標籤",
+      "helper": "這是選擇元件的輔助文字"
+    },
+    "textarea": {
+      "title": "Textarea 元件",
+      "placeholder": "請在此輸入您的訊息...",
+      "label": "訊息",
+      "helper": "請輸入您的訊息",
+      "charCount": "字數統計"
+    },
+    "checkbox": {
+      "title": "Checkbox 元件",
+      "option1": "選項 1",
+      "option2": "選項 2",
+      "option3": "選項 3",
+      "indeterminate": "不確定狀態",
+      "description": "這是核取方塊選項的描述"
+    },
+    "radio": {
+      "title": "Radio 元件",
+      "option1": "選項 1",
+      "option2": "選項 2",
+      "option3": "選項 3",
+      "description": "這是單選按鈕選項的描述"
+    },
+    "switch": {
+      "title": "Switch 元件",
+      "option1": "啟用通知",
+      "option2": "深色模式",
+      "option3": "自動儲存",
+      "description": "開啟或關閉此設定"
+    },
+    "loading": {
+      "title": "Loading 元件",
+      "spinner": "旋轉器",
+      "dots": "點點",
+      "pulse": "脈衝",
+      "bars": "條狀",
+      "text": "載入中...",
+      "overlay": "顯示覆蓋層"
     }
   },
   "stats": {

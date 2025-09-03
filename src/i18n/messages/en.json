@@ -202,6 +202,54 @@
     "skeleton": {
       "title": "Skeleton Component",
       "loading": "Loading content..."
+    },
+    "select": {
+      "title": "Select Component",
+      "placeholder": "Choose an option",
+      "option1": "Option 1",
+      "option2": "Option 2",
+      "option3": "Option 3",
+      "disabled": "Disabled Option",
+      "label": "Select Label",
+      "helper": "This is helper text for select"
+    },
+    "textarea": {
+      "title": "Textarea Component",
+      "placeholder": "Enter your message here...",
+      "label": "Message",
+      "helper": "Please enter your message",
+      "charCount": "Character count"
+    },
+    "checkbox": {
+      "title": "Checkbox Component",
+      "option1": "Option 1",
+      "option2": "Option 2",
+      "option3": "Option 3",
+      "indeterminate": "Indeterminate",
+      "description": "This is a description for the checkbox option"
+    },
+    "radio": {
+      "title": "Radio Component",
+      "option1": "Option 1",
+      "option2": "Option 2",
+      "option3": "Option 3",
+      "description": "This is a description for the radio option"
+    },
+    "switch": {
+      "title": "Switch Component",
+      "option1": "Enable notifications",
+      "option2": "Dark mode",
+      "option3": "Auto-save",
+      "description": "Toggle this setting on or off"
+    },
+    "loading": {
+      "title": "Loading Component",
+      "spinner": "Spinner",
+      "dots": "Dots",
+      "pulse": "Pulse",
+      "bars": "Bars",
+      "text": "Loading...",
+      "overlay": "Show Overlay"
     }
   },
   "stats": {
