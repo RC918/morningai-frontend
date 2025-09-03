@@ -12,12 +12,21 @@ export async function GET() {
     const versionData = fs.readFileSync(versionPath, 'utf8');
     versionInfo = JSON.parse(versionData);
   } catch (error) {
-    console.error('Error reading version.json:', error);
+    console.log('Version file not found, using default values');
+    versionInfo = {
+      commit: process.env.VERCEL_GIT_COMMIT_SHA || 'unknown',
+      buildTime: new Date().toISOString(),
+      buildId: process.env.VERCEL_DEPLOYMENT_ID || 'local'
+    };
   }
 
   return NextResponse.json({
     ok: true,
     timestamp: new Date().toISOString(),
+    node: process.version,
+    runtime: 'nodejs',
+    platform: process.platform,
+    arch: process.arch,
     ...versionInfo,
     envCheck: {
       hasNodeEnv: !!process.env.NODE_ENV,

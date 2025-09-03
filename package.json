@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/generate-version.js",
+    "postbuild": "node scripts/generate-version.js || echo 'Version generation failed, continuing...'",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
