@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { CTAButton } from '@/components/ui/CTAButton';
 
@@ -553,7 +554,96 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Footer with Version Info */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-4 gap-8 mb-8">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl font-bold mb-4">Morning AI</h3>
+              <p className="text-gray-400 mb-4 max-w-md">
+                We make smart design & AI tools that empower creators and businesses to build amazing digital experiences.
+              </p>
+            </div>
+            
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+                <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#demo" className="hover:text-white transition-colors">Demo</a></li>
+              </ul>
+            </div>
+            
+            {/* Support */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Support</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#help" className="hover:text-white transition-colors">Help Center</a></li>
+                <li><a href="#docs" className="hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="#privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#terms" className="hover:text-white transition-colors">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Bottom Bar with Version Info */}
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2025 Morning AI. All rights reserved.
+            </div>
+            
+            {/* Version Info */}
+            <div className="text-gray-500 text-xs font-mono">
+              <VersionInfo />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+  );
+}
+
+// Version Info Component
+function VersionInfo() {
+  const [versionInfo, setVersionInfo] = React.useState<any>(null);
+  
+  React.useEffect(() => {
+    // Try to fetch version info from /api/health
+    fetch('/api/health')
+      .then(res => res.json())
+      .then(data => {
+        setVersionInfo(data);
+      })
+      .catch(() => {
+        // Fallback: try to fetch from /version.json
+        fetch('/version.json')
+          .then(res => res.json())
+          .then(data => {
+            setVersionInfo(data);
+          })
+          .catch(() => {
+            // Final fallback
+            setVersionInfo({
+              shortCommit: 'unknown',
+              buildId: 'unknown',
+              version: '2.2.0'
+            });
+          });
+      });
+  }, []);
+  
+  if (!versionInfo) {
+    return <span>Loading version...</span>;
+  }
+  
+  return (
+    <span>
+      v{versionInfo.version} • {versionInfo.shortCommit} • {versionInfo.buildId}
+    </span>
   );
 }
 
