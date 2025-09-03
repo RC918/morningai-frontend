@@ -596,6 +596,7 @@
       "title": "隱私政策簡介",
       "content": "本隱私政策說明 Morning AI 如何收集、使用和保護您的個人資訊。我們致力於保護您的隱私權，並確保您的個人資料得到適當的保護。"
     },
+    "tableOfContents": "目錄",
     "dataCollection": {
       "title": "資料收集",
       "content": "我們收集您直接提供給我們的資訊，例如當您建立帳戶、使用我們的服務或聯絡我們尋求支援時。",
@@ -625,6 +626,12 @@
     },
     "contact": {
       "title": "聯絡我們",
+      "description": "如果您對本隱私政策有任何疑問或需要協助，請透過以下方式聯絡我們：",
+      "email": "電子郵件",
+      "address": "地址",
+      "addressValue": "台北市信義區信義路五段7號",
+      "phone": "電話",
+      "phoneValue": "+886-2-1234-5678",
       "content": "如果您對本隱私政策有任何疑問或需要協助，請透過 privacy@morningai.com 聯絡我們。"
     },
     "updates": {
