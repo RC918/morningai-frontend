@@ -1,10 +1,17 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { CTAButton } from '@/components/ui/CTAButton';
 
-export default function HomePage() {
-  const t = useTranslations();
+// 暫時關閉 ISR，保證「請求時解析」
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export default async function HomePage() {
+  const locale = await getLocale();
+  const tCommon = await getTranslations({locale, namespace: 'common'});
+  const tHero = await getTranslations({locale, namespace: 'hero'});
+  const tFeatures = await getTranslations({locale, namespace: 'features'});
+  const tCta = await getTranslations({locale, namespace: 'cta'});
+  const tPricing = await getTranslations({locale, namespace: 'pricing'});
 
   return (
     <div className="min-h-screen">
@@ -23,12 +30,12 @@ export default function HomePage() {
             
             {/* Main Title */}
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              {t('hero.title')}
+              {tHero('title')}
             </h1>
             
             {/* Subtitle */}
             <p className="text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              {t('hero.subtitle')}
+              {tHero('subtitle')}
             </p>
             
             {/* CTA Buttons */}
@@ -39,7 +46,7 @@ export default function HomePage() {
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                 ctaText="hero_get_started"
               >
-                {t('cta.getStarted')}
+                {tCta('getStarted')}
               </CTAButton>
               
               <CTAButton
@@ -48,7 +55,7 @@ export default function HomePage() {
                 className="border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-500 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
                 ctaText="hero_view_demo"
               >
-                {t('cta.viewDemo')}
+                {tCta('viewDemo')}
               </CTAButton>
             </div>
           </div>
@@ -65,10 +72,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              {t('features.title')}
+              {tCommon('title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('features.subtitle')}
+              {tCommon('description')}
             </p>
           </div>
           
@@ -79,10 +86,10 @@ export default function HomePage() {
                 <span className="text-3xl">🤖</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t('features.aiDesign.title')}
+                {tFeatures('aiDesign.title')}
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {t('features.aiDesign.description')}
+                {tFeatures('aiDesign.description')}
               </p>
             </div>
             
@@ -92,10 +99,10 @@ export default function HomePage() {
                 <span className="text-3xl">📦</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t('features.componentLibrary.title')}
+                {tFeatures('componentLibrary.title')}
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {t('features.componentLibrary.description')}
+                {tFeatures('componentLibrary.description')}
               </p>
             </div>
             
@@ -105,10 +112,10 @@ export default function HomePage() {
                 <span className="text-3xl">⚡</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {t('features.workflow.title')}
+                {tFeatures('workflow.title')}
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {t('features.workflow.description')}
+                {tFeatures('workflow.description')}
               </p>
             </div>
           </div>
@@ -120,7 +127,7 @@ export default function HomePage() {
               className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
               ctaText="features_view_all"
             >
-              {t('cta.viewAllFeatures')}
+              {tCta('viewAllFeatures')}
             </CTAButton>
           </div>
         </div>
@@ -145,7 +152,7 @@ export default function HomePage() {
               className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               ctaText="pricing_view_plans"
             >
-              {t('cta.viewPricing')}
+              {tCta('viewPricing')}
             </CTAButton>
           </div>
         </div>
@@ -155,10 +162,10 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            {t('cta.readyToStart.title')}
+            {tCta('readyToStart.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            {t('cta.readyToStart.description')}
+            {tCta('readyToStart.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -168,7 +175,7 @@ export default function HomePage() {
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               ctaText="final_get_started"
             >
-              {t('cta.getStarted')}
+              {tCta('getStarted')}
             </CTAButton>
             
             <CTAButton
@@ -177,7 +184,7 @@ export default function HomePage() {
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
               ctaText="final_contact_us"
             >
-              {t('cta.contactUs')}
+              {tCta('contactUs')}
             </CTAButton>
           </div>
         </div>

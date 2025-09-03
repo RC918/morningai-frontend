@@ -317,7 +317,7 @@
       "feature2": "社区技术支持",
       "feature3": "基本文档访问",
       "feature4": "最多 3 个项目",
-      "period": "",
+      "period": "Forever Free",
       "features": {
         "1": "Basic AI design tools",
         "2": "5 projects",
@@ -724,8 +724,8 @@
     "description": "展示 Morning AI 的多语言支持功能"
   },
   "hero": {
-    "title": "Powerful Features, Unlimited Possibilities",
-    "subtitle": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions. We provide all the tools you need for success.",
+    "title": "强大功能，无限可能",
+    "subtitle": "探索 Morning AI 的完整功能套件，从智能设计系统到企业级解决方案，我们提供您成功所需的一切工具。",
     "cta": {
       "primary": "Get Started",
       "secondary": "View Demo"

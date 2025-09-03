@@ -1,0 +1,125 @@
+*** Begin Patch
+*** Update File: package.json
+@@
+   "dependencies": {
+-    "next-intl": "^3.**",
++    "next-intl": "3.20.0",
++    "deepmerge": "^4.3.1",
+@@
+   },
+   "devDependencies": {
+@@
+   },
+   "scripts": {
+@@
++    "i18n:build:check": "NODE_ENV=production next build"
+   }
+ }
+*** End Patch
+
+*** Begin Patch
+*** Add File: middleware.ts
++import createMiddleware from 'next-intl/middleware';
++
++export default createMiddleware({
++  // 你的專案支援的語系
++  locales: ['en', 'zh-CN', 'zh-TW'],
++  // 沒有語系前綴時導向的預設語系
++  defaultLocale: 'en',
++  // 可選：自動偵測瀏覽器語系並第一次導向
++  localeDetection: true
++});
++
++// 排除 API、_next、以及靜態資源
++export const config = {
++  matcher: ['/((?!api|_next|.*\\..*).*)']
++};
+*** End Patch
+
+*** Begin Patch
+*** Add File: src/lib/i18n/loadMessages.ts
++/* eslint-disable @typescript-eslint/no-explicit-any */
++import merge from 'deepmerge';
++
++// 嘗試多個慣見路徑載入 JSON，找不到就回傳 {}
++async function tryImport(path: string): Promise<Record<string, any>> {
++  try {
++    // @ts-ignore: Next.js 支援 JSON import assertions
++    const mod = await import(path, { assert: { type: 'json' } } as any);
++    return (mod as any).default ?? mod;
++  } catch {
++    return {};
++  }
++}
++
++/**
++ * 載入指定語系的 messages，並以 en 為基底做深度合併。
++ * 任何缺失的 key 都會回退到英文，避免在 SSG/SSR 階段出現 key 原文。
++ */
++export async function loadMessages(locale: string) {
++  // 優先嘗試常見的目錄結構：/messages、/locales、/i18n
++  const en =
++    (await tryImport('../../messages/en.json')) ||
++    (await tryImport('../../locales/en.json')) ||
++    (await tryImport('../../i18n/en.json')) ||
++    {};
++
++  // 目標語系
++  const target =
++    (await tryImport(`../../messages/${locale}.json`)) ||
++    (await tryImport(`../../locales/${locale}.json`)) ||
++    (await tryImport(`../../i18n/${locale}.json`)) ||
++    {};
++
++  // 深度合併，右邊覆蓋左邊；缺少的 key 自動回退到 en
++  return merge(en, target, { arrayMerge: (_d, s) => s });
++}
++
++export const supportedLocales = ['en', 'zh-CN', 'zh-TW'] as const;
++export type AppLocale = typeof supportedLocales[number];
+*** End Patch
+
+*** Begin Patch
+*** Update File: app/[locale]/layout.tsx
+@@
+-'use client';
+-import React from 'react';
++import React from 'react';
++import {NextIntlClientProvider} from 'next-intl';
++import {unstable_setRequestLocale} from 'next-intl/server';
++import {loadMessages, supportedLocales} from '@/src/lib/i18n/loadMessages';
+ 
+-export default function RootLayout({
+-  children
+-}: {
+-  children: React.ReactNode;
+-}) {
+-  return <html><body>{children}</body></html>;
+-}
++export function generateStaticParams() {
++  return supportedLocales.map((locale) => ({locale}));
++}
++
++export default async function RootLayout(props: {
++  children: React.ReactNode;
++  params: {locale: string};
++}) {
++  const {children, params} = props;
++  const locale = params?.locale ?? 'en';
++  unstable_setRequestLocale(locale);
++
++  // SSG/SSR 階段就把訊息合併好，避免任何缺鍵露出 key 字串
++  const messages = await loadMessages(locale);
++
++  return (
++    <html lang={locale}>
++      <body>
++        <NextIntlClientProvider locale={locale} messages={messages}>
++          {children}
++        </NextIntlClientProvider>
++      </body>
++    </html>
++  );
++}
+*** End Patch
+
