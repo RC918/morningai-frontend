@@ -3,7 +3,7 @@
   "version": "2.2.0",
   "description": "Morning AI SaaS MVP Phase 2 Frontend - Design System & Component Library with i18n",
   "engines": {
-    "node": ">=22.0.0",
+    "node": "20.x",
     "npm": ">=10.0.0"
   },
   "scripts": {

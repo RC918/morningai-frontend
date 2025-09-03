@@ -17,8 +17,8 @@ export async function GET() {
   
   for (const locale of locales) {
     try {
-      // 嘗試載入每個語系的翻譯檔案
-      const messages = await import(`@/i18n/messages/${locale}.json`);
+      // 嘗試載入每個語系的翻譯檔案 - 使用可靠路徑
+      const messages = await import(`@/messages/${locale}.json`);
       localeStatus[locale] = !!messages.default && !!messages.default.LANG_CHECK;
     } catch (error) {
       localeStatus[locale] = false;

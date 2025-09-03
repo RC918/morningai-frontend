@@ -9,9 +9,9 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
 // 靜態import map - 避免動態載入失敗
-import zhTW from '@/i18n/messages/zh-TW.json';
-import zhCN from '@/i18n/messages/zh-CN.json';
-import en from '@/i18n/messages/en.json';
+import zhTW from '@/messages/zh-TW.json';
+import zhCN from '@/messages/zh-CN.json';
+import en from '@/messages/en.json';
 
 const MAP = {
   'zh-TW': zhTW,

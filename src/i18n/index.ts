@@ -6,11 +6,11 @@ import {locales, defaultLocale, type Locale} from './config';
 export const SUPPORTED_LOCALES = locales;
 export const DEFAULT_LOCALE = defaultLocale;
 
-// 訊息載入器映射
+// 訊息載入器映射 - 使用可靠的靜態 import 路徑
 const messageLoaders: Record<Locale, () => Promise<any>> = {
-  'zh-TW': () => import('./messages/zh-TW.json'),
-  'zh-CN': () => import('./messages/zh-CN.json'),
-  'en': () => import('./messages/en.json')
+  'zh-TW': () => import('@/messages/zh-TW.json'),
+  'zh-CN': () => import('@/messages/zh-CN.json'),
+  'en': () => import('@/messages/en.json')
 };
 
 // 語言檢查映射
