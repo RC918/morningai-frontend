@@ -643,8 +643,11 @@
       "content": "透過存取或使用 Morning AI 的服務，您確認已閱讀、理解並同意受本服務條款約束。如果您不同意這些條款，請勿使用我們的服務。\n\n本條款構成您與 Morning AI 之間具有法律約束力的協議。我們保留隨時修改這些條款的權利，修改後的條款將在網站上公布後生效。"
     },
     "services": {
-      "title": "服務描述",
-      "content": "Morning AI 提供基於人工智慧的 SaaS 平台服務，包括但不限於：AI 驅動的設計工具、元件庫、開發工作流程優化等功能。我們致力於提供高品質、可靠的服務。\n\n服務內容可能會根據技術發展和市場需求進行調整。我們會盡力提前通知重大變更，但保留隨時修改或終止特定功能的權利。"
+      "title": "Service Description",
+      "content": "Morning AI provides AI-powered SaaS platform services, including but not limited to: AI-driven design tools, component libraries, development workflow optimization, and other features. We are committed to providing high-quality, reliable services.\n\nService content may be adjusted based on technological developments and market demands. We will make every effort to notify you of major changes in advance, but reserve the right to modify or terminate specific features at any time.",
+      "item1": "AI-powered intelligent design tools and automation features",
+      "item2": "Complete UI component library and design system",
+      "item3": "Development workflow optimization and collaboration platform"
     },
     "userAccounts": {
       "title": "用戶帳戶",
@@ -698,7 +701,11 @@
     },
     "userResponsibilities": {
       "title": "User Responsibilities",
-      "content": "You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer."
+      "content": "You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer. You agree to accept responsibility for all activities that occur under your account.",
+      "item1": "Maintain the accuracy and security of account information",
+      "item2": "Comply with all applicable laws and regulations",
+      "item3": "Not abuse or interfere with the normal operation of the service",
+      "item4": "Respect the rights and privacy of other users"
     },
     "limitation": {
       "title": "Limitation of Liability",

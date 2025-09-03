@@ -651,7 +651,10 @@
     },
     "services": {
       "title": "服务描述",
-      "content": "Morning AI 提供基于人工智能的 SaaS 平台服务，包括但不限于：AI 驱动的设计工具、组件库、开发工作流程优化等功能。我们致力于提供高品质、可靠的服务。\n\n服务内容可能会根据技术发展和市场需求进行调整。我们会尽力提前通知重大变更，但保留随时修改或终止特定功能的权利。"
+      "content": "Morning AI 提供基于人工智能的 SaaS 平台服务，包括但不限于：AI 驱动的设计工具、组件库、开发工作流程优化等功能。我们致力于提供高品质、可靠的服务。\n\n服务内容可能会根据技术发展和市场需求进行调整。我们会尽力提前通知重大变更，但保留随时修改或终止特定功能的权利。",
+      "item1": "AI 驱动的智能设计工具和自动化功能",
+      "item2": "完整的 UI 组件库和设计系统",
+      "item3": "开发工作流程优化和协作平台"
     },
     "userAccounts": {
       "title": "用户账户",
@@ -704,8 +707,12 @@
       "content": "If you have any questions about these Terms, please contact us at legal@morningai.com."
     },
     "userResponsibilities": {
-      "title": "User Responsibilities",
-      "content": "You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer."
+      "title": "用户责任",
+      "content": "您有责任维护账户和密码的机密性，并限制对您计算机的访问。您同意对通过您账户进行的所有活动承担责任。",
+      "item1": "维护账户信息的准确性和安全性",
+      "item2": "遵守所有适用的法律法规",
+      "item3": "不得滥用或干扰服务的正常运作",
+      "item4": "尊重其他用户的权利和隐私"
     },
     "limitation": {
       "title": "Limitation of Liability",
