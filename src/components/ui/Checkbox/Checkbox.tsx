@@ -1,3 +1,5 @@
+'use client';
+
 import React, { forwardRef } from 'react';
 import { Check, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
