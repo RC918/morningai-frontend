@@ -1,101 +1,108 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/Button'
-import { ThemeSwitcher } from '@/components/theme/theme-switcher'
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { CTAButton } from '@/components/ui/CTAButton';
 
 export default function HomePage() {
+  const t = useTranslations();
+
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-surface">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-h4 font-bold text-primary-600">Morning AI</h1>
-          <ThemeSwitcher />
+    <div className="min-h-screen">
+      {/* Hero Section - Inspired by Orizon.co */}
+      <section className="relative min-h-screen bg-white overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          {/* Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-purple-50/30"></div>
+          
+          {/* Floating Geometric Shapes */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-lg animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Hero Section */}
-          <div className="space-y-4">
-            <h1 className="text-h1 text-primary-700">
-              Morning AI Design System
-            </h1>
-            <p className="text-body text-text-secondary max-w-2xl mx-auto">
-              企業級 React 元件庫，支援完整 RWD + A11y + 設計系統整合。
-              包含 Button、Input、Navigation 等 16+ 響應式元件。
-            </p>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/components">
-              <Button size="lg" className="w-full sm:w-auto">
-                查看元件庫
-              </Button>
-            </Link>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto">
-              查看文檔
-            </Button>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-surface p-6 rounded-lg border border-border">
-              <div className="w-12 h-12 bg-primary-500 rounded-lg mx-auto mb-4" />
-              <h3 className="text-h5 font-semibold mb-2">響應式設計</h3>
-              <p className="text-caption text-text-muted">
-                支援 375px/768px/1280px 斷點，完美適配所有裝置
-              </p>
+        
+        <div className="container mx-auto px-4 relative z-10 min-h-screen flex items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+            {/* Left Column - Main Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                AI-POWERED DESIGN 🚀
+              </div>
+              
+              {/* Main Title - Orizon Style */}
+              <div className="space-y-4">
+                <h1 className="text-6xl lg:text-8xl font-bold text-gray-900 leading-tight">
+                  We make
+                </h1>
+                <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
+                  <span className="text-blue-500">smart design,</span>
+                </h1>
+                <h1 className="text-6xl lg:text-8xl font-bold text-gray-900 leading-tight">
+                  & AI tools
+                </h1>
+              </div>
+              
+              {/* CTA Button with Team Avatars - Orizon Style */}
+              <div className="flex items-center gap-4">
+                <CTAButton
+                  variant="primary"
+                  size="lg"
+                  className="group relative bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                >
+                  <div className="flex items-center gap-3">
+                    {/* Team Avatar Circles */}
+                    <div className="flex -space-x-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-2 border-white"></div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-full border-2 border-white"></div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full border-2 border-white"></div>
+                    </div>
+                    <span>LET&apos;S TALK</span>
+                  </div>
+                </CTAButton>
+              </div>
+              
+              {/* Handwritten Note */}
+              <div className="relative">
+                <div className="font-handwriting text-2xl text-gray-600 transform rotate-2 relative">
+                  We get booked fast! 🔥
+                  {/* Hand-drawn underline */}
+                  <svg className="absolute -bottom-2 left-0 w-full h-4" viewBox="0 0 200 20" fill="none">
+                    <path d="M10 15 Q50 5 100 12 T190 8" stroke="#3B82F6" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                  </svg>
+                </div>
+              </div>
+              
+              {/* Stats Cards */}
+              <div className="flex gap-6 pt-8">
+                <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="text-3xl font-bold text-gray-900">500+</div>
+                  <div className="text-gray-600">Components</div>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="text-3xl font-bold text-gray-900">99%</div>
+                  <div className="text-gray-600">Satisfaction</div>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-surface p-6 rounded-lg border border-border">
-              <div className="w-12 h-12 bg-success rounded-lg mx-auto mb-4" />
-              <h3 className="text-h5 font-semibold mb-2">無障礙設計</h3>
-              <p className="text-caption text-text-muted">
-                符合 WCAG 2.1 AA 標準，支援鍵盤導航和螢幕閱讀器
-              </p>
-            </div>
-            
-            <div className="bg-surface p-6 rounded-lg border border-border">
-              <div className="w-12 h-12 bg-warning rounded-lg mx-auto mb-4" />
-              <h3 className="text-h5 font-semibold mb-2">主題系統</h3>
-              <p className="text-caption text-text-muted">
-                內建 Light/Dark 主題，支援系統偏好設定自動切換
-              </p>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-border">
-            <div className="text-center">
-              <div className="text-h2 font-bold text-primary-600">16+</div>
-              <div className="text-caption text-text-muted">核心元件</div>
-            </div>
-            <div className="text-center">
-              <div className="text-h2 font-bold text-primary-600">8</div>
-              <div className="text-caption text-text-muted">元件狀態</div>
-            </div>
-            <div className="text-center">
-              <div className="text-h2 font-bold text-primary-600">3</div>
-              <div className="text-caption text-text-muted">響應式斷點</div>
-            </div>
-            <div className="text-center">
-              <div className="text-h2 font-bold text-primary-600">100%</div>
-              <div className="text-caption text-text-muted">TypeScript</div>
+            {/* Right Column - Visual Element */}
+            <div className="relative">
+              <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl flex items-center justify-center">
+                <div className="text-6xl">🎨</div>
+              </div>
             </div>
           </div>
         </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t border-border bg-surface mt-16">
-        <div className="container mx-auto px-4 py-8 text-center">
-          <p className="text-caption text-text-muted">
-            © 2025 Morning AI. Built with Next.js 15 + Tailwind CSS.
-          </p>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gray-300 rounded-full mt-2 animate-bounce"></div>
+          </div>
         </div>
-      </footer>
+      </section>
     </div>
   )
 }
