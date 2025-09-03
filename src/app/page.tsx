@@ -1,11 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { CTAButton } from '@/components/ui/CTAButton';
+import { Button } from '@/components/ui/Button';
 
 export default function HomePage() {
-  const t = useTranslations();
-
   return (
     <div className="min-h-screen">
       {/* Hero Section - Inspired by Orizon.co */}
@@ -46,7 +43,7 @@ export default function HomePage() {
               
               {/* CTA Button with Team Avatars - Orizon Style */}
               <div className="flex items-center gap-4">
-                <CTAButton
+                <Button
                   variant="primary"
                   size="lg"
                   className="group relative bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 hover:shadow-2xl hover:scale-105"
@@ -60,7 +57,7 @@ export default function HomePage() {
                     </div>
                     <span>LET&apos;S TALK</span>
                   </div>
-                </CTAButton>
+                </Button>
               </div>
               
               {/* Handwritten Note */}
