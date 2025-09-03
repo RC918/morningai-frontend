@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { CTAButton } from '@/components/ui/CTAButton';
+import Footer from '@/components/Footer';
 
 export default function HomePage() {
   const t = useTranslations();
@@ -553,6 +554,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
