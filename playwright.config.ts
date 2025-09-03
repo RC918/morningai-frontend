@@ -12,9 +12,10 @@ export default defineConfig({
     ['junit', { outputFile: 'evidence/playwright/results.xml' }]
   ],
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'https://morningai-frontend-ten.vercel.app',
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'https://app.morningai.me',
+    trace: 'on',
+    video: 'on',
+    screenshot: 'on',
   },
   projects: [
     {
