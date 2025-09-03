@@ -67,7 +67,10 @@ body {
 
 /* Simple utility for the curved underline svg holder (if used) */
 .hero-curve {
+  position: absolute;
+  inset: 0;
   pointer-events: none;
+  z-index: -10; /* ensure under content */
 }
 
 a {

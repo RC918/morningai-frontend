@@ -1,10 +1,11 @@
-'use client'
-import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
+import React from "react";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], display: "swap" });
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
-  const t = useTranslations('home.hero')
-
+  const t = useTranslations();
+  
   // Avoid rendering i18n key name when missing; always fallback to English copy.
   const F = (key: string, fallback: string) => {
     try {
@@ -16,86 +17,76 @@ export default function Hero() {
     }
   }
 
-  // mark hydration-ready for E2E
-  const [ready, setReady] = useState(false)
-  useEffect(() => setReady(true), [])
-
-  const label = F('label', 'AI-POWERED DESIGN 🚀')
-  const title = F('title', 'We make smart design, & AI tools')
-  const desc = F(
-    'description',
-    'Morning AI is a design system platform based in Taiwan. We help startups & Fortune 500 companies delight humans on the other side of the screen.'
-  )
-
   return (
-    <section
-      id="hero"
-      data-e2e-ready={ready ? '1' : '0'}
-      className="relative min-h-screen bg-white overflow-hidden"
-    >
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-purple-50/30"></div>
-        
-        {/* Floating Geometric Shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-lg animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '2s'}}></div>
+    <section className={`${inter.className} relative z-0 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden`} data-e2e-ready="true">
+      {/* Background decorative elements */}
+      <div aria-hidden className="hero-curve">
+        {/* Blue curve */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-64 text-blue-400"
+          viewBox="0 0 1200 320"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            fill="currentColor"
+            fillOpacity="0.3"
+          />
+        </svg>
       </div>
-      
-      <div className="container mx-auto px-4 relative z-10 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-          {/* Left Column - Main Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-              {label}
-            </div>
-            
-            {/* Main Title - Fixed to prevent hydration mismatch */}
-            <div className="space-y-4">
-              <h1 className="text-6xl lg:text-8xl font-bold text-gray-900 leading-tight" suppressHydrationWarning>
-                {title}
-              </h1>
-            </div>
-            
-            {/* Description */}
-            <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-2xl">
-              {desc}
-            </p>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 pt-8 max-w-md">
-              <div className="text-center p-4 bg-white/50 rounded-xl border border-gray-100">
-                <div className="text-3xl font-bold text-blue-500">500+</div>
-                <div className="text-gray-600">Components</div>
-              </div>
-              <div className="text-center p-4 bg-white/50 rounded-xl border border-gray-100">
-                <div className="text-3xl font-bold text-green-500">99%</div>
-                <div className="text-gray-600">Satisfaction</div>
-              </div>
-            </div>
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-32">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="mb-4 inline-flex select-none items-center rounded-full border px-3 py-1 text-xs font-medium bg-white/80 backdrop-blur-sm border-blue-200 text-blue-700">
+            {F('home.hero.label', 'AI-POWERED DESIGN 🚀')}
           </div>
           
-          {/* Right Column - Additional Content */}
-          <div className="space-y-6 lg:pl-8">
-            {/* Optional decorative curve kept as non-interactive */}
-            <div aria-hidden="true" className="hero-curve">
-              {/* svg / canvas can live here if needed */}
+          {/* Main heading */}
+          <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight md:text-6xl text-gray-900 mb-6" suppressHydrationWarning>
+            We make smart design,<br className="hidden md:block" /> &amp; AI tools
+          </h1>
+          
+          {/* Subtitle */}
+          <p className="mt-5 max-w-3xl mx-auto text-base text-gray-600 md:text-lg leading-relaxed">
+            Morning AI is a design system platform based in Taiwan. We help startups &amp; Fortune 500 companies delight humans on the other side of the screen.
+          </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 mb-12">
+            <button className="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+              {F('home.hero.cta', 'LET\'S TALK')}
+            </button>
+            <button className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-lg font-semibold border border-gray-200 transition-all duration-300">
+              View Demo
+            </button>
+          </div>
+          
+          {/* Booking notice */}
+          <div className="text-sm text-gray-600 mb-8">
+            We get booked fast! 🔥
+          </div>
+          
+          {/* Stats */}
+          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-2xl font-semibold text-gray-900">500+</div>
+              <div className="text-sm opacity-70 text-gray-600">Components</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-semibold text-gray-900">99%</div>
+              <div className="text-sm opacity-70 text-gray-600">Satisfaction</div>
+            </div>
+            <div className="hidden md:block text-center">
+              <div className="text-2xl font-semibold text-gray-900">24/7</div>
+              <div className="text-sm opacity-70 text-gray-600">Support</div>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 

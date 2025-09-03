@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl';
 import { CTAButton } from '@/components/ui/CTAButton';
 import Hero from '@/components/Hero';
 
+export const dynamic = "force-static"; // keep SSR output stable
+
 export default function HomePage() {
   const t = useTranslations();
 
