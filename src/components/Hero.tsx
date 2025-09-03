@@ -7,9 +7,13 @@ export default function Hero() {
 
   // Avoid rendering i18n key name when missing; always fallback to English copy.
   const F = (key: string, fallback: string) => {
-    const value = t.optional(key) as unknown as string | undefined
-    if (!value || value === key) return fallback
-    return value
+    try {
+      const value = t(key)
+      if (!value || value === key) return fallback
+      return value
+    } catch {
+      return fallback
+    }
   }
 
   // mark hydration-ready for E2E
