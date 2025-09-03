@@ -51,8 +51,12 @@ module.exports = {
         surface: 'var(--surface)',
         border: 'var(--border)',
       },
+      fontFamily: {
+        // Font Families
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'handwriting': ['Caveat', 'cursive'],
+      },
       fontSize: {
-        // Typography Scale
         'h1': ['2.5rem', { lineHeight: '3rem', fontWeight: '700' }],
         'h2': ['2rem', { lineHeight: '2.5rem', fontWeight: '600' }],
         'h3': ['1.5rem', { lineHeight: '2rem', fontWeight: '600' }],
