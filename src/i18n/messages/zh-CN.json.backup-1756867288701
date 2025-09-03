@@ -621,8 +621,7 @@
       "content": "您对自己的个人信息享有以下权利：",
       "item1": "查阅权 - 您可以要求查看我们持有的关于您的信息",
       "item2": "更正权 - 您可以要求更正不准确的信息",
-      "item3": "删除权 - 在特定情况下，您可以要求删除您的个人信息",
-      "item4": "拒絕權：您可以拒絕某些資料處理活動"
+      "item3": "删除权 - 在特定情况下，您可以要求删除您的个人信息"
     },
     "contact": {
       "title": "联系我们",
@@ -633,10 +632,6 @@
       "phone": "电话",
       "phoneValue": "+86-21-1234-5678",
       "content": "If you have any questions about this Privacy Policy, please contact us at privacy@morningai.com."
-    },
-    "updates": {
-      "title": "政策更新",
-      "content": "我們可能會不時更新本隱私政策。重大變更將會透過電子郵件或網站公告通知您。"
     }
   },
   "terms": {
@@ -723,6 +718,5 @@
       "primary": "Get Started",
       "secondary": "View Demo"
     }
-  },
-  "Locale": "en"
+  }
 }

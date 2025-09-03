@@ -1,0 +1,34 @@
+📊 i18n Message Consistency Report
+Generated: 2025-09-03T02:41:34.218Z
+
+📈 Statistics:
+  English (base):     463 keys
+  Traditional Chinese: 463 keys
+  Simplified Chinese:  470 keys
+
+❌ Missing in zh-TW (0 keys):
+
+➕ Extra in zh-TW (0 keys):
+
+❌ Missing in zh-CN (0 keys):
+
+➕ Extra in zh-CN (7 keys):
+  + privacy.tableOfContents
+  + privacy.contact.description
+  + privacy.contact.email
+  + privacy.contact.address
+  + privacy.contact.addressValue
+  + privacy.contact.phone
+  + privacy.contact.phoneValue
+
+🎯 Priority Fix List (most critical first):
+
+1. Pricing page keys:
+
+2. Features page keys:
+
+3. FAQ page keys:
+
+4. Contact page keys:
+
+5. Other keys:

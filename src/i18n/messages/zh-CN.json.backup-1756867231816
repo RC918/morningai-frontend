@@ -25,11 +25,7 @@
     "about": "关于我们",
     "contact": "联系我们",
     "features": "功能特色",
-    "pricing": "价格方案",
-    "faq": "FAQ",
-    "demo": "Demo",
-    "privacy": "Privacy",
-    "terms": "Terms"
+    "pricing": "价格方案"
   },
   "theme": {
     "light": "浅色",
@@ -38,9 +34,8 @@
     "switchTheme": "切换主题"
   },
   "language": {
-    "current": "简体中文",
-    "switch": "切换语言",
-    "switchLanguage": "切换语言"
+    "switchLanguage": "切换语言",
+    "currentLanguage": "当前语言"
   },
   "home": {
     "title": "Morning AI 设计系统（简体）",
@@ -222,9 +217,7 @@
   "cta": {
     "readyToStart": {
       "title": "准备开始了吗？",
-      "description": "立即开始使用 Morning AI，体验智能化开发的全新境界。",
-      "primary": "Start Free Trial",
-      "secondary": "Contact Sales"
+      "description": "立即开始使用 Morning AI，体验智能化开发的全新境界。"
     },
     "getStarted": "立即开始",
     "learnMore": "了解更多",
@@ -235,8 +228,7 @@
     "viewAllFeatures": "查看所有功能",
     "viewAllPricing": "查看所有定价",
     "viewPricing": "查看定价",
-    "contactUs": "联系我们",
-    "tryFree": "Try Free"
+    "contactUs": "联系我们"
   },
   "features": {
     "title": "强大功能，无限可能",
@@ -287,8 +279,7 @@
     },
     "cta": {
       "title": "准备体验这些强大功能了吗？",
-      "description": "立即开始使用 Morning AI，体验智能化开发的全新境界。",
-      "viewAll": "View All Features"
+      "description": "立即开始使用 Morning AI，体验智能化开发的全新境界。"
     }
   },
   "pricing": {
@@ -316,15 +307,7 @@
       "feature1": "基础 UI 组件库",
       "feature2": "社区技术支持",
       "feature3": "基本文档访问",
-      "feature4": "最多 3 个项目",
-      "period": "",
-      "features": {
-        "1": "Basic AI design tools",
-        "2": "5 projects",
-        "3": "Community support",
-        "4": "Basic templates"
-      },
-      "cta": "Get Started"
+      "feature4": "最多 3 个项目"
     },
     "professional": {
       "name": "专业方案",
@@ -348,17 +331,7 @@
       "feature2": "进阶设计系统",
       "feature3": "优先技术支持",
       "feature4": "无限项目数量",
-      "feature5": "自定义主题与品牌",
-      "popular": "Most Popular",
-      "features": {
-        "1": "Advanced AI design tools",
-        "2": "Unlimited projects",
-        "3": "Priority support",
-        "4": "Premium templates",
-        "5": "Team collaboration",
-        "6": "Advanced analytics"
-      },
-      "cta": "Get Started"
+      "feature5": "自定义主题与品牌"
     },
     "enterprise": {
       "name": "企业方案",
@@ -372,15 +345,7 @@
       "feature4": "定制化开发服务",
       "feature5": "企业级安全与合规",
       "feature6": "白标解决方案",
-      "cta": "联系销售",
-      "features": {
-        "1": "Custom AI solutions",
-        "2": "Unlimited everything",
-        "3": "24/7 dedicated support",
-        "4": "Custom integrations",
-        "5": "Advanced security",
-        "6": "Training & onboarding"
-      }
+      "cta": "联系销售"
     },
     "faq": {
       "title": "常见问题",
@@ -389,9 +354,7 @@
     "cta": {
       "title": "准备开始了吗？",
       "description": "选择最适合您需求的方案，立即开始使用 Morning AI。"
-    },
-    "title": "Choose the Right Plan for You",
-    "subtitle": "From individual developers to large enterprises, we offer flexible pricing plans to meet different scale requirements."
+    }
   },
   "faq": {
     "title": "常见问题",
@@ -413,30 +376,6 @@
       "q3": {
         "question": "可以免费试用吗？",
         "answer": "当然可以！我们提供永久免费方案，您也可以申请专业方案的 14 天免费试用，无需信用卡信息。"
-      },
-      "q4": {
-        "question": "What kind of support do you offer?",
-        "answer": "We provide comprehensive support including documentation, tutorials, community forums, and direct support for Pro and Enterprise users."
-      },
-      "q5": {
-        "question": "Is there a free trial available?",
-        "answer": "Yes, we offer a free plan with basic features. You can also try our Pro features with a 14-day free trial."
-      },
-      "q6": {
-        "question": "How secure is my data?",
-        "answer": "We take security seriously with enterprise-grade encryption, regular security audits, and compliance with industry standards."
-      },
-      "q7": {
-        "question": "Can I cancel my subscription anytime?",
-        "answer": "Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period."
-      },
-      "q8": {
-        "question": "Do you offer custom solutions for enterprises?",
-        "answer": "Yes, we provide tailored solutions for large organizations including custom integrations, dedicated support, and specialized training."
-      },
-      "q9": {
-        "question": "How often do you release new features?",
-        "answer": "We continuously improve our platform with regular updates and new features based on user feedback and industry trends."
       }
     },
     "pricing": {
@@ -495,43 +434,90 @@
     }
   },
   "contact": {
+    "title": "联系我们",
+    "subtitle": "有任何问题或需要协助？我们的团队随时为您服务。",
     "hero": {
       "title": "联系我们",
-      "description": "有任何问题或需要协助吗？我们的团队随时为您提供支持。"
+      "description": "有任何问题或需要协助？我们的团队随时为您服务。"
     },
     "form": {
       "title": "发送消息",
+      "firstName": "名字",
+      "firstNamePlaceholder": "请输入您的名字",
+      "lastName": "姓氏",
+      "lastNamePlaceholder": "请输入您的姓氏",
       "name": "姓名",
       "namePlaceholder": "请输入您的姓名",
       "email": "电子邮件",
       "emailPlaceholder": "请输入您的电子邮件",
+      "company": "公司名称",
+      "companyPlaceholder": "请输入公司名称（选填）",
       "subject": "主题",
-      "subjectPlaceholder": "请选择主题",
+      "subjectPlaceholder": "请输入邮件主题",
+      "selectSubject": "请选择主题",
+      "subjectSales": "销售咨询",
+      "subjectSupport": "技术支持",
+      "subjectPartnership": "合作伙伴",
+      "subjectOther": "其他",
       "message": "消息内容",
       "messagePlaceholder": "请详细描述您的问题或需求",
       "submit": "发送消息"
     },
+    "methods": {
+      "title": "联系方式"
+    },
+    "sales": {
+      "title": "销售咨询",
+      "description": "想了解我们的产品和定价方案？我们的销售团队将为您提供专业建议。",
+      "action": "联系销售团队"
+    },
+    "support": {
+      "title": "技术支持",
+      "description": "遇到技术问题或需要使用协助？我们的技术团队随时为您解决问题。",
+      "action": "获得技术支持"
+    },
     "info": {
-      "title": "联系信息",
       "email": {
         "title": "电子邮件",
-        "value": "hello@morningai.com"
+        "value": "contact@morningai.me"
       },
       "phone": {
         "title": "电话",
-        "value": "+86-21-1234-5678"
+        "value": "+86-10-1234-5678"
       },
       "address": {
         "title": "地址",
-        "value": "上海市浦东新区陆家嘴环路1000号"
+        "value": "北京市朝阳区建国门外大街1号"
       }
     },
     "hours": {
       "title": "营业时间",
       "weekdays": "周一至周五",
-      "weekdaysTime": "09:00 - 18:00",
+      "weekdaysTime": "上午 9:00 - 下午 6:00",
       "weekend": "周末",
       "weekendTime": "休息"
+    },
+    "partnership": {
+      "title": "合作伙伴",
+      "description": "有兴趣成为我们的合作伙伴？让我们一起探索合作机会。",
+      "action": "探索合作机会"
+    },
+    "office": {
+      "title": "办公室信息",
+      "address": "上海市浦东新区陆家嘴环路 1000 号",
+      "phone": "+86-21-1234-5678",
+      "hours": "周一至周五 9:00-18:00"
+    },
+    "faq": {
+      "title": "还有其他问题？",
+      "description": "查看我们的常见问题页面，或许能找到您需要的答案。",
+      "action": "查看常见问题"
+    },
+    "info": {
+      "title": "联系信息",
+      "email": "support@morningai.com",
+      "phone": "+86-21-1234-5678",
+      "address": "上海市浦东新区陆家嘴环路 1000 号"
     }
   },
   "demo": {
@@ -621,8 +607,7 @@
       "content": "您对自己的个人信息享有以下权利：",
       "item1": "查阅权 - 您可以要求查看我们持有的关于您的信息",
       "item2": "更正权 - 您可以要求更正不准确的信息",
-      "item3": "删除权 - 在特定情况下，您可以要求删除您的个人信息",
-      "item4": "拒絕權：您可以拒絕某些資料處理活動"
+      "item3": "删除权 - 在特定情况下，您可以要求删除您的个人信息"
     },
     "contact": {
       "title": "联系我们",
@@ -631,12 +616,7 @@
       "address": "地址",
       "addressValue": "上海市浦东新区陆家嘴环路1000号",
       "phone": "电话",
-      "phoneValue": "+86-21-1234-5678",
-      "content": "If you have any questions about this Privacy Policy, please contact us at privacy@morningai.com."
-    },
-    "updates": {
-      "title": "政策更新",
-      "content": "我們可能會不時更新本隱私政策。重大變更將會透過電子郵件或網站公告通知您。"
+      "phoneValue": "+86-21-1234-5678"
     }
   },
   "terms": {
@@ -700,29 +680,56 @@
       "address": "地址",
       "addressValue": "上海市浦东新区陆家嘴环路 1000 号",
       "phone": "电话",
-      "phoneValue": "+86-21-1234-5678",
-      "content": "If you have any questions about these Terms, please contact us at legal@morningai.com."
-    },
-    "userResponsibilities": {
-      "title": "User Responsibilities",
-      "content": "You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer."
-    },
-    "limitation": {
-      "title": "Limitation of Liability",
-      "content": "In no event shall Morning AI be liable for any indirect, incidental, special, consequential, or punitive damages."
+      "phoneValue": "+86-21-1234-5678"
     }
   },
   "i18nDemo": {
     "title": "多语言演示",
     "description": "展示 Morning AI 的多语言支持功能"
   },
-  "hero": {
-    "title": "Powerful Features, Unlimited Possibilities",
-    "subtitle": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions. We provide all the tools you need for success.",
-    "cta": {
-      "primary": "Get Started",
-      "secondary": "View Demo"
-    }
+  "language": {
+    "current": "简体中文",
+    "switch": "切换语言",
+    "switchLanguage": "切换语言"
   },
-  "Locale": "en"
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "description": "有任何问题或需要协助吗？我们的团队随时为您提供支持。"
+    },
+    "form": {
+      "title": "发送消息",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "email": "电子邮件",
+      "emailPlaceholder": "请输入您的电子邮件",
+      "subject": "主题",
+      "subjectPlaceholder": "请选择主题",
+      "message": "消息内容",
+      "messagePlaceholder": "请详细描述您的问题或需求",
+      "submit": "发送消息"
+    },
+    "info": {
+      "title": "联系信息",
+      "email": {
+        "title": "电子邮件",
+        "value": "hello@morningai.com"
+      },
+      "phone": {
+        "title": "电话",
+        "value": "+86-21-1234-5678"
+      },
+      "address": {
+        "title": "地址",
+        "value": "上海市浦东新区陆家嘴环路1000号"
+      }
+    },
+    "hours": {
+      "title": "营业时间",
+      "weekdays": "周一至周五",
+      "weekdaysTime": "09:00 - 18:00",
+      "weekend": "周末",
+      "weekendTime": "休息"
+    }
+  }
 }

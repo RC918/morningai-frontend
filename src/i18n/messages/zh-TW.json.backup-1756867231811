@@ -25,11 +25,7 @@
     "about": "關於我們",
     "contact": "聯絡我們",
     "features": "功能特色",
-    "pricing": "價格方案",
-    "faq": "FAQ",
-    "demo": "Demo",
-    "privacy": "Privacy",
-    "terms": "Terms"
+    "pricing": "價格方案"
   },
   "theme": {
     "light": "淺色",
@@ -38,9 +34,8 @@
     "switchTheme": "切換主題"
   },
   "language": {
-    "current": "繁體中文",
-    "switch": "切換語言",
-    "switchLanguage": "切換語言"
+    "switchLanguage": "切換語言",
+    "currentLanguage": "目前語言"
   },
   "home": {
     "title": "Morning AI 設計系統",
@@ -222,9 +217,7 @@
   "cta": {
     "readyToStart": {
       "title": "準備開始了嗎？",
-      "description": "立即開始使用 Morning AI，體驗智能化開發的全新境界。",
-      "primary": "Start Free Trial",
-      "secondary": "Contact Sales"
+      "description": "立即開始使用 Morning AI，體驗智能化開發的全新境界。"
     },
     "getStarted": "立即開始",
     "learnMore": "了解更多",
@@ -235,8 +228,7 @@
     "viewAllFeatures": "查看所有功能",
     "viewAllPricing": "查看所有定價",
     "viewPricing": "查看定價",
-    "contactUs": "聯絡我們",
-    "tryFree": "Try Free"
+    "contactUs": "聯絡我們"
   },
   "features": {
     "title": "強大功能，無限可能",
@@ -287,8 +279,7 @@
     },
     "cta": {
       "title": "準備體驗這些強大功能了嗎？",
-      "description": "立即開始使用 Morning AI，體驗智能化開發的全新境界。",
-      "viewAll": "View All Features"
+      "description": "立即開始使用 Morning AI，體驗智能化開發的全新境界。"
     }
   },
   "pricing": {
@@ -316,15 +307,7 @@
       "feature1": "基礎 UI 元件庫",
       "feature2": "社群技術支援",
       "feature3": "基本文檔存取",
-      "feature4": "最多 3 個專案",
-      "period": "",
-      "features": {
-        "1": "Basic AI design tools",
-        "2": "5 projects",
-        "3": "Community support",
-        "4": "Basic templates"
-      },
-      "cta": "Get Started"
+      "feature4": "最多 3 個專案"
     },
     "professional": {
       "name": "專業方案",
@@ -348,17 +331,7 @@
       "feature2": "進階設計系統",
       "feature3": "優先技術支援",
       "feature4": "無限專案數量",
-      "feature5": "自訂主題與品牌",
-      "popular": "Most Popular",
-      "features": {
-        "1": "Advanced AI design tools",
-        "2": "Unlimited projects",
-        "3": "Priority support",
-        "4": "Premium templates",
-        "5": "Team collaboration",
-        "6": "Advanced analytics"
-      },
-      "cta": "Get Started"
+      "feature5": "自訂主題與品牌"
     },
     "enterprise": {
       "name": "企業方案",
@@ -372,15 +345,7 @@
       "feature4": "客製化開發服務",
       "feature5": "企業級安全與合規",
       "feature6": "白標解決方案",
-      "cta": "聯絡銷售",
-      "features": {
-        "1": "Custom AI solutions",
-        "2": "Unlimited everything",
-        "3": "24/7 dedicated support",
-        "4": "Custom integrations",
-        "5": "Advanced security",
-        "6": "Training & onboarding"
-      }
+      "cta": "聯絡銷售"
     },
     "faq": {
       "title": "常見問題",
@@ -389,133 +354,79 @@
     "cta": {
       "title": "準備開始了嗎？",
       "description": "選擇最適合您需求的方案，立即開始使用 Morning AI。"
-    },
-    "title": "Choose the Right Plan for You",
-    "subtitle": "From individual developers to large enterprises, we offer flexible pricing plans to meet different scale requirements."
+    }
   },
   "faq": {
     "title": "常見問題",
     "subtitle": "找到您需要的答案，或聯絡我們的支援團隊。",
-    "hero": {
-      "title": "常見問題",
-      "description": "找到您需要的答案，或聯絡我們的支援團隊獲得更多協助。"
+    "q1": {
+      "question": "Morning AI 適合什麼類型的專案？",
+      "answer": "Morning AI 適合各種規模的 Web 應用程式開發，從個人部落格到大型企業應用都能受益於我們的設計系統和 AI 功能。"
     },
-    "general": {
-      "title": "一般問題",
-      "q1": {
-        "question": "Morning AI 適合什麼類型的專案？",
-        "answer": "Morning AI 適合各種規模的 Web 應用程式開發，從個人部落格到大型企業應用都能受益於我們的設計系統和 AI 功能。"
-      },
-      "q2": {
-        "question": "是否支援客製化設計？",
-        "answer": "是的，我們的設計系統完全支援客製化。您可以調整顏色、字體、間距等設計代幣，打造符合品牌形象的獨特界面。"
-      },
-      "q3": {
-        "question": "可以免費試用嗎？",
-        "answer": "當然可以！我們提供永久免費方案，您也可以申請專業方案的 14 天免費試用，無需信用卡資訊。"
-      },
-      "q4": {
-        "question": "What kind of support do you offer?",
-        "answer": "We provide comprehensive support including documentation, tutorials, community forums, and direct support for Pro and Enterprise users."
-      },
-      "q5": {
-        "question": "Is there a free trial available?",
-        "answer": "Yes, we offer a free plan with basic features. You can also try our Pro features with a 14-day free trial."
-      },
-      "q6": {
-        "question": "How secure is my data?",
-        "answer": "We take security seriously with enterprise-grade encryption, regular security audits, and compliance with industry standards."
-      },
-      "q7": {
-        "question": "Can I cancel my subscription anytime?",
-        "answer": "Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period."
-      },
-      "q8": {
-        "question": "Do you offer custom solutions for enterprises?",
-        "answer": "Yes, we provide tailored solutions for large organizations including custom integrations, dedicated support, and specialized training."
-      },
-      "q9": {
-        "question": "How often do you release new features?",
-        "answer": "We continuously improve our platform with regular updates and new features based on user feedback and industry trends."
-      }
+    "q2": {
+      "question": "是否支援客製化設計？",
+      "answer": "是的，我們的設計系統完全支援客製化。您可以調整顏色、字體、間距等設計代幣，打造符合品牌形象的獨特介面。"
     },
-    "pricing": {
-      "title": "定價問題",
-      "q1": {
-        "question": "有哪些付費方案？",
-        "answer": "我們提供入門版（NT$ 990/月）、專業版（NT$ 2990/月）和企業版（客製化價格）三種方案，滿足不同規模使用者的需求。"
-      },
-      "q2": {
-        "question": "可以隨時取消訂閱嗎？",
-        "answer": "是的，您可以隨時取消訂閱。取消後，您的帳戶將在當前計費週期結束時降級為免費方案。"
-      },
-      "q3": {
-        "question": "是否提供教育折扣？",
-        "answer": "我們為學生和教育機構提供 50% 的教育折扣。請聯絡我們的銷售團隊了解詳情。"
-      }
+    "q3": {
+      "question": "技術支援如何提供？",
+      "answer": "我們提供多層級的技術支援：免費用戶可使用社群論壇，付費用戶享有郵件支援，企業客戶則有專屬的客戶成功經理。"
     },
-    "technical": {
-      "title": "技術問題",
-      "q1": {
-        "question": "支援哪些框架和技術堆疊？",
-        "answer": "我們支援 React、Vue、Angular 等主流前端框架，以及 Next.js、Nuxt.js 等全端框架。"
-      },
-      "q2": {
-        "question": "如何整合到現有專案中？",
-        "answer": "透過我們的 CLI 工具或 npm 套件，您可以輕鬆將 Morning AI 元件整合到現有專案中，無需重構現有程式碼。"
-      },
-      "q3": {
-        "question": "是否支援 TypeScript？",
-        "answer": "是的，我們的所有元件都提供完整的 TypeScript 類型定義，確保類型安全和更好的開發體驗。"
-      }
+    "q4": {
+      "question": "資料安全如何保障？",
+      "answer": "我們採用業界標準的安全措施，包括 SOC 2 Type II 認證、端到端加密，以及定期的安全稽核，確保您的資料安全。"
     },
-    "support": {
-      "title": "支援問題",
-      "q1": {
-        "question": "技術支援如何提供？",
-        "answer": "我們提供多層級的技術支援：免費使用者可使用社群論壇，付費使用者享有電子郵件支援，企業客戶則有專屬的客戶成功經理。"
-      },
-      "q2": {
-        "question": "回應時間是多久？",
-        "answer": "免費使用者透過社群支援，通常 24-48 小時內回覆；付費使用者電子郵件支援 12 小時內回覆；企業客戶享有 4 小時內回應的 SLA。"
-      },
-      "q3": {
-        "question": "資料安全如何保障？",
-        "answer": "我們採用業界標準的安全措施，包括 SOC 2 Type II 認證、端到端加密，以及定期的安全稽核，確保您的資料安全。"
-      }
-    },
-    "search": {
-      "title": "沒找到您要的答案？",
-      "placeholder": "搜尋常見問題..."
-    },
-    "contact": {
-      "title": "仍有疑問？",
-      "description": "如果您沒有找到需要的答案，我們的支援團隊隨時為您提供協助。",
-      "support": "聯絡支援團隊"
+    "q5": {
+      "question": "可以免費試用嗎？",
+      "answer": "當然可以！我們提供永久免費方案，您也可以申請專業方案的 14 天免費試用，無需信用卡資訊。"
     }
   },
   "contact": {
+    "title": "聯絡我們",
+    "subtitle": "有任何問題或需要協助？我們的團隊隨時為您服務。",
     "hero": {
       "title": "聯絡我們",
-      "description": "有任何問題或需要協助嗎？我們的團隊隨時為您提供支援。"
+      "description": "有任何問題或需要協助？我們的團隊隨時為您服務。"
     },
     "form": {
       "title": "發送訊息",
+      "firstName": "名字",
+      "firstNamePlaceholder": "請輸入您的名字",
+      "lastName": "姓氏",
+      "lastNamePlaceholder": "請輸入您的姓氏",
       "name": "姓名",
       "namePlaceholder": "請輸入您的姓名",
       "email": "電子郵件",
       "emailPlaceholder": "請輸入您的電子郵件",
+      "company": "公司名稱",
+      "companyPlaceholder": "請輸入公司名稱（選填）",
       "subject": "主旨",
-      "subjectPlaceholder": "請選擇主旨",
+      "subjectPlaceholder": "請輸入郵件主旨",
+      "selectSubject": "請選擇主旨",
+      "subjectSales": "銷售諮詢",
+      "subjectSupport": "技術支援",
+      "subjectPartnership": "合作夥伴",
+      "subjectOther": "其他",
       "message": "訊息內容",
       "messagePlaceholder": "請詳細描述您的問題或需求",
       "submit": "發送訊息"
     },
+    "methods": {
+      "title": "聯絡方式"
+    },
+    "sales": {
+      "title": "銷售諮詢",
+      "description": "想了解我們的產品和定價方案？我們的銷售團隊將為您提供專業建議。",
+      "action": "聯絡銷售團隊"
+    },
+    "support": {
+      "title": "技術支援",
+      "description": "遇到技術問題或需要使用協助？我們的技術團隊隨時為您解決問題。",
+      "action": "獲得技術支援"
+    },
     "info": {
-      "title": "聯絡資訊",
       "email": {
         "title": "電子郵件",
-        "value": "hello@morningai.com"
+        "value": "contact@morningai.me"
       },
       "phone": {
         "title": "電話",
@@ -529,9 +440,31 @@
     "hours": {
       "title": "營業時間",
       "weekdays": "週一至週五",
-      "weekdaysTime": "09:00 - 18:00",
+      "weekdaysTime": "上午 9:00 - 下午 6:00",
       "weekend": "週末",
       "weekendTime": "休息"
+    },
+    "partnership": {
+      "title": "合作夥伴",
+      "description": "有興趣成為我們的合作夥伴？讓我們一起探索合作機會。",
+      "action": "探索合作機會"
+    },
+    "office": {
+      "title": "辦公室資訊",
+      "address": "台北市信義區信義路五段 7 號",
+      "phone": "+886-2-1234-5678",
+      "hours": "週一至週五 9:00-18:00"
+    },
+    "faq": {
+      "title": "還有其他問題？",
+      "description": "查看我們的常見問題頁面，或許能找到您需要的答案。",
+      "action": "查看常見問題"
+    },
+    "info": {
+      "title": "聯絡資訊",
+      "email": "support@morningai.com",
+      "phone": "+886-2-1234-5678",
+      "address": "台北市信義區信義路五段 7 號"
     }
   },
   "demo": {
@@ -693,29 +626,134 @@
       "address": "地址",
       "addressValue": "台北市信義區信義路五段 7 號",
       "phone": "電話",
-      "phoneValue": "+886-2-1234-5678",
-      "content": "If you have any questions about these Terms, please contact us at legal@morningai.com."
+      "phoneValue": "+886-2-1234-5678"
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "找到您需要的答案，或聯絡我們的支援團隊。",
+    "hero": {
+      "title": "常見問題",
+      "description": "找到您需要的答案，或聯絡我們的支援團隊獲得更多協助。"
     },
-    "userResponsibilities": {
-      "title": "User Responsibilities",
-      "content": "You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer."
+    "general": {
+      "title": "一般問題",
+      "q1": {
+        "question": "Morning AI 適合什麼類型的專案？",
+        "answer": "Morning AI 適合各種規模的 Web 應用程式開發，從個人部落格到大型企業應用都能受益於我們的設計系統和 AI 功能。"
+      },
+      "q2": {
+        "question": "是否支援客製化設計？",
+        "answer": "是的，我們的設計系統完全支援客製化。您可以調整顏色、字體、間距等設計代幣，打造符合品牌形象的獨特界面。"
+      },
+      "q3": {
+        "question": "可以免費試用嗎？",
+        "answer": "當然可以！我們提供永久免費方案，您也可以申請專業方案的 14 天免費試用，無需信用卡資訊。"
+      }
     },
-    "limitation": {
-      "title": "Limitation of Liability",
-      "content": "In no event shall Morning AI be liable for any indirect, incidental, special, consequential, or punitive damages."
+    "pricing": {
+      "title": "定價問題",
+      "q1": {
+        "question": "有哪些付費方案？",
+        "answer": "我們提供入門版（NT$ 990/月）、專業版（NT$ 2990/月）和企業版（客製化價格）三種方案，滿足不同規模使用者的需求。"
+      },
+      "q2": {
+        "question": "可以隨時取消訂閱嗎？",
+        "answer": "是的，您可以隨時取消訂閱。取消後，您的帳戶將在當前計費週期結束時降級為免費方案。"
+      },
+      "q3": {
+        "question": "是否提供教育折扣？",
+        "answer": "我們為學生和教育機構提供 50% 的教育折扣。請聯絡我們的銷售團隊了解詳情。"
+      }
+    },
+    "technical": {
+      "title": "技術問題",
+      "q1": {
+        "question": "支援哪些框架和技術堆疊？",
+        "answer": "我們支援 React、Vue、Angular 等主流前端框架，以及 Next.js、Nuxt.js 等全端框架。"
+      },
+      "q2": {
+        "question": "如何整合到現有專案中？",
+        "answer": "透過我們的 CLI 工具或 npm 套件，您可以輕鬆將 Morning AI 元件整合到現有專案中，無需重構現有程式碼。"
+      },
+      "q3": {
+        "question": "是否支援 TypeScript？",
+        "answer": "是的，我們的所有元件都提供完整的 TypeScript 類型定義，確保類型安全和更好的開發體驗。"
+      }
+    },
+    "support": {
+      "title": "支援問題",
+      "q1": {
+        "question": "技術支援如何提供？",
+        "answer": "我們提供多層級的技術支援：免費使用者可使用社群論壇，付費使用者享有電子郵件支援，企業客戶則有專屬的客戶成功經理。"
+      },
+      "q2": {
+        "question": "回應時間是多久？",
+        "answer": "免費使用者透過社群支援，通常 24-48 小時內回覆；付費使用者電子郵件支援 12 小時內回覆；企業客戶享有 4 小時內回應的 SLA。"
+      },
+      "q3": {
+        "question": "資料安全如何保障？",
+        "answer": "我們採用業界標準的安全措施，包括 SOC 2 Type II 認證、端到端加密，以及定期的安全稽核，確保您的資料安全。"
+      }
+    },
+    "search": {
+      "title": "沒找到您要的答案？",
+      "placeholder": "搜尋常見問題..."
+    },
+    "contact": {
+      "title": "仍有疑問？",
+      "description": "如果您沒有找到需要的答案，我們的支援團隊隨時為您提供協助。",
+      "support": "聯絡支援團隊"
     }
   },
   "i18nDemo": {
     "title": "多語言示範",
     "description": "展示 Morning AI 的多語言支援功能"
   },
-  "hero": {
-    "title": "Powerful Features, Unlimited Possibilities",
-    "subtitle": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions. We provide all the tools you need for success.",
-    "cta": {
-      "primary": "Get Started",
-      "secondary": "View Demo"
-    }
+  "language": {
+    "current": "繁體中文",
+    "switch": "切換語言",
+    "switchLanguage": "切換語言"
   },
-  "Locale": "en"
+  "contact": {
+    "hero": {
+      "title": "聯絡我們",
+      "description": "有任何問題或需要協助嗎？我們的團隊隨時為您提供支援。"
+    },
+    "form": {
+      "title": "發送訊息",
+      "name": "姓名",
+      "namePlaceholder": "請輸入您的姓名",
+      "email": "電子郵件",
+      "emailPlaceholder": "請輸入您的電子郵件",
+      "subject": "主旨",
+      "subjectPlaceholder": "請選擇主旨",
+      "message": "訊息內容",
+      "messagePlaceholder": "請詳細描述您的問題或需求",
+      "submit": "發送訊息"
+    },
+    "info": {
+      "title": "聯絡資訊",
+      "email": {
+        "title": "電子郵件",
+        "value": "hello@morningai.com"
+      },
+      "phone": {
+        "title": "電話",
+        "value": "+886-2-1234-5678"
+      },
+      "address": {
+        "title": "地址",
+        "value": "台北市信義區信義路五段7號"
+      }
+    },
+    "hours": {
+      "title": "營業時間",
+      "weekdays": "週一至週五",
+      "weekdaysTime": "09:00 - 18:00",
+      "weekend": "週末",
+      "weekendTime": "休息"
+    }
+  }
 }
+

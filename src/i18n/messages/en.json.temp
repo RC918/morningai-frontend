@@ -1,0 +1,617 @@
+{
+  "LANG_CHECK": "EN OK",
+  "common": {
+    "title": "Powerful Features, Unlimited Possibilities",
+    "description": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions, we provide all the tools you need for success.",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "navigation": {
+    "home": "Home",
+    "components": "Components",
+    "documentation": "Documentation",
+    "about": "About",
+    "contact": "Contact",
+    "features": "Features",
+    "pricing": "Pricing"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "switchTheme": "Switch Theme"
+  },
+  "language": {
+    "switchLanguage": "Switch Language",
+    "currentLanguage": "Current Language"
+  },
+  "home": {
+    "title": "Morning AI Design System (EN)",
+    "subtitle": "Enterprise React Component Library",
+    "description": "Complete RWD + A11y + Design System Integration. Includes Button, Input, Navigation and 16+ responsive components.",
+    "viewComponents": "View Components",
+    "viewDocumentation": "View Documentation",
+    "hero": {
+      "title": "Build Better Products Faster",
+      "subtitle": "Enterprise-grade design system and component library",
+      "description": "Accelerate your development with our comprehensive design system. Built with accessibility, performance, and developer experience in mind.",
+      "cta": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose Morning AI",
+      "subtitle": "Everything you need to build modern applications",
+      "accessibility": {
+        "title": "Accessibility First",
+        "description": "WCAG 2.1 AA compliant components with full keyboard navigation and screen reader support."
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Mobile-first approach with breakpoints at 375px, 768px, and 1280px for perfect adaptation."
+      },
+      "performance": {
+        "title": "High Performance",
+        "description": "Optimized bundle size and runtime performance. First Load JS under 140KB."
+      },
+      "typescript": {
+        "title": "TypeScript Ready",
+        "description": "100% TypeScript support with comprehensive type definitions and IntelliSense."
+      },
+      "theming": {
+        "title": "Advanced Theming",
+        "description": "Light/Dark mode support with CSS custom properties and design tokens."
+      },
+      "developer": {
+        "title": "Developer Experience",
+        "description": "Excellent documentation, Storybook integration, and comprehensive testing."
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of developers building amazing products with Morning AI Design System.",
+      "button": "Start Building Now"
+    }
+  },
+  "components": {
+    "title": "Component Library",
+    "subtitle": "Morning AI Design System Core Components. Includes Button, Input, Navigation and 16+ responsive components.",
+    "description": "Explore our comprehensive UI component library, each component is carefully designed with responsive layout and accessibility standards support.",
+    "basic": "Basic Components",
+    "advanced": "Advanced Components",
+    "button": {
+      "title": "Button Component",
+      "variants": "Variants",
+      "sizes": "Sizes", 
+      "states": "States",
+      "fullWidth": "Full Width"
+    },
+    "input": {
+      "title": "Input Component",
+      "basic": "Basic Input",
+      "withIcon": "With Icon Input",
+      "sizes": "Input Sizes",
+      "states": "Input States",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "nameHelper": "This is helper text",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+      "smallPlaceholder": "Small input",
+      "mediumPlaceholder": "Medium input", 
+      "largePlaceholder": "Large input",
+      "normalState": "Normal state",
+      "successState": "Success state",
+      "errorState": "Error state",
+      "loadingState": "Loading state",
+      "disabledState": "Disabled state"
+    },
+    "navigation": {
+      "title": "Navigation Component",
+      "description": "Responsive navigation with theme switcher and language selector"
+    },
+    "tabs": {
+      "title": "Tabs Component",
+      "tab1": "Tab 1",
+      "tab2": "Tab 2", 
+      "tab3": "Tab 3",
+      "content1": "Content for Tab 1",
+      "content2": "Content for Tab 2",
+      "content3": "Content for Tab 3"
+    },
+    "modal": {
+      "title": "Modal Component",
+      "openModal": "Open Modal",
+      "modalTitle": "Modal Title",
+      "modalContent": "This is the modal content. You can put any content here.",
+      "closeModal": "Close Modal"
+    },
+    "toast": {
+      "title": "Toast Component",
+      "showSuccess": "Show Success Toast",
+      "showError": "Show Error Toast",
+      "showWarning": "Show Warning Toast",
+      "showInfo": "Show Info Toast",
+      "successMessage": "Operation completed successfully!",
+      "errorMessage": "An error occurred. Please try again.",
+      "warningMessage": "Please check your input.",
+      "infoMessage": "This is an informational message."
+    },
+    "dropdown": {
+      "title": "Dropdown Component",
+      "selectOption": "Select an option",
+      "option1": "Option 1",
+      "option2": "Option 2",
+      "option3": "Option 3"
+    },
+    "tooltip": {
+      "title": "Tooltip Component",
+      "hoverMe": "Hover me",
+      "tooltipText": "This is a tooltip"
+    },
+    "table": {
+      "title": "Table Component",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "actions": "Actions",
+      "noData": "No data available"
+    },
+    "pagination": {
+      "title": "Pagination Component",
+      "page": "Page",
+      "of": "of",
+      "itemsPerPage": "items per page"
+    },
+    "card": {
+      "title": "Card Component",
+      "cardTitle": "Card Title",
+      "cardSubtitle": "Card Subtitle",
+      "cardContent": "This is the card content area where you can put any information.",
+      "action": "Action"
+    },
+    "badge": {
+      "title": "Badge Component",
+      "default": "Default",
+      "primary": "Primary",
+      "success": "Success",
+      "warning": "Warning",
+      "error": "Error"
+    },
+    "avatar": {
+      "title": "Avatar Component",
+      "user": "User"
+    },
+    "skeleton": {
+      "title": "Skeleton Component",
+      "loading": "Loading content..."
+    }
+  },
+  "stats": {
+    "coreComponents": "Core Components",
+    "componentStates": "Component States", 
+    "responsiveBreakpoints": "Responsive Breakpoints",
+    "typescript": "TypeScript"
+  },
+  "footer": {
+    "copyright": "© 2025 Morning AI. Built with Next.js 15 + Tailwind CSS."
+  },
+  "seo": {
+    "siteName": "Morning AI - Intelligent SaaS Platform",
+    "defaultTitle": "Morning AI - Intelligent SaaS Platform",
+    "defaultDescription": "Morning AI provides advanced artificial intelligence solutions to help businesses improve efficiency and innovation. Experience our intelligent design system and component library.",
+    "defaultKeywords": "Morning AI, artificial intelligence, SaaS, design system, component library, intelligent platform, AI solutions"
+  },
+  "cta": {
+    "readyToStart": {
+      "title": "Ready to Get Started?",
+      "description": "Start using Morning AI now and experience the new era of intelligent development."
+    },
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewDemo": "View Demo",
+    "tryDemo": "Try Demo",
+    "signUp": "Sign Up",
+    "contactSales": "Contact Sales",
+    "viewAllFeatures": "View All Features",
+    "viewAllPricing": "View All Pricing",
+    "viewPricing": "View Pricing",
+    "contactUs": "Contact Us"
+  },
+  "features": {
+    "title": "Powerful Features, Unlimited Possibilities",
+    "subtitle": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions, we provide all the tools you need for success.",
+    "hero": {
+      "title": "Powerful Features, Unlimited Possibilities",
+      "description": "Explore Morning AI's complete feature suite, from intelligent design systems to enterprise-grade solutions. We provide all the tools you need for success."
+    },
+    "aiDesign": {
+      "title": "AI Smart Design",
+      "description": "Leverage cutting-edge artificial intelligence technology to automate your design workflow and boost creative efficiency."
+    },
+    "componentLibrary": {
+      "title": "Component Library System",
+      "description": "Complete UI component library with each component carefully designed to support responsive layouts."
+    },
+    "workflow": {
+      "title": "Development Workflow",
+      "description": "Optimized development workflow providing one-stop solution from design to deployment."
+    },
+    "aiPowered": {
+      "title": "AI-Powered Intelligent System",
+      "description": "Leverage cutting-edge artificial intelligence technology to automate your workflows and boost team efficiency.",
+      "benefit1": "Intelligent code generation, reducing 80% development time",
+      "benefit2": "Automated testing and quality assurance",
+      "benefit3": "Smart error detection and fix suggestions"
+    },
+    "designSystem": {
+      "title": "Enterprise-Grade Design System",
+      "description": "Unified design language and component library ensuring brand consistency and development efficiency.",
+      "benefit1": "16+ responsive UI components",
+      "benefit2": "Complete design token system",
+      "benefit3": "Light/dark theme switching support"
+    },
+    "enterpriseReady": {
+      "title": "Enterprise-Ready Security & Scale",
+      "description": "Enterprise-standard security, reliability, and scalability supporting large-scale deployments.",
+      "benefit1": "SOC 2 Type II compliance certification",
+      "benefit2": "99.9% service availability guarantee",
+      "benefit3": "Single Sign-On (SSO) integration support"
+    },
+    "developerExperience": {
+      "title": "Exceptional Developer Experience",
+      "description": "Tools and documentation crafted for developers, letting you focus on creating value.",
+      "benefit1": "Complete TypeScript support",
+      "benefit2": "Rich API documentation and examples",
+      "benefit3": "Active community and technical support"
+    },
+    "cta": {
+      "title": "Ready to Experience These Powerful Features?",
+      "description": "Start using Morning AI today and experience the new realm of intelligent development."
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Choose the Right Plan for You",
+      "description": "From individual developers to large enterprises, we offer flexible pricing plans to meet different scale requirements."
+    },
+    "popular": "Most Popular",
+    "starter": {
+      "name": "Starter Plan",
+      "price": "Free",
+      "period": "forever",
+      "description": "Perfect for individual developers and small projects",
+      "feature1": "Basic UI component library",
+      "feature2": "Community technical support",
+      "feature3": "Basic documentation access",
+      "feature4": "Up to 3 projects",
+      "cta": "Get Started"
+    },
+    "free": {
+      "name": "Free Plan",
+      "title": "Free Plan",
+      "price": "Free",
+      "description": "Perfect for individual developers and small projects",
+      "feature1": "Basic UI component library",
+      "feature2": "Community technical support",
+      "feature3": "Basic documentation access",
+      "feature4": "Up to 3 projects"
+    },
+    "professional": {
+      "name": "Professional Plan",
+      "price": "$19",
+      "period": "per month",
+      "description": "Perfect for professional developers and growing teams",
+      "feature1": "Complete UI component library",
+      "feature2": "Advanced design system",
+      "feature3": "Priority technical support",
+      "feature4": "Unlimited projects",
+      "feature5": "Custom themes and branding",
+      "cta": "Get Started"
+    },
+    "pro": {
+      "name": "Professional Plan",
+      "title": "Professional Plan",
+      "price": "$19",
+      "period": "per month",
+      "description": "Perfect for professional developers and growing teams",
+      "feature1": "Complete UI component library",
+      "feature2": "Advanced design system",
+      "feature3": "Priority technical support",
+      "feature4": "Unlimited projects",
+      "feature5": "Custom themes and branding"
+    },
+    "enterprise": {
+      "name": "Enterprise Plan",
+      "title": "Enterprise Plan",
+      "price": "Custom",
+      "period": "contact sales",
+      "description": "Perfect for large enterprises and organizations",
+      "feature1": "All professional features",
+      "feature2": "Dedicated customer success manager",
+      "feature3": "SLA service guarantee",
+      "feature4": "Custom development services",
+      "feature5": "Enterprise-grade security and compliance",
+      "feature6": "White-label solutions",
+      "cta": "Contact Sales"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Find the answers you need, or contact our support team."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Choose the plan that best fits your needs and start using Morning AI today."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find the answers you need, or contact our support team.",
+    "q1": {
+      "question": "What types of projects is Morning AI suitable for?",
+      "answer": "Morning AI is suitable for web application development of all scales, from personal blogs to large enterprise applications can benefit from our design system and AI features."
+    },
+    "q2": {
+      "question": "Does it support custom design?",
+      "answer": "Yes, our design system fully supports customization. You can adjust colors, fonts, spacing and other design tokens to create unique interfaces that match your brand identity."
+    },
+    "q3": {
+      "question": "How is technical support provided?",
+      "answer": "We provide multi-level technical support: free users can use community forums, paid users enjoy email support, and enterprise customers have dedicated customer success managers."
+    },
+    "q4": {
+      "question": "How is data security guaranteed?",
+      "answer": "We adopt industry-standard security measures, including SOC 2 Type II certification, end-to-end encryption, and regular security audits to ensure your data security."
+    },
+    "q5": {
+      "question": "Can I try it for free?",
+      "answer": "Absolutely! We offer a permanent free plan, and you can also apply for a 14-day free trial of the professional plan without requiring credit card information."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have any questions or need assistance? Our team is here to help you.",
+    "hero": {
+      "title": "Contact Us",
+      "description": "Have any questions or need assistance? Our team is here to help you."
+    },
+    "form": {
+      "title": "Send Message",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Please enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Please enter your last name",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Please enter your email",
+      "company": "Company Name",
+      "companyPlaceholder": "Please enter company name (optional)",
+      "subject": "Subject",
+      "subjectPlaceholder": "Please enter email subject",
+      "selectSubject": "Please select a subject",
+      "subjectSales": "Sales Inquiry",
+      "subjectSupport": "Technical Support",
+      "subjectPartnership": "Partnership",
+      "subjectOther": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Please describe your questions or requirements in detail",
+      "submit": "Send Message"
+    },
+    "methods": {
+      "title": "Contact Methods"
+    },
+    "sales": {
+      "title": "Sales Inquiry",
+      "description": "Want to learn about our products and pricing plans? Our sales team will provide professional advice.",
+      "action": "Contact Sales Team"
+    },
+    "support": {
+      "title": "Technical Support",
+      "description": "Encountering technical issues or need usage assistance? Our technical team is ready to solve problems for you.",
+      "action": "Get Technical Support"
+    },
+    "info": {
+      "email": {
+        "title": "Email",
+        "value": "contact@morningai.me"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+1-555-123-4567"
+      },
+      "address": {
+        "title": "Address",
+        "value": "123 Innovation Drive, Tech City, TC 12345"
+      }
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekdays": "Monday - Friday",
+      "weekdaysTime": "9:00 AM - 6:00 PM",
+      "weekend": "Weekend",
+      "weekendTime": "Closed"
+    },
+    "partnership": {
+      "title": "Partnership",
+      "description": "Interested in becoming our partner? Let's explore collaboration opportunities together.",
+      "action": "Explore Partnership"
+    },
+    "office": {
+      "title": "Office Information",
+      "address": "123 Innovation Drive, San Francisco, CA 94105",
+      "phone": "+1-555-123-4567",
+      "hours": "Monday to Friday 9:00-18:00"
+    },
+    "faq": {
+      "title": "Have Other Questions?",
+      "description": "Check our FAQ page, you might find the answers you need.",
+      "action": "View FAQ"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "support@morningai.com",
+      "phone": "+1-555-123-4567",
+      "address": "123 Innovation Drive, San Francisco, CA 94105"
+    }
+  },
+  "demo": {
+    "title": "Product Demo",
+    "subtitle": "Experience Morning AI's powerful features firsthand and see how we transform your development process.",
+    "hero": {
+      "title": "Product Demo",
+      "description": "Experience Morning AI's powerful features firsthand and see how we transform your development process.",
+      "cta": "Start Experience"
+    },
+    "features": {
+      "design": {
+        "title": "Smart Design",
+        "description": "AI-driven design tools that automatically generate beautiful and functional interfaces."
+      },
+      "speed": {
+        "title": "Lightning Fast",
+        "description": "Dramatically improve development efficiency and quickly build high-quality product prototypes."
+      },
+      "tools": {
+        "title": "Complete Tools",
+        "description": "Provide complete development toolchain, from design to deployment one-stop solution."
+      }
+    },
+    "aiDesign": {
+      "title": "AI Intelligent Design",
+      "description": "Experience AI-driven design tools that automatically generate beautiful and functional interfaces.",
+      "feature1": "Smart layout suggestions",
+      "feature2": "Automatic color matching",
+      "feature3": "Responsive design optimization"
+    },
+    "componentLibrary": {
+      "title": "Component Library Showcase",
+      "description": "Explore our rich UI component library, where each component is carefully designed and tested.",
+      "feature1": "16+ responsive components",
+      "feature2": "Complete design tokens",
+      "feature3": "Accessibility support"
+    },
+    "workflow": {
+      "title": "Development Workflow",
+      "description": "Learn how to use Morning AI to optimize your development workflow.",
+      "feature1": "Rapid prototyping",
+      "feature2": "Automatic code generation",
+      "feature3": "Real-time preview updates"
+    },
+    "interactive": {
+      "title": "Interactive Demo",
+      "description": "Click the components below to experience the powerful features of our design system.",
+      "startTrial": "Start Free Trial",
+      "scheduleDemo": "Schedule Demo"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Sign up now and begin your Morning AI journey."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "lastUpdatedDate": "January 1, 2025",
+    "introduction": "Morning AI values your privacy. This privacy policy explains how we collect, use, and protect your personal information.",
+    "tableOfContents": "Table of Contents",
+    "informationCollection": {
+      "title": "Information Collection",
+      "content": "We collect information you voluntarily provide to us, including but not limited to: your name, email address, company information, and other registration details. We also automatically collect technical information when you use our services, such as IP address, browser type, operating system, and access times.\n\nWhen you use our AI features, we collect your input content and usage patterns to improve service quality. All collected information is processed and protected in accordance with this policy."
+    },
+    "informationUse": {
+      "title": "Information Use",
+      "content": "We use collected information to provide, maintain, and improve our services. Specific uses include: processing your requests and transactions, providing customer support, sending service-related notifications, conducting security monitoring and preventing abuse.\n\nWe also use anonymized data for analysis to understand usage trends and improve product features. Your personal information will not be used for commercial purposes without your consent."
+    },
+    "informationSharing": {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or transfer your personal information to third parties. We only share your information in the following circumstances: with your explicit consent, to comply with legal requirements or court orders, to protect our rights and security, when working with trusted service providers (who must comply with strict confidentiality agreements).\n\nAll third-party service providers must meet our data protection standards and may only use your information to the extent necessary to provide services."
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "content": "We employ industry-standard security measures to protect your personal information, including encrypted transmission, secure storage, access controls, and regular security audits. Our systems use multi-layer protection mechanisms to ensure data security during transmission and storage.\n\nWhile we make every effort to protect your information, please note that internet transmission cannot guarantee 100% security. We recommend you also take appropriate precautions to protect your account security."
+    },
+    "cookies": {
+      "title": "Cookies and Tracking Technologies",
+      "content": "We use cookies and similar tracking technologies to improve your user experience. These technologies help us remember your preferences, analyze website traffic and usage patterns.\n\nYou can control cookie usage through your browser settings, but please note this may affect the normal operation of certain features. Third-party analytics tools we use (such as Google Analytics) also use cookies to collect anonymous usage data."
+    },
+    "userRights": {
+      "title": "User Rights",
+      "content": "You have the following rights regarding your personal information: Right of access - you can request to view information we hold about you; Right of rectification - you can request correction of inaccurate information; Right of erasure - in certain circumstances, you can request deletion of your personal information; Right to data portability - you can request your data in a structured format.\n\nTo exercise these rights, please contact us using the contact information provided at the end of this policy. We will respond to your requests within a reasonable timeframe."
+    },
+    "childrenPrivacy": {
+      "title": "Children's Privacy",
+      "content": "Our services are not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover we have collected such information, we will delete it immediately.\n\nIf you are a parent or guardian and discover that your child has provided personal information to us, please contact us immediately and we will take appropriate measures to delete the relevant information."
+    },
+    "policyChanges": {
+      "title": "Policy Changes",
+      "content": "We may update this privacy policy from time to time. Significant changes will be notified to you via email or website announcement. We recommend you regularly review this policy to stay informed of the latest information.\n\nContinued use of our services indicates your acceptance of the updated policy. If you disagree with the changes, please stop using our services."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about this privacy policy or need assistance, please contact us through the following methods:",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "123 Tech Street, San Francisco, CA 94105, USA",
+      "phone": "Phone",
+      "phoneValue": "+1-415-123-4567"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated",
+    "lastUpdatedDate": "January 1, 2025",
+    "introduction": "Welcome to Morning AI services. By using our services, you agree to comply with the following terms and conditions.",
+    "tableOfContents": "Table of Contents",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing or using Morning AI's services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
+    },
+    "services": {
+      "title": "Service Description",
+      "content": "Morning AI provides AI-powered SaaS platform services, including but not limited to:",
+      "item1": "AI-driven design tools and intelligent automation features",
+      "item2": "Component library and development workflow optimization",
+      "item3": "Enterprise-grade solutions and technical support"
+    },
+    "userResponsibilities": {
+      "title": "User Responsibilities",
+      "content": "You agree to use our services only for lawful purposes. Prohibited activities include but are not limited to:",
+      "item1": "Uploading malicious software or viruses",
+      "item2": "Attempting unauthorized access to our systems",
+      "item3": "Harassing other users or infringing intellectual property rights",
+      "item4": "Engaging in fraudulent activities or violating applicable laws"
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "Morning AI services and all content, features, and technology are the property of Morning AI or its licensors, protected by copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the services."
+    },
+    "limitation": {
+      "title": "Limitation of Liability",
+      "content": "To the maximum extent permitted by law, Morning AI shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business interruption."
+    },
+    "termination": {
+      "title": "Termination",
+      "content": "We reserve the right to suspend or terminate your account and access to our services at any time, with or without notice, for conduct that we believe violates these Terms of Service or is harmful to other users or our business."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "We may update these Terms of Service from time to time. We will notify you of any material changes by email or through our website. Your continued use of our services after such changes constitutes acceptance of the updated terms."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms of Service, please contact us at hello@morningai.com or visit our contact page for more information."
+    }
+  },
