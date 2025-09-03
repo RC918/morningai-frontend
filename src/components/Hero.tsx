@@ -18,7 +18,7 @@ export default function Hero() {
   }
 
   return (
-    <section className={`${inter.className} relative z-0 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden`} data-e2e-ready="true">
+    <section className={`${inter.className} relative z-0 min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden`} data-e2e-ready="true">
       {/* Background decorative elements */}
       <div aria-hidden className="hero-curve">
         {/* Blue curve */}
@@ -34,54 +34,64 @@ export default function Hero() {
             fillOpacity="0.3"
           />
         </svg>
+        
+        {/* Floating elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-purple-200 rounded-full opacity-30 animate-bounce"></div>
+        <div className="absolute bottom-40 left-1/4 w-12 h-12 bg-indigo-200 rounded-full opacity-25 animate-pulse"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="mb-4 inline-flex select-none items-center rounded-full border px-3 py-1 text-xs font-medium bg-white/80 backdrop-blur-sm border-blue-200 text-blue-700">
-            {F('home.hero.label', 'AI-POWERED DESIGN 🚀')}
+          <div className="mb-8 inline-flex select-none items-center rounded-full border px-4 py-2 text-sm font-medium bg-white/80 backdrop-blur-sm border-blue-200 text-blue-700 shadow-lg">
+            <span className="mr-2">🚀</span>
+            {F('home.hero.label', 'AI-POWERED DESIGN')}
           </div>
           
           {/* Main heading */}
-          <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight md:text-6xl text-gray-900 mb-6" suppressHydrationWarning>
-            We make smart design,<br className="hidden md:block" /> &amp; AI tools
+          <h1 className="text-balance text-5xl font-bold leading-tight tracking-tight md:text-7xl text-gray-900 mb-8 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent" suppressHydrationWarning>
+            We make<br />
+            smart design,<br className="hidden md:block" />
+            <span className="text-blue-600">&amp; AI tools</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="mt-5 max-w-3xl mx-auto text-base text-gray-600 md:text-lg leading-relaxed">
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600 md:text-xl leading-relaxed">
             Morning AI is a design system platform based in Taiwan. We help startups &amp; Fortune 500 companies delight humans on the other side of the screen.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 mb-12">
-            <button className="cta-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-              {F('home.hero.cta', 'LET\'S TALK')}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 mb-12">
+            <button className="cta-button bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              LET&apos;S TALK
             </button>
-            <button className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-lg font-semibold border border-gray-200 transition-all duration-300">
+            <button className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border border-gray-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
               View Demo
             </button>
           </div>
           
           {/* Booking notice */}
-          <div className="text-sm text-gray-600 mb-8">
-            We get booked fast! 🔥
+          <div className="text-sm text-gray-600 mb-12 flex items-center justify-center gap-2">
+            <span className="animate-pulse">🔥</span>
+            <span>We get booked fast!</span>
+            <span className="animate-pulse">🔥</span>
           </div>
           
           {/* Stats */}
-          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl font-semibold text-gray-900">500+</div>
-              <div className="text-sm opacity-70 text-gray-600">Components</div>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 max-w-3xl mx-auto">
+            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20">
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-sm text-gray-600 font-medium">Components</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-semibold text-gray-900">99%</div>
-              <div className="text-sm opacity-70 text-gray-600">Satisfaction</div>
+            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20">
+              <div className="text-4xl font-bold text-purple-600 mb-2">99%</div>
+              <div className="text-sm text-gray-600 font-medium">Satisfaction</div>
             </div>
-            <div className="hidden md:block text-center">
-              <div className="text-2xl font-semibold text-gray-900">24/7</div>
-              <div className="text-sm opacity-70 text-gray-600">Support</div>
+            <div className="hidden md:block text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20">
+              <div className="text-4xl font-bold text-indigo-600 mb-2">24/7</div>
+              <div className="text-sm text-gray-600 font-medium">Support</div>
             </div>
           </div>
         </div>
