@@ -1,319 +1,152 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
-import Button from '@/components/ui/Button';
-import Input from '@/components/ui/Input';
-import Select from '@/components/ui/Select';
-import Textarea from '@/components/ui/Textarea';
-import Checkbox from '@/components/ui/Checkbox';
-import Radio, { RadioGroup } from '@/components/ui/Radio';
-import Switch from '@/components/ui/Switch';
-import { Modal } from '@/components/ui/Modal/Modal';
-import { Toast } from '@/components/ui/Toast/Toast';
-import Loading, { LoadingOverlay, LoadingButton } from '@/components/ui/Loading';
-import { Tooltip } from '@/components/ui/Tooltip/Tooltip';
+import React from 'react';
 
 export default function ComponentsPage() {
-  const t = useTranslations();
-  
-  // State for interactive components
-  const [selectValue, setSelectValue] = useState('');
-  const [textareaValue, setTextareaValue] = useState('');
-  const [checkboxChecked, setCheckboxChecked] = useState(false);
-  const [radioValue, setRadioValue] = useState('');
-  const [switchChecked, setSwitchChecked] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [toastVisible, setToastVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  // Sample data
-  const selectOptions = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3', disabled: true },
-    { value: 'option4', label: 'Option 4' },
-  ];
-
-  const radioOptions = [
-    { value: 'radio1', label: 'Radio Option 1' },
-    { value: 'radio2', label: 'Radio Option 2' },
-    { value: 'radio3', label: 'Radio Option 3', disabled: true },
-  ];
-
-  const ComponentSection = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <div className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-gray-900">{title}</h2>
-      <div className="space-y-6">
-        {children}
-      </div>
-    </div>
-  );
-
-  const ComponentDemo = ({ title, description, children }: { 
-    title: string; 
-    description?: string; 
-    children: React.ReactNode;
-  }) => (
-    <div className="border border-gray-200 rounded-lg p-6">
-      <h3 className="text-lg font-semibold mb-2 text-gray-800">{title}</h3>
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      <div className="space-y-4">
-        {children}
-      </div>
-    </div>
-  );
-
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            UI Components Showcase
-          </h1>
-          <p className="text-xl text-gray-600">
-            Complete collection of UI components with various states and sizes
-          </p>
-        </div>
-
-        {/* Button Components */}
-        <ComponentSection title="Buttons">
-          <ComponentDemo title="Button Variants" description="Different button styles and states">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-8">UI Components Library</h1>
+      
+      <div className="space-y-12">
+        {/* Basic Components */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Basic Components</h2>
+          
+          {/* Button Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Button Component</h3>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary">Primary</Button>
-              <Button variant="secondary">Secondary</Button>
-              <Button variant="outline">Outline</Button>
-              <Button variant="ghost">Ghost</Button>
-              <Button variant="destructive">Destructive</Button>
-              <Button disabled>Disabled</Button>
+              <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Primary Button
+              </button>
+              <button className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">
+                Secondary Button
+              </button>
+              <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50">
+                Outline Button
+              </button>
             </div>
-          </ComponentDemo>
+          </div>
 
-          <ComponentDemo title="Button Sizes">
-            <div className="flex flex-wrap items-center gap-4">
-              <Button size="sm">Small</Button>
-              <Button size="md">Medium</Button>
-              <Button size="lg">Large</Button>
-            </div>
-          </ComponentDemo>
-
-          <ComponentDemo title="Loading Button">
-            <div className="flex gap-4">
-              <LoadingButton
-                isLoading={loading}
-                onClick={() => {
-                  setLoading(true);
-                  setTimeout(() => setLoading(false), 2000);
-                }}
-              >
-                Click to Load
-              </LoadingButton>
-              <LoadingButton isLoading={true} loadingText="Processing...">
-                Always Loading
-              </LoadingButton>
-            </div>
-          </ComponentDemo>
-        </ComponentSection>
-
-        {/* Form Components */}
-        <ComponentSection title="Form Components">
-          <ComponentDemo title="Input Field" description="Text input with various states">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Input placeholder="Default input" />
-              <Input placeholder="With label" label="Email Address" />
-              <Input placeholder="Error state" error helperText="This field is required" />
-              <Input placeholder="Disabled" disabled />
-            </div>
-          </ComponentDemo>
-
-          <ComponentDemo title="Select Dropdown">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Select
-                options={selectOptions}
-                value={selectValue}
-                onChange={setSelectValue}
-                placeholder="Choose an option"
+          {/* Input Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Input Component</h3>
+            <div className="space-y-4 max-w-md">
+              <input 
+                type="text" 
+                placeholder="Basic Input"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <Select
-                options={selectOptions}
-                placeholder="Disabled select"
-                disabled
+              <input 
+                type="email" 
+                placeholder="Email Input"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-          </ComponentDemo>
+          </div>
 
-          <ComponentDemo title="Textarea">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Textarea
-                placeholder="Enter your message..."
-                value={textareaValue}
-                onChange={(e) => setTextareaValue(e.target.value)}
-                label="Message"
-                showCharCount
-                maxLength={200}
-              />
-              <Textarea
-                placeholder="Disabled textarea"
-                disabled
-                helperText="This field is disabled"
-              />
-            </div>
-          </ComponentDemo>
-        </ComponentSection>
+          {/* Select Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Select Component</h3>
+            <select className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>Choose an option</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
 
-        {/* Selection Components */}
-        <ComponentSection title="Selection Components">
-          <ComponentDemo title="Checkbox">
-            <div className="space-y-4">
-              <Checkbox
-                label="Accept terms and conditions"
-                checked={checkboxChecked}
-                onChange={(e) => setCheckboxChecked(e.target.checked)}
-              />
-              <Checkbox label="Disabled checkbox" disabled />
-              <Checkbox label="Error state" error helperText="Please check this box" />
-            </div>
-          </ComponentDemo>
-
-          <ComponentDemo title="Radio Buttons">
-            <RadioGroup
-              options={radioOptions}
-              value={radioValue}
-              onChange={setRadioValue}
-              name="demo-radio"
+          {/* Textarea Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Textarea Component</h3>
+            <textarea 
+              placeholder="Enter your message..."
+              rows={4}
+              className="w-full max-w-md px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          </ComponentDemo>
+          </div>
 
-          <ComponentDemo title="Switch">
-            <div className="space-y-4">
-              <Switch
-                label="Enable notifications"
-                checked={switchChecked}
-                onChange={(e) => setSwitchChecked(e.target.checked)}
-              />
-              <Switch label="Disabled switch" disabled />
-              <Switch label="Left label" labelPosition="left" />
+          {/* Checkbox Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Checkbox Component</h3>
+            <div className="space-y-2">
+              <label className="flex items-center">
+                <input type="checkbox" className="mr-2" />
+                <span>Option 1</span>
+              </label>
+              <label className="flex items-center">
+                <input type="checkbox" className="mr-2" />
+                <span>Option 2</span>
+              </label>
             </div>
-          </ComponentDemo>
-        </ComponentSection>
+          </div>
 
-        {/* Feedback Components */}
-        <ComponentSection title="Feedback Components">
-          <ComponentDemo title="Loading States">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <Loading variant="spinner" size="md" />
-                <p className="mt-2 text-sm text-gray-600">Spinner</p>
-              </div>
-              <div className="text-center">
-                <Loading variant="dots" size="md" />
-                <p className="mt-2 text-sm text-gray-600">Dots</p>
-              </div>
-              <div className="text-center">
-                <Loading variant="pulse" size="md" />
-                <p className="mt-2 text-sm text-gray-600">Pulse</p>
-              </div>
-              <div className="text-center">
-                <Loading variant="bars" size="md" />
-                <p className="mt-2 text-sm text-gray-600">Bars</p>
-              </div>
+          {/* Radio Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Radio Component</h3>
+            <div className="space-y-2">
+              <label className="flex items-center">
+                <input type="radio" name="radio-group" className="mr-2" />
+                <span>Choice 1</span>
+              </label>
+              <label className="flex items-center">
+                <input type="radio" name="radio-group" className="mr-2" />
+                <span>Choice 2</span>
+              </label>
             </div>
-          </ComponentDemo>
+          </div>
 
-          <ComponentDemo title="Loading Overlay">
-            <LoadingOverlay isLoading={loading} loadingProps={{ text: "Loading content..." }}>
-              <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">Content that can be overlaid with loading</p>
+          {/* Switch Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Switch Component</h3>
+            <label className="flex items-center">
+              <input type="checkbox" className="sr-only" />
+              <div className="relative">
+                <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
               </div>
-            </LoadingOverlay>
-          </ComponentDemo>
+              <span className="ml-3">Toggle Switch</span>
+            </label>
+          </div>
 
-          <ComponentDemo title="Modal">
-            <div className="space-y-4">
-              <Button onClick={() => setModalOpen(true)}>Open Modal</Button>
-              <Modal
-                isOpen={modalOpen}
-                onClose={() => setModalOpen(false)}
-                title="Example Modal"
-              >
-                <div className="space-y-4">
-                  <p>This is an example modal with some content.</p>
-                  <div className="flex justify-end space-x-2">
-                    <Button variant="outline" onClick={() => setModalOpen(false)}>
-                      Cancel
-                    </Button>
-                    <Button onClick={() => setModalOpen(false)}>
-                      Confirm
-                    </Button>
-                  </div>
-                </div>
-              </Modal>
+          {/* Loading Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Loading Component</h3>
+            <div className="flex items-center space-x-4">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <span>Loading...</span>
             </div>
-          </ComponentDemo>
+          </div>
+        </section>
 
-          <ComponentDemo title="Toast Notifications">
-            <div className="space-y-4">
-              <Button onClick={() => setToastVisible(true)}>Show Toast</Button>
-              {toastVisible && (
-                <Toast
-                  type="success"
-                  title="Success!"
-                  message="This is a success toast notification."
-                  onClose={() => setToastVisible(false)}
-                />
-              )}
-            </div>
-          </ComponentDemo>
+        {/* Advanced Components */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Advanced Components</h2>
+          
+          {/* Modal Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Modal Component</h3>
+            <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+              Open Modal
+            </button>
+          </div>
 
-          <ComponentDemo title="Tooltip">
-            <div className="flex gap-4">
-              <Tooltip content="This is a tooltip">
-                <Button>Hover for tooltip</Button>
-              </Tooltip>
-              <Tooltip content="Tooltip on the right" position="right">
-                <Button>Right tooltip</Button>
-              </Tooltip>
-              <Tooltip content="Tooltip on the left" position="left">
-                <Button>Left tooltip</Button>
-              </Tooltip>
-            </div>
-          </ComponentDemo>
-        </ComponentSection>
+          {/* Toast Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Toast Component</h3>
+            <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+              Show Toast
+            </button>
+          </div>
 
-        {/* Size Variations */}
-        <ComponentSection title="Size Variations">
-          <ComponentDemo title="Component Sizes">
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-medium mb-3">Buttons</h4>
-                <div className="flex items-center gap-4">
-                  <Button size="sm">Small</Button>
-                  <Button size="md">Medium</Button>
-                  <Button size="lg">Large</Button>
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="font-medium mb-3">Loading</h4>
-                <div className="flex items-center gap-6">
-                  <Loading size="sm" />
-                  <Loading size="md" />
-                  <Loading size="lg" />
-                  <Loading size="xl" />
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-medium mb-3">Form Controls</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Input placeholder="Small" size="sm" />
-                  <Input placeholder="Medium" size="md" />
-                  <Input placeholder="Large" size="lg" />
-                </div>
-              </div>
-            </div>
-          </ComponentDemo>
-        </ComponentSection>
+          {/* Tooltip Component */}
+          <div className="mb-8">
+            <h3 className="text-xl font-medium mb-4">Tooltip Component</h3>
+            <button className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700" title="This is a tooltip">
+              Hover for Tooltip
+            </button>
+          </div>
+        </section>
       </div>
     </div>
   );
