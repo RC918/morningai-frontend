@@ -1,27 +1,29 @@
-// Force Node.js runtime to avoid Edge compatibility issues
+import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
+
 export const runtime = 'nodejs';
 
 export async function GET() {
-  return new Response(JSON.stringify({
+  const versionPath = path.join(process.cwd(), 'public', 'version.json');
+  let versionInfo = {};
+
+  try {
+    const versionData = fs.readFileSync(versionPath, 'utf8');
+    versionInfo = JSON.parse(versionData);
+  } catch (error) {
+    console.error('Error reading version.json:', error);
+  }
+
+  return NextResponse.json({
     ok: true,
     timestamp: new Date().toISOString(),
-    node: process.version,
-    runtime: process.env.NEXT_RUNTIME || 'nodejs',
-    platform: process.platform,
-    arch: process.arch,
-    nextVersion: process.env.npm_package_dependencies_next || 'unknown',
+    ...versionInfo,
     envCheck: {
-      hasNodeEnv: Boolean(process.env.NODE_ENV),
+      hasNodeEnv: !!process.env.NODE_ENV,
       nodeEnv: process.env.NODE_ENV,
-      hasVercelEnv: Boolean(process.env.VERCEL),
-      vercelEnv: process.env.VERCEL_ENV
-    }
-  }), { 
-    headers: { 
-      'content-type': 'application/json',
-      'cache-control': 'no-store'
-    }
+      hasVercelEnv: !!process.env.VERCEL_ENV,
+      vercelEnv: process.env.VERCEL_ENV,
+    },
   });
 }
-
-// Force deployment trigger Mon Sep  1 10:33:11 EDT 2025
