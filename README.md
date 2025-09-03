@@ -238,3 +238,7 @@ MIT License - 詳見 LICENSE 檔案
 - Production: ⏳ Deployment triggered, cache clearing in progress
 
 
+
+
+<!-- Force deployment trigger: 2025-09-03 03:44 - i18n configuration fix -->
+
