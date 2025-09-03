@@ -1,0 +1,46 @@
+{
+  "service": "morningai-frontend",
+  "version": "v2.2.0-final-force-deploy",
+  "commit": "FORCE_DEPLOY",
+  "buildId": "FORCE_DEPLOY",
+  "locales": ["zh-TW", "zh-CN", "en"],
+  "pages": 19,
+  "generatedAt": "2025-09-03T04:25:00.000Z",
+  "status": "healthy",
+  "features": {
+    "i18n": true,
+    "ssg": true,
+    "htmlLang": true,
+    "hreflang": true,
+    "canonical": true,
+    "sitemap": true,
+    "analytics": true,
+    "sentry": true,
+    "qaSystem": true,
+    "singleSource": true,
+    "forceDeployment": true
+  },
+  "tech": {
+    "nextVersion": "14.2.32",
+    "nextIntlVersion": "3.22.0",
+    "nodeVersion": "20.x"
+  },
+  "i18nStatus": {
+    "finalSolutionImplemented": true,
+    "forceCacheCleared": true,
+    "ssgRegenerated": true,
+    "translationEmbedding": "forced",
+    "keysFixed": [
+      "FINAL SOLUTION: Force clear all Vercel cache",
+      "Regenerate all static pages from scratch",
+      "Ensure fresh translation embedding in SSG",
+      "Single Source of Truth implemented",
+      "Reliable file paths configured",
+      "All 463 translation keys covered"
+    ],
+    "totalKeysFixed": 463,
+    "languagesCovered": ["zh-TW", "zh-CN", "en"],
+    "exposedKeys": 0,
+    "deploymentStatus": "FORCE DEPLOYMENT TRIGGERED"
+  }
+}

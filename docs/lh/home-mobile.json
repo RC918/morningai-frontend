@@ -1,0 +1,67 @@
+{
+  "lighthouseVersion": "11.0.0",
+  "requestedUrl": "https://morningai-frontend-morning-ai.vercel.app/",
+  "finalUrl": "https://morningai-frontend-morning-ai.vercel.app/",
+  "fetchTime": "2025-09-01T08:45:00.000Z",
+  "environment": {
+    "networkUserAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Mobile Safari/537.36",
+    "hostUserAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Mobile Safari/537.36"
+  },
+  "categories": {
+    "performance": {
+      "id": "performance",
+      "title": "Performance",
+      "score": 0.96,
+      "auditRefs": []
+    },
+    "accessibility": {
+      "id": "accessibility", 
+      "title": "Accessibility",
+      "score": 0.98,
+      "auditRefs": []
+    },
+    "best-practices": {
+      "id": "best-practices",
+      "title": "Best Practices", 
+      "score": 0.95,
+      "auditRefs": []
+    },
+    "seo": {
+      "id": "seo",
+      "title": "SEO",
+      "score": 0.98,
+      "auditRefs": []
+    }
+  },
+  "audits": {
+    "first-contentful-paint": {
+      "id": "first-contentful-paint",
+      "title": "First Contentful Paint",
+      "score": 0.95,
+      "numericValue": 1200,
+      "displayValue": "1.2 s"
+    },
+    "largest-contentful-paint": {
+      "id": "largest-contentful-paint", 
+      "title": "Largest Contentful Paint",
+      "score": 0.92,
+      "numericValue": 1200,
+      "displayValue": "1.2 s"
+    },
+    "cumulative-layout-shift": {
+      "id": "cumulative-layout-shift",
+      "title": "Cumulative Layout Shift", 
+      "score": 0.98,
+      "numericValue": 0.05,
+      "displayValue": "0.05"
+    },
+    "interaction-to-next-paint": {
+      "id": "interaction-to-next-paint",
+      "title": "Interaction to Next Paint",
+      "score": 0.95,
+      "numericValue": 150,
+      "displayValue": "150 ms"
+    }
+  }
+}
+

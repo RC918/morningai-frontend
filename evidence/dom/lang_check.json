@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-09-02T12:10:54.352Z",
+  "results": {
+    "zh-CN": {
+      "statusCode": 200,
+      "hasTitle": true
+    },
+    "en": {
+      "htmlLang": "en",
+      "langCheck": "LANG_CHECK: EN OK",
+      "localeDisplay": "Locale: en",
+      "statusCode": 200,
+      "hasTitle": true
+    }
+  },
+  "navigation": {
+    "zh-TW_to_zh-CN": "success",
+    "zh-CN_to_en": "success"
+  }
+}

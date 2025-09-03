@@ -1,0 +1,78 @@
+{
+  "name": "morningai-frontend",
+  "version": "2.2.0",
+  "description": "Morning AI SaaS MVP Phase 2 Frontend - Design System & Component Library with i18n",
+  "engines": {
+    "node": "20.x",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:all": "npm run test && npm run test:e2e",
+    "i18n:check": "node scripts/i18n-check.js",
+    "i18n:diff": "node scripts/i18n-diff.mjs",
+    "i18n:fill": "node scripts/i18n-fill.mjs",
+    "i18n:lint": "npx ts-node --transpile-only scripts/i18n-lint.ts",
+    "i18n:lint:ci": "npx ts-node --transpile-only scripts/i18n-lint.ts --ci --report=json --out ./.reports/i18n-lint.json",
+    "i18n:sync": "npx ts-node --transpile-only scripts/i18n-sync.ts",
+    "i18n:sync:dry": "npx ts-node --transpile-only scripts/i18n-sync.ts --dry --report=json --out ./.reports/i18n-sync.json",
+    "ci:check": "npm run i18n:diff"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RC918/morningai-frontend.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "design-system"
+  ],
+  "author": "Morning AI Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RC918/morningai-frontend/issues"
+  },
+  "homepage": "https://github.com/RC918/morningai-frontend#readme",
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.6.1",
+    "@sentry/nextjs": "^10.8.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "negotiator": "^1.0.0",
+    "next": "14.2.32",
+    "next-intl": "^3.22.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.1.2",
+    "@playwright/test": "^1.55.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.19.11",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.15",
+    "jest": "^30.1.2",
+    "jest-environment-jsdom": "^30.1.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
