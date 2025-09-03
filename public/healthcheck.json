@@ -1,11 +1,11 @@
 {
   "service": "morningai-frontend",
-  "version": "v2.2.0-phase2-final-qa-system",
-  "commit": "3a6ffb6",
-  "buildId": "3a6ffb6",
+  "version": "v2.2.0-runbook-single-source",
+  "commit": "0ca1909",
+  "buildId": "0ca1909",
   "locales": ["zh-TW", "zh-CN", "en"],
   "pages": 19,
-  "generatedAt": "2025-09-03T03:27:00.000Z",
+  "generatedAt": "2025-09-03T04:05:00.000Z",
   "status": "healthy",
   "features": {
     "i18n": true,
@@ -16,7 +16,8 @@
     "sitemap": true,
     "analytics": true,
     "sentry": true,
-    "qaSystem": true
+    "qaSystem": true,
+    "singleSource": true
   },
   "tech": {
     "nextVersion": "14.2.32",
@@ -24,20 +25,22 @@
     "nodeVersion": "22.x"
   },
   "i18nStatus": {
-    "middlewareFixed": true,
-    "i18nConfigFixed": true,
-    "qaSystemImplemented": true,
-    "automatedValidation": true,
+    "singleSourceImplemented": true,
+    "duplicateConfigsRemoved": true,
+    "cacheControlAdded": true,
+    "healthcheckApiAdded": true,
+    "runbookExecuted": true,
     "keysFixed": [
-      "Complete i18n Quality Assurance System implemented",
-      "Runtime fallback + Auto-fill scripts added",
+      "Single Source of Truth implemented (src/i18n/index.ts)",
+      "Duplicate configs removed (src/i18n/request.ts deleted)",
+      "Cache control headers added",
+      "Healthcheck API route created",
       "All MISSING_MESSAGE errors resolved",
-      "463 translation keys fully covered",
-      "GitHub Actions CI/CD integration"
+      "463 translation keys fully covered"
     ],
     "totalKeysFixed": 463,
     "languagesCovered": ["zh-TW", "zh-CN", "en"],
     "exposedKeys": 0,
-    "deploymentStatus": "force deployment triggered"
+    "deploymentStatus": "runbook deployment triggered"
   }
 }

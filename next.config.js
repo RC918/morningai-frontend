@@ -10,6 +10,40 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: false
+  },
+  async headers() {
+    return [
+      // 靜態資源長快取
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // i18n 相關檔案不快取
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, no-cache, must-revalidate'
+          }
+        ]
+      },
+      // healthcheck 不快取
+      {
+        source: '/healthcheck.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, no-cache, must-revalidate'
+          }
+        ]
+      }
+    ];
   }
 }
 
