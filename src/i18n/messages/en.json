@@ -49,9 +49,10 @@
     "viewComponents": "View Components",
     "viewDocumentation": "View Documentation",
     "hero": {
-      "title": "Build Better Products Faster",
+      "label": "AI-POWERED DESIGN 🚀",
+      "title": "We make smart design, & AI tools",
       "subtitle": "Enterprise Design System & Component Library",
-      "description": "Accelerate your development with our comprehensive design system. Focus on accessibility, performance, and developer experience.",
+      "description": "Morning AI is a design system platform based in Taiwan. We help startups & Fortune 500 companies delight humans on the other side of the screen.",
       "cta": "Get Started",
       "learnMore": "Learn More"
     },
