@@ -1,0 +1,166 @@
+{
+  "Index": {
+    "meta_title": "Morning AI - Phase 2 Final 智能解决方案平台",
+    "meta_description": "Morning AI Phase 2 Final 提供先进的人工智能解决方案，助力企业数字化转型与智能化升级。"
+  },
+  "Navbar": {
+    "sign_in": "登录",
+    "sign_up": "注册",
+    "product": "产品",
+    "docs": "文档",
+    "blog": "博客",
+    "community": "社区",
+    "company": "公司"
+  },
+  "Hero": {
+    "follow_twitter": "在 Twitter 上关注我们",
+    "title": "Morning AI <important>Phase 2 Final</important> 智能解决方案平台",
+    "description": "提供先进的人工智能技术，助力企业实现数字化转型与智能化升级，打造下一代智能商业生态。",
+    "primary_button": "立即开始",
+    "secondary_button": "了解更多"
+  },
+  "Sponsors": {
+    "title": "合作伙伴"
+  },
+  "Features": {
+    "section_subtitle": "核心功能",
+    "section_title": "释放 Morning AI 的全部潜能",
+    "section_description": "Morning AI Phase 2 Final 整合最新的人工智能技术，为企业提供全方位的智能化解决方案。",
+    "feature1_title": "智能分析",
+    "feature2_title": "自动化流程",
+    "feature3_title": "数据洞察",
+    "feature4_title": "机器学习",
+    "feature5_title": "云端部署",
+    "feature6_title": "安全保障",
+    "feature_description": "采用最新的人工智能技术，为您的业务提供强大的智能化支持。"
+  },
+  "Pricing": {
+    "section_subtitle": "方案选择",
+    "section_title": "选择最适合您的方案",
+    "section_description": "Morning AI 提供灵活的定价方案，满足不同规模企业的需求。",
+    "button_text": "立即开始"
+  },
+  "PricingPlan": {
+    "free_plan_name": "基础版",
+    "premium_plan_name": "专业版",
+    "enterprise_plan_name": "企业版",
+    "free_plan_description": "适合个人用户",
+    "premium_plan_description": "适合小型团队",
+    "enterprise_plan_description": "适合大型企业",
+    "feature_team_member": "{number} 团队成员",
+    "feature_website": "{number} 网站",
+    "feature_storage": "{number} GB 存储空间",
+    "feature_transfer": "{number} TB 流量",
+    "feature_email_support": "电子邮件支持",
+    "plan_interval_month": "月",
+    "plan_interval_year": "年",
+    "next_renew_date": "您的订阅将于 {date} 续约"
+  },
+  "FAQ": {
+    "question": "Morning AI 如何帮助企业提升效率？",
+    "answer": "Morning AI 通过智能分析、自动化流程和机器学习技术，帮助企业优化业务流程，提高工作效率，降低运营成本。"
+  },
+  "CTA": {
+    "title": "准备好开始了吗？",
+    "description": "立即体验 Morning AI Phase 2 Final 的强大功能。",
+    "button_text": "立即开始"
+  },
+  "Footer": {
+    "product": "产品",
+    "docs": "文档",
+    "blog": "博客",
+    "community": "社区",
+    "company": "公司",
+    "terms_of_service": "服务条款",
+    "privacy_policy": "隐私政策",
+    "designed_by": "由 <author></author> 设计。"
+  },
+  "ProtectFallback": {
+    "not_enough_permission": "您没有执行此操作的权限"
+  },
+  "SignIn": {
+    "meta_title": "登录",
+    "meta_description": "通过我们友好的登录流程，轻松登录您的账户。"
+  },
+  "SignUp": {
+    "meta_title": "注册",
+    "meta_description": "通过我们直观的注册流程，轻松创建账户。"
+  },
+  "DashboardLayout": {
+    "home": "首页",
+    "todos": "待办事项",
+    "members": "成员",
+    "billing": "账单",
+    "settings": "设置"
+  },
+  "Dashboard": {
+    "meta_title": "Morning AI 控制台",
+    "meta_description": "Morning AI Phase 2 Final 智能解决方案平台控制台。"
+  },
+  "DashboardIndex": {
+    "title_bar": "控制台",
+    "title_bar_description": "欢迎来到您的控制台",
+    "message_state_title": "让我们开始吧",
+    "message_state_description": "您可以通过编辑 <code>dashboard/page.tsx</code> 文件来自定义此页面",
+    "message_state_button": "在 GitHub 上加星",
+    "message_state_alternative": "想要使用相同技术栈的更多功能？试试 <url></url>。"
+  },
+  "UserProfile": {
+    "title_bar": "用户资料",
+    "title_bar_description": "查看和管理您的用户资料"
+  },
+  "OrganizationProfile": {
+    "title_bar": "组织管理",
+    "title_bar_description": "管理您的组织"
+  },
+  "Billing": {
+    "title_bar": "账单",
+    "title_bar_description": "管理您的账单和订阅",
+    "current_section_title": "当前方案",
+    "current_section_description": "调整您的付费方案以最符合您的需求",
+    "manage_subscription_button": "管理订阅"
+  },
+  "BillingOptions": {
+    "current_plan": "当前方案",
+    "upgrade_plan": "立即开始"
+  },
+  "CheckoutConfirmation": {
+    "title_bar": "付款确认",
+    "message_state_title": "付款成功",
+    "message_state_description": "您的付款已成功处理。感谢您的购买！",
+    "message_state_button": "返回账单"
+  },
+  "DataTable": {
+    "no_results": "没有结果。"
+  },
+  "Todos": {
+    "title_bar": "待办事项清单",
+    "title_bar_description": "查看和管理您的待办事项清单",
+    "add_todo_button": "新增待办事项"
+  },
+  "TodoTableColumns": {
+    "open_menu": "打开菜单",
+    "edit": "编辑",
+    "delete": "删除",
+    "title_header": "标题",
+    "message_header": "消息",
+    "created_at_header": "创建时间"
+  },
+  "AddTodo": {
+    "title_bar": "新增待办事项",
+    "add_todo_section_title": "创建新的待办事项",
+    "add_todo_section_description": "填写下方表单以创建新的待办事项"
+  },
+  "EditTodo": {
+    "title_bar": "编辑待办事项",
+    "edit_todo_section_title": "修改待办事项",
+    "edit_todo_section_description": "填写下方表单以编辑待办事项"
+  },
+  "TodoForm": {
+    "title_label": "标题",
+    "title_description": "为您的待办事项输入描述性标题。",
+    "message_title": "消息",
+    "message_description": "为您的待办事项输入详细消息。",
+    "submit_button": "提交"
+  }
+}

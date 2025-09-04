@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
+import { VersionInfo } from '@/components/VersionInfo';
 import { CenteredFooter } from '@/features/landing/CenteredFooter';
 import { Section } from '@/features/landing/Section';
 import { AppConfig } from '@/utils/AppConfig';
@@ -13,7 +14,12 @@ export const Footer = () => {
   return (
     <Section className="pb-16 pt-0">
       <CenteredFooter
-        logo={<Logo />}
+        logo={(
+          <div className="flex flex-col items-center">
+            <Logo />
+            <VersionInfo />
+          </div>
+        )}
         name={AppConfig.name}
         iconList={(
           <>

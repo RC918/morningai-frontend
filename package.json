@@ -1,11 +1,12 @@
 {
-  "name": "saas-boilerplate",
-  "version": "1.7.6",
+  "name": "morningai-phase2-final",
+  "version": "2.0.0",
   "scripts": {
     "dev:spotlight": "spotlight-sidecar",
     "dev:next": "next dev",
     "dev": "run-p dev:*",
     "build": "next build",
+    "postbuild": "node scripts/generate-version.js || echo 'Version generation failed, continuing...'",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next out coverage",
