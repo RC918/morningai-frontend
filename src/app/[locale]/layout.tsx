@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme/theme-provider';
 import { Navigation } from '@/components/ui/Navigation';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider';
+import { inter } from '@/app/fonts';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
@@ -55,11 +56,11 @@ export default function RootLayout({
   const pathname = `/${locale}`;
   
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <head>
         <SEOHead locale={locale} pathname={pathname} />
       </head>
-      <body className="min-h-screen bg-background font-sans antialiased">
+      <body className="min-h-screen bg-white text-zinc-900 font-sans antialiased">
         <AnalyticsProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ThemeProvider>

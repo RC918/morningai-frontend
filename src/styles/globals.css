@@ -1,8 +1,11 @@
+/* Keep tailwind layer order canonical to avoid style overrides */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Base reset & typography guardrails */
 :root {
+  --radius: 12px;
   /* Light Theme */
   --background: #ffffff;
   --surface: #f8fafc;
@@ -26,27 +29,48 @@
   --primary-hover: #0284c7;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
+html, body {
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+}
+
+/* Prevent system font swap jitter before next/font attaches */
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  color: var(--text-primary);
+  background: var(--background);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  color: var(--text-primary);
-  background: var(--background);
-  transition: color 0.2s ease, background-color 0.2s ease;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reduce demo animation in test to cut flakiness */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Simple utility for the curved underline svg holder (if used) */
+.hero-curve {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10; /* ensure under content */
 }
 
 a {

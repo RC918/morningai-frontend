@@ -1,74 +1,56 @@
-'use client';
+import Link from 'next/link';
 
-import { useTranslations } from 'next-intl';
-
-export default function TermsPage() {
-  const t = useTranslations();
-
+export default function TermsOfServicePage() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <div className="prose prose-lg mx-auto">
-        <h1 className="text-4xl font-bold mb-8">{t('terms.title')}</h1>
-        
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.acceptance.title')}</h2>
-            <p className="text-muted-foreground">{t('terms.acceptance.content')}</p>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex items-center gap-4 mb-4">
+            <Link 
+              href="/" 
+              className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              返回首頁
+            </Link>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900">服務條款</h1>
+          <p className="text-gray-600 mt-2">最後更新：2025年9月4日</p>
+        </div>
+      </header>
+
+      {/* Content */}
+      <main className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">1. 服務條款接受</h2>
+            <p className="text-gray-700 leading-relaxed">
+              歡迎使用 Morning AI 的服務。通過存取或使用我們的服務，您同意受這些服務條款的約束。
+            </p>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.services.title')}</h2>
-            <p className="text-muted-foreground mb-4">{t('terms.services.content')}</p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>{t('terms.services.item1')}</li>
-              <li>{t('terms.services.item2')}</li>
-              <li>{t('terms.services.item3')}</li>
-            </ul>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">2. 服務描述</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Morning AI 提供 AI 驅動的設計系統平台和相關服務。
+            </p>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.userResponsibilities.title')}</h2>
-            <p className="text-muted-foreground mb-4">{t('terms.userResponsibilities.content')}</p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>{t('terms.userResponsibilities.item1')}</li>
-              <li>{t('terms.userResponsibilities.item2')}</li>
-              <li>{t('terms.userResponsibilities.item3')}</li>
-              <li>{t('terms.userResponsibilities.item4')}</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.intellectualProperty.title')}</h2>
-            <p className="text-muted-foreground">{t('terms.intellectualProperty.content')}</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.limitation.title')}</h2>
-            <p className="text-muted-foreground">{t('terms.limitation.content')}</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.termination.title')}</h2>
-            <p className="text-muted-foreground">{t('terms.termination.content')}</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.changes.title')}</h2>
-            <p className="text-muted-foreground">{t('terms.changes.content')}</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">{t('terms.contact.title')}</h2>
-            <p className="text-muted-foreground">{t('terms.contact.content')}</p>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">3. 聯繫資訊</h2>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="text-gray-700">
+                <strong>Morning AI</strong><br />
+                電子郵件：legal@morningai.me<br />
+                地址：台灣台北市信義區<br />
+              </p>
+            </div>
           </section>
         </div>
-
-        <div className="mt-12 pt-8 border-t">
-          <p className="text-sm text-muted-foreground">
-            {t('terms.lastUpdated')}: {t('terms.lastUpdatedDate')}
-          </p>
-        </div>
-      </div>
+      </main>
     </div>
   );
 }

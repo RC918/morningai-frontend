@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,6 +11,13 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      container: { 
+        center: true, 
+        padding: '1rem' 
+      },
+      screens: { 
+        xs: '375px' 
+      },
       colors: {
         // Primary Colors
         primary: {
@@ -51,8 +61,12 @@ module.exports = {
         surface: 'var(--surface)',
         border: 'var(--border)',
       },
+      fontFamily: {
+        // Font Families with CSS variable support
+        'sans': ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        'handwriting': ['Caveat', 'cursive'],
+      },
       fontSize: {
-        // Typography Scale
         'h1': ['2.5rem', { lineHeight: '3rem', fontWeight: '700' }],
         'h2': ['2rem', { lineHeight: '2.5rem', fontWeight: '600' }],
         'h3': ['1.5rem', { lineHeight: '2rem', fontWeight: '600' }],

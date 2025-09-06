@@ -3,15 +3,15 @@
 import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
-import { ChevronDown } from 'lucide-react'
 
 const selectVariants = cva(
-  'inline-flex w-full items-center justify-between rounded-lg border bg-background px-3 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+  'flex w-full rounded-lg border bg-background px-3 py-2 text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'border-border text-text-primary hover:border-primary-300',
-        error: 'border-error text-error focus-visible:ring-error',
+        default: 'border-border hover:border-border focus:border-primary-500',
+        error: 'border-error focus:border-error focus-visible:ring-error',
+        success: 'border-success focus:border-success focus-visible:ring-success',
       },
       size: {
         sm: 'h-8 px-2 text-xs',
@@ -26,47 +26,71 @@ const selectVariants = cva(
   }
 )
 
+export interface SelectOption {
+  value: string
+  label: string
+  disabled?: boolean
+}
+
 export interface SelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement>,
+  extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'>,
     VariantProps<typeof selectVariants> {
   label?: string
   helperText?: string
-  error?: boolean
-  options: Array<{ value: string; label: string; disabled?: boolean }>
+  errorMessage?: string
+  options: SelectOption[]
+  placeholder?: string
 }
 
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ 
     className, 
     variant, 
-    size, 
-    label, 
-    helperText, 
-    error, 
-    options, 
-    disabled, 
+    size,
+    label,
+    helperText,
+    errorMessage,
+    options,
+    placeholder,
+    disabled,
+    id,
     ...props 
   }, ref) => {
-    const selectVariant = error ? 'error' : variant
-
+    const generatedId = React.useId()
+    const selectId = id || generatedId
+    const isError = variant === 'error' || !!errorMessage
+    
     return (
-      <div className="w-full">
+      <div className="w-full space-y-2">
         {label && (
-          <label className="mb-2 block text-sm font-medium text-text-primary">
+          <label 
+            htmlFor={selectId}
+            className="text-sm font-medium text-text-primary"
+          >
             {label}
           </label>
         )}
+        
         <div className="relative">
           <select
+            id={selectId}
             className={cn(
-              selectVariants({ variant: selectVariant, size }),
-              'appearance-none pr-8',
-              className
+              selectVariants({ 
+                variant: isError ? 'error' : variant, 
+                size, 
+                className 
+              }),
+              'appearance-none pr-10 cursor-pointer'
             )}
             ref={ref}
             disabled={disabled}
             {...props}
           >
+            {placeholder && (
+              <option value="" disabled>
+                {placeholder}
+              </option>
+            )}
             {options.map((option) => (
               <option 
                 key={option.value} 
@@ -77,16 +101,31 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
               </option>
             ))}
           </select>
-          <ChevronDown 
-            className="absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-text-secondary pointer-events-none" 
-          />
+          
+          {/* Dropdown arrow */}
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg
+              className="h-4 w-4 text-text-muted"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
         </div>
-        {helperText && (
+        
+        {(helperText || errorMessage) && (
           <p className={cn(
-            'mt-1 text-xs',
-            error ? 'text-error' : 'text-text-secondary'
+            'text-xs',
+            isError ? 'text-error' : 'text-text-muted'
           )}>
-            {helperText}
+            {errorMessage || helperText}
           </p>
         )}
       </div>

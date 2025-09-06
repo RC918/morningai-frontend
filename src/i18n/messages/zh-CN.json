@@ -49,9 +49,10 @@
     "viewComponents": "查看组件库",
     "viewDocumentation": "查看文档",
     "hero": {
-      "title": "更快构建更好的产品",
+      "label": "AI 驱动设计 🚀",
+      "title": "我们创造智能设计与 AI 工具",
       "subtitle": "企业级设计系统与组件库",
-      "description": "使用我们全面的设计系统加速您的开发。专注于无障碍性、性能和开发者体验。",
+      "description": "Morning AI 是一个位于台湾的设计系统平台。我们帮助初创公司和财富 500 强企业在屏幕另一端取悦人们。",
       "cta": "开始使用",
       "learnMore": "了解更多"
     },

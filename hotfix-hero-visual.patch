@@ -1,0 +1,102 @@
+--- a/src/styles/globals.css
++++ b/src/styles/globals.css
+@@ -1,3 +1,18 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
++
++/* Global font & smoothing */
++html, body {
++  -webkit-font-smoothing: antialiased;
++  -moz-osx-font-smoothing: grayscale;
++  text-rendering: optimizeLegibility;
++}
++
++/* Hero decorative curve should never cover content */
++.hero-curve {
++  position: absolute;
++  inset: 0;
++  pointer-events: none;
++  z-index: -10; /* ensure under content */
++}
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -1,4 +1,6 @@
+ import React from "react";
++import { Inter } from "next/font/google";
++const inter = Inter({ subsets: ["latin"], display: "swap" });
+ import { useTranslations } from 'next-intl';
+ 
+ export default function Hero() {
+@@ -15,7 +17,7 @@ export default function Hero() {
+   }
+ 
+   return (
+-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden" data-e2e-ready="true">
++    <section className={`${inter.className} relative z-0 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden`} data-e2e-ready="true">
+       {/* Background decorative elements */}
+-      <div className="absolute inset-0 pointer-events-none">
++      <div aria-hidden className="hero-curve">
+         {/* Blue curve */}
+         <svg
+           className="absolute bottom-0 left-0 w-full h-64 text-blue-400"
+@@ -35,7 +37,7 @@ export default function Hero() {
+       </div>
+ 
+       {/* Content */}
+-      <div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
++      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20 lg:py-32">
+         <div className="max-w-4xl mx-auto text-center">
+           {/* Badge */}
+-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 text-sm font-medium mb-8">
++          <div className="mb-4 inline-flex select-none items-center rounded-full border px-3 py-1 text-xs font-medium bg-white/80 backdrop-blur-sm border-blue-200 text-blue-700">
+             {F('home.hero.label', 'AI-POWERED DESIGN 🚀')}
+           </div>
+           
+           {/* Main heading */}
+-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight" suppressHydrationWarning>
+-            {F('home.hero.title', 'We make smart design, & AI tools')}
++          <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight md:text-6xl text-gray-900 mb-6" suppressHydrationWarning>
++            We make smart design,<br className="hidden md:block" /> &amp; AI tools
+           </h1>
+           
+           {/* Subtitle */}
+-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+-            {F('home.hero.description', 'Morning AI is a design system platform based in Taiwan. We help startups & Fortune 500 companies delight humans on the other side of the screen.')}
++          <p className="mt-5 max-w-3xl mx-auto text-base text-gray-600 md:text-lg leading-relaxed">
++            Morning AI is a design system platform based in Taiwan. We help startups &amp; Fortune 500 companies delight humans on the other side of the screen.
+           </p>
+           
+           {/* Stats */}
+-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
++          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 max-w-2xl mx-auto">
+             <div className="text-center">
+-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">500+</div>
+-              <div className="text-gray-600">Components</div>
++              <div className="text-2xl font-semibold text-gray-900">500+</div>
++              <div className="text-sm opacity-70 text-gray-600">Components</div>
+             </div>
+             <div className="text-center">
+-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">99%</div>
+-              <div className="text-gray-600">Satisfaction</div>
++              <div className="text-2xl font-semibold text-gray-900">99%</div>
++              <div className="text-sm opacity-70 text-gray-600">Satisfaction</div>
+             </div>
+-            <div className="text-center col-span-2 md:col-span-1">
+-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24/7</div>
+-              <div className="text-gray-600">Support</div>
++            <div className="hidden md:block text-center">
++              <div className="text-2xl font-semibold text-gray-900">24/7</div>
++              <div className="text-sm opacity-70 text-gray-600">Support</div>
+             </div>
+           </div>
+         </div>
+--- a/src/app/[locale]/page.tsx
++++ b/src/app/[locale]/page.tsx
+@@ -1,4 +1,5 @@
+ import Hero from '../../components/Hero';
++export const dynamic = "force-static"; // keep SSR output stable
+ import { useTranslations } from 'next-intl';
+ 
+ export default function HomePage() {
+
